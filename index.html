@@ -1,1 +1,154 @@
-Hello World
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <style>
+            * {
+                margin:0;
+                padding:0;
+            }
+            
+            body {
+                font-family: Papyrus, fantasy;
+            }
+            
+            main {
+                 margin:auto;
+                 width:800px;
+            }
+            
+            header {
+                background-color:black;
+                width:100%;
+                margin:0;
+                height: 55px;
+                text-align: center;
+                display: block;
+            }
+            
+            /* Header Link */
+            .headerText {
+                color:white;
+                text-decoration: none;
+                font-family: "Brush Script MT", cursive;
+                font-size: 45px;
+            }
+            
+            .headerText:visited {
+                color:white;
+                text-decoration: none;
+            }
+            
+            .headerText:hover {
+                color:white;
+                text-decoration: none;
+            }
+            
+            .headerText:active {
+                color:gray;
+                text-decoration: none;
+            }
+            
+            
+            .top {
+                border-bottom: 1px solid black;
+                height: 35px;
+                margin-top: 30px;
+            }
+            
+            .title {
+                text-align:left;
+                float:left;
+            }
+            
+            .date {
+                text-align:right;
+                float:right;
+                margin-top: 20px;
+                white-space:pre;
+            }
+            
+            article {
+                clear:both;
+            }
+            
+            p {
+                word-wrap: break-word;
+            }
+
+            .codesnippet {
+                overflow: hidden;
+            }
+
+            pre {
+                max-width:600px;
+                margin-left:0;
+                overflow-y: scroll;
+            }
+            
+            footer {
+                background-color: black;
+                color: white;
+                height: 24px;
+                bottom: 0;
+                left: 0;
+                position: fixed;
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+        <title>Testing</title>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <a class="headerText" href="index.html">Howard's Code Blog</a>
+            </header>
+            <main>
+                <div class="top">
+                    <h1 class="title">Code Snippet Testing</h1>
+                    <h5 class="date">Posted on: 09/01/2017        Last edit: 09/01/2017</h5>
+                </div>
+                
+                <article>
+                    <p>So yeah. I'm a paragraph. What's up?</p><br>
+                    <p>Testing text wrapping weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</p>
+                    
+                    <br><p>First snippet</p>
+                    <div class="codesnippet">
+                        <pre class="prettyprint">
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    cout << "Hello world\n";
+    cout << "this is a test\n";
+    
+    return 0;
+}
+                        </pre>
+                    </div>
+                    
+                    <br><p>Second snippet</p>
+                    <div class="codenippet">
+                    <pre class="prettyprint">
+//what if I do thisssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                    </pre>
+                    </div>
+                    
+                    <br><p>Third snippet</p>
+                    <pre class="prettyprint">
+hello hello world!
+                    </pre>
+                    <br><br>
+                </article>
+                <footer>
+                    Copyright &copy; 2017 Hsuan-Hau Liu.
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>

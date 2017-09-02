@@ -1,0 +1,100 @@
+/*
+    Style sheet for home page
+*/
+
+/* Reset margin and padding */
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: Papyrus, fantasy;
+}
+
+main {
+     margin:auto;
+     width:800px;
+}
+
+/* Header Formatting */
+header {
+    background-color:black;
+    width:100%;
+    margin:0;
+    height: 55px;
+    text-align: center;
+    display: block;
+}
+
+.headerText {
+    color:white;
+    text-decoration: none;
+    font-family: "Brush Script MT", cursive;
+    font-size: 45px;
+}
+
+.headerText:visited {
+    color:white;
+    text-decoration: none;
+}
+
+.headerText:hover {
+    color:white;
+    text-decoration: none;
+}
+
+.headerText:active {
+    color:gray;
+    text-decoration: none;
+}
+
+.top {
+    border-bottom: 1px solid black;
+    height: 35px;
+    margin-top: 30px;
+}
+
+.title {
+    text-align:left;
+    float:left;
+}
+
+.date {
+    text-align:right;
+    float:right;
+    margin-top: 20px;
+    white-space:pre;
+}
+
+/* Article formatting */
+article {
+    clear:both;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+/* Code snippet formatting */
+.codesnippet {
+    overflow: hidden;
+}
+
+pre {
+    max-width:600px;
+    margin-left:0;
+    overflow-y: scroll;
+}
+
+/* Copyright footer */
+footer {
+    background-color: black;
+    color: white;
+    height: 24px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}

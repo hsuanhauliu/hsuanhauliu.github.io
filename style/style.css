@@ -76,6 +76,11 @@ p {
     word-wrap: break-word;
 }
 
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
 /* Code snippet formatting */
 .codesnippet {
     overflow: hidden;

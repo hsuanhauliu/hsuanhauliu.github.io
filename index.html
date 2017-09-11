@@ -11,21 +11,208 @@
     <link href="style/style.css" rel="stylesheet" type="text/css"/>
     <title>Howard's Coding Blog!</title>
   </head>
+
   <body>
     <div class="container">
       <header>
-        <a class="headerText" href="index.html">Howard's Coding Blog</a>
+        <a class="headerText" href="index.html">Howard's Playground</a>
       </header>
 
+      <nav class="topnav">
+        <button class="tablink" onclick="switchTab(event,'tab-1', 'side-1')">Home</button>
+        <button class="tablink" onclick="switchTab(event,'tab-2')">Notebook</button>
+        <button class="tablink" onclick="switchTab(event,'tab-3')">Cheat Sheets</button>
+        <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
+        <button class="tablink" onclick="switchTab(event,'tab-5', 'side-5')">Schoolwork</button>
+      </nav>
+
+      <script>
+      function switchTab(evt, Name, Menu) {
+        var i, x;
+
+        // Get all class "tab" tags
+        x = document.getElementsByClassName("tab");
+
+        // Change all display styles to "none" to hide them.
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        // Get all side menus
+        x = document.getElementsByClassName("sidenav");
+
+        // Change all display styles to "none" to hide them.
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        // Display current tab content.
+        document.getElementById(Name).style.display = "block";
+        document.getElementById(Menu).style.display = "block";
+      }
+      </script>
+
+      <nav id="side-1" class="sidenav">
+        <ul>
+          <li><a href="#">Who am I?</a></li>
+          <li><a href="https://howardliusite.wordpress.com/">Second blog</a></li>
+          <li><a href="https://github.com/hsuanhauliu">Github</a></li>
+        </ul>
+      </nav>
+
+      <nav id="side-5" class="sidenav" style="display:none">
+        <ul>
+          <li><a href="#" onclick="switchCourse(event,'course-4200')">COMP4200</a></li>
+          <li><a href="#" onclick="switchCourse(event,'course-4320')">COMP4320</a></li>
+          <li><a href="#" onclick="switchCourse(event,'course-5370')">COMP5370</a></li>
+          <li><a href="#" onclick="switchCourse(event,'course-5600')">COMP5600</a></li>
+        </ul>
+      </nav>
+
+      <script>
+      function switchCourse(evt, Course) {
+        var i, x;
+
+        // Get all class "section" tags
+        x = document.getElementsByClassName("section");
+
+        // Change all display styles to "none" to hide them.
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        // Display current tab content.
+        document.getElementById(Course).style.display = "block";
+      }
+      </script>
+
       <main>
-        <div class="top">
-          <h1 class="title">Home Page is still under construction...</h1>
-          <h5 class="date">Date: 09/07/2017</h5>
+<!-- Home Page -->
+        <div id="tab-1" class="tab" >
+          <div class="top">
+            <h1 class="title">Welcome!</h1>
+            <h5 class="date">Date: 09/10/2017</h5>
+          </div>
+
+          <article style="font-size: 23px">
+            <img style="border-radius: 50%; float: left" src="Pictures/profile.jpg" alt="me" width="200" height="200">
+            <br><br>
+            <p> &emsp;&larr; This is me </p>
+
+            <img style="border-radius: 50%; float: right" src="Pictures/Popcorn.jpg" alt="me" width="200" height="200">
+            <br><br>
+            <p style="float: right"> This adorable lil creature is Popcorn &rarr;&emsp; </p>
+            <br>
+
+            <img style="border-radius: 50%; float: left" src="Pictures/Taiwan.jpg" alt="me" width="200" height="200">
+            <br><br><br>
+            <p>  &emsp;&larr; I'm from Taiwan </p>
+            <br><br>
+
+            <p style="float: right"> &darr; I love coding&emsp;</p>
+            <br>
+            <img style="border-radius: 50%; float: right" src="Pictures/coding.jpg" alt="me" width="180" height="180">
+            <br>
+
+            <p style="float: right"> &darr; I love playing tennis</p>
+            <br>
+            <img style="border-radius: 50%; float: right" src="Pictures/tennis.jpg" alt="me" width="180" height="180">
+            <br>
+
+            <p style="float: right"> &darr; I play video games</p>
+            <br>
+            <img style="border-radius: 50%; float: right" src="Pictures/gaming.jpg" alt="me" width="180" height="180">
+            <br>
+
+            <p style="float: right"> &darr; and instruments </p>
+            <br>
+            <img style="border-radius: 50%; float: right" src="Pictures/piano.jpg" alt="me" width="180" height="180">
+            <br>
+
+          </article>
         </div>
 
-        <article>
-          <a href="Resume.html">My resume</a>
-        </article>
+<!-- Second Page -->
+        <div id="tab-2" class="tab" style="display:none">
+          <div class="top">
+            <h1 class="title">2nd Tab</h1>
+            <h5 class="date">Date: 09/10/2017</h5>
+          </div>
+
+          <article>
+            <p>Still under construction...</p>
+          </article>
+        </div>
+
+<!-- Third Page -->
+        <div id="tab-3" class="tab" style="display:none">
+          <div class="top">
+            <h1 class="title">3rd Tab</h1>
+            <h5 class="date">Date: 09/10/2017</h5>
+          </div>
+
+          <article>
+            <p>Still under construction...</p>
+          </article>
+        </div>
+
+<!-- Fourth Page -->
+        <div id="tab-4" class="tab" style="display:none">
+          <div class="top">
+            <h1 class="title">4th Tab</h1>
+            <h5 class="date">Date: 09/10/2017</h5>
+          </div>
+
+          <article>
+            <p>Still under construction...</p>
+          </article>
+        </div>
+
+<!-- Fifth Page -->
+        <div id="tab-5" class="tab" style="display:none">
+          <div class="top">
+            <h1 class="title">5th Tab</h1>
+            <h5 class="date">Date: 09/10/2017</h5>
+          </div>
+
+          <article>
+            <p>This is where I keep all my homework notes.</p>
+
+            <div class="course" id="course-4200">
+
+            </div>
+
+            <div class="course" id="course-4320" style="display: none">
+
+            </div>
+
+            <div class="course" id="course-5370" style="display: none">
+              <a href="COMP5370/COMP5370-HW1.html">Homework 1 Notes</a>
+            </div>
+
+            <div class="course" id="course-5600" style="display: none">
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+<!-- Sixth Page -->
+        <div id="tab-6" class="tab" style="display:none">
+          <div class="top">
+            <h1 class="title">6th Tab</h1>
+            <h5 class="date">Date: 09/10/2017</h5>
+          </div>
+
+          <article>
+
+          </article>
+        </div>
+
+
+        <br style="clear:both"><br><br>
       </main>
 
       <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>

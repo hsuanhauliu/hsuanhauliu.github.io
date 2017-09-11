@@ -74,7 +74,7 @@
         var i, x;
 
         // Get all class "section" tags
-        x = document.getElementsByClassName("section");
+        x = document.getElementsByClassName("course");
 
         // Change all display styles to "none" to hide them.
         for (i = 0; i < x.length; i++) {
@@ -86,8 +86,29 @@
       }
       </script>
 
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+      <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+              document.getElementById("myBtn").style.display = "block";
+          } else {
+              document.getElementById("myBtn").style.display = "none";
+          }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      }
+      </script>
+
       <main>
-<!-- Home Page -->
+<!-- Home Tab -->
         <div id="tab-1" class="tab" >
           <div class="top">
             <h1 class="title">Welcome!</h1>
@@ -95,48 +116,48 @@
           </div>
 
           <article style="font-size: 23px">
-            <img style="border-radius: 50%; float: left" src="Pictures/profile.jpg" alt="me" width="200" height="200">
+            <img style="border-radius: 50%; float: left" src="Pictures/profile.jpg" alt="" width="200" height="200">
             <br><br>
             <p> &emsp;&larr; This is me </p>
 
-            <img style="border-radius: 50%; float: right" src="Pictures/Popcorn.jpg" alt="me" width="200" height="200">
+            <img style="border-radius: 50%; float: right" src="Pictures/Popcorn.jpg" alt="" width="200" height="200">
             <br><br>
             <p style="float: right"> This adorable lil creature is Popcorn &rarr;&emsp; </p>
             <br>
 
-            <img style="border-radius: 50%; float: left" src="Pictures/Taiwan.jpg" alt="me" width="200" height="200">
+            <img style="border-radius: 50%; float: left" src="Pictures/Taiwan.jpg" alt="" width="200" height="200">
             <br><br><br>
             <p>  &emsp;&larr; I'm from Taiwan </p>
             <br><br>
 
             <p style="float: right"> &darr; I love coding&emsp;</p>
             <br>
-            <img style="border-radius: 50%; float: right" src="Pictures/coding.jpg" alt="me" width="180" height="180">
+            <img style="border-radius: 50%; float: right" src="Pictures/coding.jpg" alt="" width="180" height="180">
             <br>
 
             <p style="float: right"> &darr; I love playing tennis</p>
             <br>
-            <img style="border-radius: 50%; float: right" src="Pictures/tennis.jpg" alt="me" width="180" height="180">
+            <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/tennis.jpg" alt="" width="180" height="180">
             <br>
 
             <p style="float: right"> &darr; I play video games</p>
             <br>
-            <img style="border-radius: 50%; float: right" src="Pictures/gaming.jpg" alt="me" width="180" height="180">
+            <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/gaming.jpg" alt="" width="180" height="180">
             <br>
 
             <p style="float: right"> &darr; and instruments </p>
             <br>
-            <img style="border-radius: 50%; float: right" src="Pictures/piano.jpg" alt="me" width="180" height="180">
+            <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/piano.jpg" alt="" width="180" height="180">
             <br>
 
           </article>
         </div>
 
-<!-- Second Page -->
+<!-- Second Tab -->
         <div id="tab-2" class="tab" style="display:none">
           <div class="top">
-            <h1 class="title">2nd Tab</h1>
-            <h5 class="date">Date: 09/10/2017</h5>
+            <h1 class="title">My Programming Notebook</h1>
+            <h5 class="date">Date: 09/11/2017</h5>
           </div>
 
           <article>
@@ -144,23 +165,23 @@
           </article>
         </div>
 
-<!-- Third Page -->
+<!-- Third Tab -->
         <div id="tab-3" class="tab" style="display:none">
           <div class="top">
-            <h1 class="title">3rd Tab</h1>
-            <h5 class="date">Date: 09/10/2017</h5>
+            <h1 class="title">Cheat Sheets</h1>
+            <h5 class="date">Date: 09/11/2017</h5>
           </div>
 
           <article>
-            <p>Still under construction...</p>
+            <p>This is where I put all my programming cheat sheets.</p>
           </article>
         </div>
 
-<!-- Fourth Page -->
+<!-- Fourth Tab -->
         <div id="tab-4" class="tab" style="display:none">
           <div class="top">
-            <h1 class="title">4th Tab</h1>
-            <h5 class="date">Date: 09/10/2017</h5>
+            <h1 class="title">Projects</h1>
+            <h5 class="date">Date: 09/11/2017</h5>
           </div>
 
           <article>
@@ -168,38 +189,89 @@
           </article>
         </div>
 
-<!-- Fifth Page -->
+<!-- Fifth Tab -->
         <div id="tab-5" class="tab" style="display:none">
           <div class="top">
-            <h1 class="title">5th Tab</h1>
-            <h5 class="date">Date: 09/10/2017</h5>
+            <h1 class="title">Schoolwork</h1>
+            <h5 class="date">Date: 09/11/2017</h5>
           </div>
 
           <article>
             <p>This is where I keep all my homework notes.</p>
+            <br>
 
             <div class="course" id="course-4200">
-
+              <table>
+                <tr>
+                  <th>Homework</th>
+                  <th>Study Notes</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </table>
             </div>
 
             <div class="course" id="course-4320" style="display: none">
-
+              <table>
+                <tr>
+                  <th>Homework</th>
+                  <th>Study Notes</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </table>
             </div>
 
             <div class="course" id="course-5370" style="display: none">
-              <a href="COMP5370/COMP5370-HW1.html">Homework 1 Notes</a>
+              <table>
+                <tr>
+                  <th>Homework</th>
+                  <th>Study Notes</th>
+                </tr>
+                <tr>
+                  <td><a href="COMP5370/COMP5370-HW1.html">Homework 1 Notes</a></td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </table>
             </div>
 
             <div class="course" id="course-5600" style="display: none">
-
+              <table>
+                <tr>
+                  <th>Homework</th>
+                  <th>Study Notes</th>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </table>
             </div>
 
           </article>
-
-
         </div>
 
-<!-- Sixth Page -->
+<!-- Sixth Tab -->
         <div id="tab-6" class="tab" style="display:none">
           <div class="top">
             <h1 class="title">6th Tab</h1>
@@ -210,7 +282,6 @@
 
           </article>
         </div>
-
 
         <br style="clear:both"><br><br>
       </main>

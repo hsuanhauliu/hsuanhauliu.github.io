@@ -11,6 +11,7 @@
 body {
     font-family: "Roboto", serif;
     height: 100%;
+    width: 100%;
     background-color: #262626;
     background-image: url("../Pictures/background.jpg");
     background-repeat: no-repeat;
@@ -82,12 +83,14 @@ header {
 .topmenu {
     background-color: #333;
     height: 50px;
+    width: 100%;
 }
 
 .topnav {
     overflow: hidden;
-    width: 1100px;
+    width: 1000px;
     float: left;
+    height: 100%;
 }
 
 .topnav button {
@@ -126,11 +129,11 @@ button:focus {
 .sidemenu {
     width: 180px;
     float: left;
-    margin-left: 20px;
     width: 180px;
     margin-top: 80px;
     text-align: center;
     font-size: 12px;
+    padding: 20px;
 }
 
 .sidenav {
@@ -172,30 +175,40 @@ button:focus {
 
 /************************************ Main ************************************/
 main {
-    margin-left: 70px;
-    float: left;
     width: 800px;
     margin-top: 30px;
     min-height: 100vh;
 }
 
+/* Used for main page */
+.front-page{
+    float: left;
+}
+
+/* Posts format */
+.post {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: fantasy;
+}
+
 /******************* Header *******************/
 .top {
     border-bottom: 1px solid black;
-    height: 50px;
+    height: 40px;
 
 }
 
 .title {
     text-align:left;
     float:left;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .date {
     text-align:right;
     float:right;
-    margin-top: 35px;
+    margin-top: 25px;
     white-space:pre;
 }
 

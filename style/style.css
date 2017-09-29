@@ -9,25 +9,29 @@
 }
 
 body {
-    font-family: Papyrus, fantasy;
-    background-color: #F3F3F3;
+    font-family: "Roboto", serif;
     height: 100%;
-}
-
-.container {
-    background-image: url("../Pictures/background.png");
-    background-repeat:no-repeat;
+    background-color: #262626;
+    background-image: url("../Pictures/background.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-size: 100% 100%;
+}
+
+.container {
+}
+
+#main-body {
+    width: 1500px;
 }
 
 /* Button formatting */
 #myBtn {
     display: none;
     position: fixed;
-    bottom: 50px;
-    right: 160px;
+    bottom: 70px;
+    right: 100px;
     z-index: 99;
     border: none;
     outline: none;
@@ -75,9 +79,15 @@ header {
 }
 
 /******************* Top Navigation *******************/
-.topnav {
+.topmenu {
     background-color: #333;
+    height: 50px;
+}
+
+.topnav {
     overflow: hidden;
+    width: 1100px;
+    float: left;
 }
 
 .topnav button {
@@ -113,15 +123,18 @@ button:focus {
 }
 
 /******************* Left navigation *******************/
-.sidenav {
-    background-color: red;
-    position: absolute;
+.sidemenu {
+    width: 180px;
     float: left;
     margin-left: 20px;
     width: 180px;
     margin-top: 80px;
     text-align: center;
     font-size: 12px;
+}
+
+.sidenav {
+    font-family: Papyrus, fantasy;
 }
 
 .sidenav ul {
@@ -159,38 +172,41 @@ button:focus {
 
 /************************************ Main ************************************/
 main {
-     margin:auto;
-     width:800px;
-     margin-top: 30px;
-     min-height: 100vh;
+    margin-left: 70px;
+    float: left;
+    width: 800px;
+    margin-top: 30px;
+    min-height: 100vh;
 }
 
 /******************* Header *******************/
 .top {
     border-bottom: 1px solid black;
-    height: 35px;
+    height: 50px;
 
 }
 
 .title {
     text-align:left;
     float:left;
+    font-size: 50px;
 }
 
 .date {
     text-align:right;
     float:right;
-    margin-top: 20px;
+    margin-top: 35px;
     white-space:pre;
 }
 
 /******************* Artifcle *******************/
 article {
-    clear:both;
+    clear: both;
 }
 
 p {
     word-wrap: break-word;
+    font-size: 20px;
 }
 
 iframe {
@@ -223,6 +239,15 @@ table, th, td {
 
 tr:hover {
     background-color: #f5f5f5;
+}
+
+/******************* Audio *******************/
+audio {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 24px;
+    position: fixed;
 }
 
 /******************* Copyright footer *******************/

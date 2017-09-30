@@ -49,19 +49,19 @@ body {
 
 /************************************ Header Formatting ************************************/
 header {
-    background-color: #262626;
-    width:100%;
-    margin:0;
+    background: #262626;
+    width: 100%;
+    margin: 0;
     text-align: center;
     display: block;
 }
 
 .headerText {
-    color:white;
+    color: white;
     text-decoration: none;
     font-family: "Brush Script MT", cursive;
     font-size: 60px;
-    width:100%;
+    width: 100%;
 }
 
 .headerText:visited {
@@ -82,6 +82,7 @@ header {
 /******************* Top Navigation *******************/
 .topmenu {
     background-color: #333;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 50px;
     width: 100%;
 }
@@ -130,7 +131,7 @@ button:focus {
     width: 180px;
     float: left;
     width: 180px;
-    margin-top: 80px;
+    margin-top: 20px;
     text-align: center;
     font-size: 12px;
     padding: 20px;
@@ -195,21 +196,21 @@ main {
 
 /******************* Header *******************/
 .top {
-    border-bottom: 1px solid black;
-    height: 30px;
-
+    border-bottom: 1px solid lightgray;
+    height: 40px;
+    color: #726F6F;
 }
 
 .title {
     text-align:left;
     float:left;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .date {
     text-align:right;
     float:right;
-    margin-top: 15px;
+    margin-top: 28px;
     white-space:pre;
 }
 

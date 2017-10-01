@@ -36,7 +36,7 @@ body {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #E95C5C;
+    background-color: #555;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -44,7 +44,7 @@ body {
 }
 
 #myBtn:hover {
-    background-color: #555;
+    background-color: #CBCBCB;
 }
 
 /************************************ Header Formatting ************************************/

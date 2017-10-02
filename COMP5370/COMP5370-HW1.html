@@ -8,6 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../scripts/general.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <title>COMP5370 - HW1</title>
   </head>
@@ -15,6 +16,7 @@
   <body ng-app="">
     <div class="container">
       <div ng-include="'../partials/header.html'"></div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
       <main class="post">
         <div class="top">
@@ -74,7 +76,7 @@
         </article>
       </main>
 
-      <div ng-include="'partials/footer.html'"></div>
+      <div ng-include="'../partials/footer.html'"></div>
     </div>
   </body>
 </html>

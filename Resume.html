@@ -1,5 +1,5 @@
 <!--
-    Blog Home Page
+    Resume Page
 -->
 
 <!DOCTYPE html>
@@ -7,15 +7,13 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <link href="style/style.css" rel="stylesheet" type="text/css"/>
-    <title>Howard's Coding Blog!</title>
+    <title>Howard's Playground! - Resume Page</title>
   </head>
+  
   <body>
     <div class="container">
-      <header>
-        <a class="headerText" href="home.html">Howard's Coding Blog</a>
-      </header>
+      <div ng-include="'partials/header.html'"></div>
 
       <main class="post">
         <div class="top">
@@ -26,10 +24,9 @@
         <article>
           <embed src="Documents/Resume.pdf" width="800px" height="1100px" />
         </article>
-      </main>
+      </main><br><br>
 
-      <br><br>
-      <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>
+      <div ng-include="'partials/footer.html'"></div>
     </div>
   </body>
 </html>

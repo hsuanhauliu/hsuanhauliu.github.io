@@ -3,15 +3,13 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <link href="../style/style.css" rel="stylesheet" type="text/css"/>
-    <title>Howard's Coding Blog!</title>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <title>Howard's Playground! - test</title>
   </head>
   <body>
     <div class="container">
-      <header>
-        <a class="headerText" href="../home.html">Howard's Coding Blog</a>
-      </header>
+      <div ng-include="'partials/header.html'"></div>
 
       <main class="post">
         <div class="top">
@@ -54,7 +52,7 @@
         </article>
       </main>
 
-      <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>
+      <div ng-include="'partials/footer.html'"></div>
     </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <!--
-    Blog Home Page
+    Main Page
 -->
 
 <!DOCTYPE html>
@@ -7,18 +7,18 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/main-page-script.js"></script>
+    <script src="scripts/general.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <title>Howard's Coding Blog!</title>
+    <title>Howard's Playground!</title>
   </head>
 
-  <body>
+  <body ng-app="">
     <div class="container">
 <!-- Header -->
-        <header>
-          <a class="headerText" href="home.html">Howard's Playground</a>
-        </header>
+        <div ng-include="'partials/header.html'"></div>
 
 <!-- Top navigation menu -->
         <div class="topmenu">
@@ -34,32 +34,6 @@
             </div>
         </div>
 
-        <script>
-          function switchTab(evt, Name, Menu) {
-            var i, x;
-
-            // Get all class "tab" tags
-            x = document.getElementsByClassName("tab");
-
-            // Change all display styles to "none" to hide them.
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-
-            // Get all side menus
-            x = document.getElementsByClassName("sidemenu");
-
-            // Change all display styles to "none" to hide them.
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-
-            // Display current tab content.
-            document.getElementById(Name).style.display = "block";
-            document.getElementById(Menu).style.display = "block";
-          }
-        </script>
-
 <!-- Main body begins here -->
         <div id="main-body">
 <!-- Left side navigation menu -->
@@ -67,13 +41,7 @@
           <div id="side-1" class="sidemenu">
             <div class="quote">
               <img src="Pictures/quote1.png" style="width:100%; box-shadow:5px 5px #AEB6BF;">
-            </div>
-
-            <br><br>
-
-            <div ng-app="">
-              <div ng-include="'test.html'"></div>
-            </div>
+            </div><br><br>
 
             <nav class="sidenav">
               <ul>
@@ -112,49 +80,13 @@
               <ul>
                 <li><a href="#" onclick="switchCourse('course', event,'course-4200')">Formal Languages</a></li>
                 <li><a href="#" onclick="switchCourse('course', event,'course-4320')">Computer Networks</a></li>
-                <li><a href="#" onclick="switchCourse('course', event,'course-5370')">Artificial Intelligence</a></li>
-                <li><a href="#" onclick="switchCourse('course', event,'course-5600')">Network Security</a></li>
+                <li><a href="#" onclick="switchCourse('course', event,'course-5370')">Network Security</a></li>
+                <li><a href="#" onclick="switchCourse('course', event,'course-5600')">Artificial Intelligence</a></li>
               </ul>
             </nav>
           </div>
 
-          <script>
-            function switchCourse(page, evt, Course) {
-              var i, x;
-
-              // Get all class "course" tags
-              x = document.getElementsByClassName(page);
-
-              // Change all display styles to "none" to hide them.
-              for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-              }
-
-              // Display current tab content.
-              document.getElementById(Course).style.display = "block";
-            }
-          </script>
-
           <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-          <script>
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {scrollFunction()};
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                    document.getElementById("myBtn").style.display = "block";
-                } else {
-                    document.getElementById("myBtn").style.display = "none";
-                }
-            }
-
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-          </script>
 
 <!-- Home Tab -->
           <div id="tab-1" class="tab" >
@@ -386,27 +318,14 @@
             </main>
           </div>
 
-<!-- Sixth Tab -->
-          <div id="tab-6" class="tab" style="display:none">
-            <main class="front-page">
-              <div class="top">
-                <h1 class="title">6th Tab</h1>
-                <h5 class="date">Date: 09/10/2017</h5>
-              </div>
-
-              <article>
-
-              </article>
-            </main>
-          </div>
-
           <br style="clear:both"><br><br><br><br>
 
 <!-- Footer -->
         <audio controls loop>
           <source src="Music/River-Flows-In-You-Yiruma.mp3" title="Music of the day!"/>
         </audio>
-        <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>
+
+        <div ng-include="'partials/footer.html'"></div>
 
       </div>
     </div>

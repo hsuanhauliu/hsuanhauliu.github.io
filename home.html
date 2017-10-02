@@ -1,0 +1,418 @@
+<!--
+    Blog Home Page
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>Howard's Coding Blog!</title>
+  </head>
+
+  <body>
+    <div class="container">
+<!-- Header -->
+        <header>
+          <a class="headerText" href="home.html">Howard's Playground</a>
+        </header>
+
+<!-- Top navigation menu -->
+        <div class="topmenu">
+            <nav class="topnav">
+              <button class="tablink" onclick="switchTab(event,'tab-1', 'side-1')">Home</button>
+              <button class="tablink" onclick="switchTab(event,'tab-2', 'side-2')">Notebook</button>
+              <button class="tablink" onclick="switchTab(event,'tab-3', 'side-3')">Cheat Sheets</button>
+              <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
+              <button class="tablink" onclick="switchTab(event,'tab-5', 'side-5')">Schoolwork</button>
+            </nav>
+            <div class="banner">
+              <img src="Pictures/banner.png" style="position: absolute; width: 150px; margin-top: -10px">
+            </div>
+        </div>
+
+        <script>
+          function switchTab(evt, Name, Menu) {
+            var i, x;
+
+            // Get all class "tab" tags
+            x = document.getElementsByClassName("tab");
+
+            // Change all display styles to "none" to hide them.
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+
+            // Get all side menus
+            x = document.getElementsByClassName("sidemenu");
+
+            // Change all display styles to "none" to hide them.
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+
+            // Display current tab content.
+            document.getElementById(Name).style.display = "block";
+            document.getElementById(Menu).style.display = "block";
+          }
+        </script>
+
+<!-- Main body begins here -->
+        <div id="main-body">
+<!-- Left side navigation menu -->
+          <!-- Home tab menu -->
+          <div id="side-1" class="sidemenu">
+            <div class="quote">
+              <img src="Pictures/quote1.png" style="width:100%; box-shadow:5px 5px #AEB6BF;">
+            </div>
+
+            <br><br>
+
+            <script>
+              $(function(){
+                $("#test").load("test.html");
+              });
+            </script>
+
+            <div id="test"></div>
+
+            <nav class="sidenav">
+              <ul>
+                <li><a href="index.html">Who am I?</a></li>
+                <li><a href="https://howardliusite.wordpress.com/">Blog</a></li>
+                <li><a href="https://github.com/hsuanhauliu">Github</a></li>
+              </ul>
+            </nav>
+            <br>
+          </div>
+
+          <!-- Notebook tab menu -->
+          <div id="side-2" class="sidemenu" style="display:none">
+            <nav  class="sidenav">
+              <ul>
+                <li><a href="#" onclick="switchCourse('notebook', event,'algorithm')">Algorithm</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'data-structure')">Data Structure</a></li>
+              </ur>
+            </nav>
+          </div>
+
+          <!-- Cheat Sheets tab menu -->
+          <div id="side-3" class="sidemenu" style="display:none">
+            <nav  class="sidenav">
+              <ul>
+                <li><a href="#" onclick="switchCourse('cheatsheet', event,'VIM')">VIM</a></li>
+                <li><a href="#" onclick="switchCourse('cheatsheet', event,'Tmux')">Tmux</a></li>
+                <li><a href="#" onclick="switchCourse('cheatsheet', event,'Github')">Github</a></li>
+              </ur>
+            </nav>
+          </div>
+
+          <!-- Schoolwork tab menu -->
+          <div id="side-5" class="sidemenu" style="display:none">
+            <nav  class="sidenav">
+              <ul>
+                <li><a href="#" onclick="switchCourse('course', event,'course-4200')">Formal Languages</a></li>
+                <li><a href="#" onclick="switchCourse('course', event,'course-4320')">Computer Networks</a></li>
+                <li><a href="#" onclick="switchCourse('course', event,'course-5370')">Artificial Intelligence</a></li>
+                <li><a href="#" onclick="switchCourse('course', event,'course-5600')">Network Security</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <script>
+            function switchCourse(page, evt, Course) {
+              var i, x;
+
+              // Get all class "course" tags
+              x = document.getElementsByClassName(page);
+
+              // Change all display styles to "none" to hide them.
+              for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";
+              }
+
+              // Display current tab content.
+              document.getElementById(Course).style.display = "block";
+            }
+          </script>
+
+          <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+          <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+          </script>
+
+<!-- Home Tab -->
+          <div id="tab-1" class="tab" >
+            <main class="front-page">
+              <div class="top">
+                <h1 class="title">std::cout << "Hello World!";</h1>
+                <h5 class="date">Date: 10/1/2017</h5>
+              </div>
+              <br><br>
+
+              <article style="font-size: 23px">
+                <img style="border-radius: 50%; float: left" src="Pictures/profile.jpg" alt="" width="200" height="200">
+                <br><br><br>
+                <p> &emsp;&larr; This is me </p>
+
+                <img style="border-radius: 50%; float: right" src="Pictures/Popcorn.jpg" alt="" width="200" height="200">
+                <br><br><br>
+                <p style="float: right"> This adorable creature is Popcorn &rarr;&emsp; </p>
+                <br><br><br>
+
+                <img style="border-radius: 50%; float: left" src="Pictures/Taiwan.jpg" alt="" width="200" height="200">
+                <br><br><br>
+                <p>  &emsp;&larr; I'm from Taiwan </p>
+                <br>
+
+                <p style="float: right"> &darr; CS student&emsp;&emsp;</p>
+                <br>
+                <img style="border-radius: 50%; float: right" src="Pictures/coding.jpg" alt="" width="130" height="130">
+                <br>
+
+                <p style="float: right"> &darr; Tennis enthusiast&emsp;&emsp;</p>
+                <br>
+                <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/tennis.jpg" alt="" width="130" height="130">
+                <br>
+
+                <p style="float: right"> &darr; Video game lover&emsp;&emsp;</p>
+                <br>
+                <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/gaming.jpg" alt="" width="130" height="130">
+                <br>
+
+                <p style="float: right"> &darr; Been playing since 5&emsp;</p>
+                <br>
+                <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/piano.jpg" alt="" width="130" height="130">
+                <br>
+
+                <br><br><br><br><br><br><br><br><br><br>
+              </article>
+            </man>
+          </div>
+
+<!-- Notebook Tab -->
+          <div id="tab-2" class="tab" style="display:none">
+            <main class="front-page">
+              <div class="top">
+                <h1 class="title">My Programming Notebook</h1>
+                <h5 class="date">Date: 10/01/2017</h5>
+              </div>
+
+              <article>
+                <p>This is my programming notebook.</p>
+                <br>
+
+                <div class="notebook" id="algorithm">
+                  <h3>Algorithm</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="data-structure" style="display:none">
+                  <h3>Data Structure</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+              </article>
+            </main>
+          </div>
+
+<!-- Cheat Sheets Tab -->
+          <div id="tab-3" class="tab" style="display:none">
+            <main class="front-page">
+              <div class="top">
+                <h1 class="title">Cheat Sheets</h1>
+                <h5 class="date">Date: 09/11/2017</h5>
+              </div>
+
+              <article>
+                <p>This is where I put all my programming cheat sheets.</p>
+
+                <div class="cheatsheet" id="VIM">
+                  <h3>VIM</h3>
+                </div>
+
+                <div class="cheatsheet" id="Tmux" style="display:none">
+                  <h3>Tmux</h3>
+                </div>
+
+                <div class="cheatsheet" id="Github" style="display:none">
+                  <h3>Github</h3>
+                </div>
+              </article>
+            </main>
+          </div>
+
+<!-- Projects Tab -->
+          <div id="tab-4" class="tab" style="display:none">
+            <main class="post">
+              <div class="top">
+                <h1 class="title">Projects</h1>
+                <h5 class="date">Date: 09/11/2017</h5>
+              </div>
+
+              <article>
+                <p>Still under construction...</p>
+                <h2>Editable List</h2>
+
+                 <ul contenteditable="true">
+                    <li> You can actually edit me! </li>
+                    <li> beep beep </li>
+                    <li> Hello World! </li>
+                 </ul>
+              </article>
+            </main>
+          </div>
+
+<!-- Schoolwork Tab -->
+          <div id="tab-5" class="tab" style="display:none">
+            <main class="front-page">
+              <div class="top">
+                <h1 class="title">Schoolwork</h1>
+                <h5 class="date">Date: 09/11/2017</h5>
+              </div>
+
+              <article>
+                <p>This is where I keep all my homework notes.</p>
+                <p>Please use the side menu on the left to navigate.</p>
+                <br>
+
+                <div class="course" id="course-4200">
+                  <h3>COMP4200 - Formal Languages</h3>
+                  <table>
+                    <tr>
+                      <th>Homework</th>
+                      <th>Study Notes</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="course" id="course-4320" style="display: none">
+                  <h3>COMP4320 - Intro to Computer Networks</h3>
+                  <table>
+                    <tr>
+                      <th>Homework</th>
+                      <th>Study Notes</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="course" id="course-5370" style="display: none">
+                  <h3>COMP5370 - Computer and Network Security</h3>
+                  <table>
+                    <tr>
+                      <th>Homework</th>
+                      <th>Study Notes</th>
+                    </tr>
+                    <tr>
+                      <td><a href="COMP5370/COMP5370-HW1.html">Homework 1 Notes</a></td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="course" id="course-5600" style="display: none">
+                  <h3>COMP5600 - Artificial Intelligence</h3>
+                  <table>
+                    <tr>
+                      <th>Homework</th>
+                      <th>Study Notes</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+              </article>
+            </main>
+          </div>
+
+<!-- Sixth Tab -->
+          <div id="tab-6" class="tab" style="display:none">
+            <main class="front-page">
+              <div class="top">
+                <h1 class="title">6th Tab</h1>
+                <h5 class="date">Date: 09/10/2017</h5>
+              </div>
+
+              <article>
+
+              </article>
+            </main>
+          </div>
+
+          <br style="clear:both"><br><br><br><br>
+
+<!-- Footer -->
+        <audio controls loop>
+          <source src="Music/River-Flows-In-You-Yiruma.mp3" title="Music of the day!"/>
+        </audio>
+        <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>
+
+      </div>
+    </div>
+  </body>
+</html>

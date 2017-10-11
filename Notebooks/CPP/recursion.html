@@ -1,0 +1,67 @@
+<!--
+  Recursion tutorial
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../../scripts/general.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>Recursion Tutorial</title>
+  </head>
+
+  <body ng-app="">
+    <div class="container">
+      <div ng-include="'../../partials/header-2.html'"></div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+      <main class="post">
+        <div class="top">
+          <h1 class="title">Recursion</h1>
+          <h5 class="date">Date: 10/8/2017</h5>
+        </div>
+
+        <article>
+          <br>
+          <p>
+            Recursion is a useful programming technique that allows a function to call itself.
+            It is usually used to solve problems that can be broken down into smaller pieces.
+            This clever idea allows us to write elegant codes to solve problems.
+            The idea is simple, but the implementation can be a little difficult at fist.
+          </p><br>
+
+          <p>Here is a simple example of a recursive algorithm.</p>
+          <div class="codesnippet">
+            <pre class="prettyprint">
+// Use recursion to calculate factorial
+long long int factorial(int num) {
+	long long int sum = num;
+
+	// base case
+	if (num == 0)
+		return 0; // factorial of 0 is 1
+	else if (num == 1)
+		return 1; // return 1 when it reaches 1
+	else
+		sum *= factorial(--num); // decrement by one then pass it into the function
+
+	return sum;
+}
+            </pre>
+          </div><br>
+          <p>
+            Click here for <a href="https://github.com/hsuanhauliu/programming-examples/blob/master/recursion.cpp">A complete example</a>
+          </p>
+
+          <br><br><br><br>
+        </article>
+      </main>
+
+      <div ng-include="'../../partials/footer.html'"></div>
+    </div>
+  </body>
+</html>

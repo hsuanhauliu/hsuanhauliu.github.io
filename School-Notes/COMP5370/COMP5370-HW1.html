@@ -7,15 +7,15 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
-    <script src="../scripts/general.js"></script>
+    <link href="../../style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../../scripts/general.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <title>COMP5370 - HW1</title>
   </head>
 
   <body ng-app="">
     <div class="container">
-      <div ng-include="'../partials/header.html'"></div>
+      <div ng-include="'../../partials/header-2.html'"></div>
       <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
       <main class="post">
@@ -29,9 +29,9 @@
           <h3>Step 1: Download VirtualBox and create three virtual machines with 3 different Operating Systems.</h3>
           <p>&emsp;1.1 Go to <a href="https://www.virtualbox.org/wiki/Downloads">Oracle's website</a> and download VirtialBox.</p>
           <p>&emsp;1.2 Install Kali Linux, Ubuntu, and Metasploitable 2 on the VirtualBox.</p>
-          <img src="../Pictures/1.Kali_OS_Screenshot.png" alt="" style="width:250px"/>
-          <img src="../Pictures/1.Metasploitable2_OS_Screenshot.png" alt="" style="width:250px"/>
-          <img src="../Pictures/1.Ubuntu_OS_Screenshot.png" alt="" style="width:250px"/>
+          <img src="../../Pictures/1.Kali_OS_Screenshot.png" alt="" style="width:250px"/>
+          <img src="../../Pictures/1.Metasploitable2_OS_Screenshot.png" alt="" style="width:250px"/>
+          <img src="../../Pictures/1.Ubuntu_OS_Screenshot.png" alt="" style="width:250px"/>
           <br><br>
           <h3>Step 2: Enable communication between the three virtual machines.</h3>
           <p>&emsp;2.1 Set up a NAT network.</p>
@@ -44,7 +44,7 @@
           <p>&emsp;2.5 Use netcat to communicate between the VMs.</p>
           <br>
           <h5>Two VMs (Kali on the left and Metasploitable2 on the right</h>
-          <img src="../Pictures/2e.NC-communication-Kali&Metas.png" alt="" style="width:700px"/>
+          <img src="../../Pictures/2e.NC-communication-Kali&Metas.png" alt="" style="width:700px"/>
           <br><br>
           <h4>NAT Network Tutorial:</h4>
           <iframe width="600" height="450" src="https://www.youtube.com/embed/KTplBo60KXc"></iframe>
@@ -76,7 +76,7 @@
         </article>
       </main>
 
-      <div ng-include="'../partials/footer.html'"></div>
+      <div ng-include="'../../partials/footer.html'"></div>
     </div>
   </body>
 </html>

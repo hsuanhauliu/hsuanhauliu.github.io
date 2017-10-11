@@ -1,0 +1,90 @@
+<!--
+  A quick tutorial on how to use the overloading feature in C++.
+-->
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../../scripts/general.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title></title>
+  </head>
+
+  <body ng-app="">
+    <div class="container">
+      <div ng-include="'../../partials/header-2.html'"></div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+      <main class="post">
+        <div class="top">
+          <h1 class="title">Overloading in C++</h1>
+          <h5 class="date">Date: 10/8/2017</h5>
+        </div>
+
+        <article>
+          <br>
+          <p>
+            Overloading is a programming technique that allows you to have multiple functions that share the same name.
+            This means that you can use the same function to deal with different data type inputs.
+            Operators can also be overloaded.
+          </p><br>
+
+          <p>Function overloading example:</p>
+          <div class="codesnippet">
+            <pre class="prettyprint">
+// Have a function called timesTwo to deal with float and int type input.
+
+float timesTwo(float num) {
+   	return num * 2;
+}
+
+int timesTwo(int num) {
+   	return num * 2;
+}
+            </pre>
+          </div><br>
+
+          <p>
+            Click here for <a href="https://github.com/hsuanhauliu/programming-examples/blob/master/function-overload.cpp">a complete example</a> of function overloading.
+          </p><br>
+
+          <p>Operator overloading example:</p>
+          <div class="codesnippet">
+            <pre class="prettyprint">
+#include &lt;iostream&gt;
+#define tab '\t'
+
+using namespace std;
+
+struct data {
+	string name;
+	int age;
+	float height;
+};
+
+// Overloaded insertion operator for data struct
+ostream& operator << (ostream& str_out, struct data& d) {
+	str_out << d.name << tab;
+	str_out << d.age << tab;
+	str_out << d.height << endl;
+	return str_out;
+}
+            </pre>
+          </div><br>
+            <p>
+              Click here for <a href="https://github.com/hsuanhauliu/programming-examples/blob/master/operator-overload.cpp">a complete example</a> of operator overloading.
+            </p><br>
+
+          <p>Ref: The Complete Idiot's Guide to C++ by Paul Snaith</p>
+          <br><br><br><br>
+        </article>
+      </main>
+
+      <div ng-include="'../../partials/footer.html'"></div>
+    </div>
+  </body>
+</html>

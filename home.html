@@ -18,9 +18,7 @@
   <body ng-app="">
     <div class="container">
 <!-- Header -->
-        <header>
-          <a class="headerText" href="home.html">Howard's Playground</a>
-        </header>
+        <div ng-include="'partials/header-1.html'"></div>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!-- Top navigation menu -->
@@ -62,6 +60,18 @@
               <ul>
                 <li><a href="#" onclick="switchCourse('notebook', event,'algorithm')">Algorithm</a></li>
                 <li><a href="#" onclick="switchCourse('notebook', event,'data-structure')">Data Structure</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'web-development')">Web Development</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'network')">Computer Networks</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'security')">Security</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'ai')">Artificial Intelligence</a></li>
+              </ur>
+            </nav><br>
+
+            <nav  class="sidenav">
+              <ul>
+                <li><a href="#" onclick="switchCourse('notebook', event,'cpp')">C++</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'python')">Python</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'java')">Java</a></li>
               </ur>
             </nav>
           </div>
@@ -179,6 +189,113 @@
                     </tr>
                   </table>
                 </div>
+
+                <div class="notebook" id="web-development" style="display:none">
+                  <h3>Web Development</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="network" style="display:none">
+                  <h3>Networks</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="security" style="display:none">
+                  <h3>Computer & Network Security</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="ai" style="display:none">
+                  <h3>Artificial Intelligence</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="cpp" style="display:none">
+                  <h3>C++</h3>
+                  <table>
+                    <tr>
+                      <td><a href="Notebooks/CPP/cpp-overload.html">Overloading</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="Notebooks/CPP/pointers.html">Pointers</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="Notebooks/CPP/recurrsion.html">Recurrsion</a></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="python" style="display:none">
+                  <h3>Python</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="java" style="display:none">
+                  <h3>Java</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+
               </article>
             </main>
           </div>
@@ -192,7 +309,7 @@
               </div>
 
               <article>
-                <p>This is where I put all my programming cheat sheets.</p>
+                <p>This is where I put all my programming cheat sheets.</p><br>
 
                 <div class="cheatsheet" id="VIM">
                   <h3>VIM</h3>

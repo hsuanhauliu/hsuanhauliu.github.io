@@ -8,8 +8,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="style/style.css" rel="stylesheet" type="text/css"/>
-    <script src="scripts/main-page-script.js"></script>
+    <script src="scripts/switch.js"></script>
     <script src="scripts/general.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <title>Howard's Playground!</title>
@@ -25,10 +28,11 @@
         <div class="topmenu">
             <nav class="topnav">
               <button class="tablink" onclick="switchTab(event,'tab-1', 'side-1')">Home</button>
-              <button class="tablink" onclick="switchTab(event,'tab-2', 'side-2')">Notebook</button>
-              <button class="tablink" onclick="switchTab(event,'tab-3', 'side-3')">Cheat Sheets</button>
+              <a href="index.html">About</a>
+              <a href="Resume.html">Resume</a>
               <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
-              <button class="tablink" onclick="switchTab(event,'tab-5', 'side-5')">Schoolwork</button>
+              <a href="notebook.html">Notebook</a>
+              <button class="tablink" onclick="switchTab(event,'tab-5')">Contacts</button>
             </nav>
             <div class="banner">
               <img src="Pictures/banner.png" style="position: absolute; width: 150px; margin-top: -10px">
@@ -45,8 +49,8 @@
             </div><br><br>
 
             <nav class="sidenav">
+              <p style="font-weight: bold; font-size: 20px">My other links:</p>
               <ul>
-                <li><a href="index.html">Who am I?</a></li>
                 <li><a href="https://howardliusite.wordpress.com/">Blog</a></li>
                 <li><a href="https://github.com/hsuanhauliu">Github</a></li>
               </ul>
@@ -54,50 +58,6 @@
             <br>
           </div>
 
-          <!-- Notebook tab menu -->
-          <div id="side-2" class="sidemenu" style="display:none">
-            <nav  class="sidenav">
-              <ul>
-                <li><a href="#" onclick="switchCourse('notebook', event,'algorithm')">Algorithm</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'data-structure')">Data Structure</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'web-development')">Web Development</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'network')">Computer Networks</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'security')">Security</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'ai')">Artificial Intelligence</a></li>
-              </ur>
-            </nav><br>
-
-            <nav  class="sidenav">
-              <ul>
-                <li><a href="#" onclick="switchCourse('notebook', event,'cpp')">C++</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'python')">Python</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'java')">Java</a></li>
-              </ur>
-            </nav>
-          </div>
-
-          <!-- Cheat Sheets tab menu -->
-          <div id="side-3" class="sidemenu" style="display:none">
-            <nav  class="sidenav">
-              <ul>
-                <li><a href="#" onclick="switchCourse('cheatsheet', event,'VIM')">VIM</a></li>
-                <li><a href="#" onclick="switchCourse('cheatsheet', event,'Tmux')">Tmux</a></li>
-                <li><a href="#" onclick="switchCourse('cheatsheet', event,'Github')">Github</a></li>
-              </ur>
-            </nav>
-          </div>
-
-          <!-- Schoolwork tab menu -->
-          <div id="side-5" class="sidemenu" style="display:none">
-            <nav  class="sidenav">
-              <ul>
-                <li><a href="#" onclick="switchCourse('course', event,'course-4200')">Formal Languages</a></li>
-                <li><a href="#" onclick="switchCourse('course', event,'course-4320')">Computer Networks</a></li>
-                <li><a href="#" onclick="switchCourse('course', event,'course-5370')">Network Security</a></li>
-                <li><a href="#" onclick="switchCourse('course', event,'course-5600')">Artificial Intelligence</a></li>
-              </ul>
-            </nav>
-          </div>
 
 <!-- Home Tab -->
           <div id="tab-1" class="tab" >
@@ -148,184 +108,6 @@
             </man>
           </div>
 
-<!-- Notebook Tab -->
-          <div id="tab-2" class="tab" style="display:none">
-            <main class="front-page">
-              <div class="top">
-                <h1 class="title">My Programming Notebook</h1>
-                <h5 class="date">Date: 10/01/2017</h5>
-              </div>
-
-              <article>
-                <p>This is my programming notebook.</p>
-                <br>
-
-                <div class="notebook" id="algorithm">
-                  <h3>Algorithm</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="data-structure" style="display:none">
-                  <h3>Data Structure</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="web-development" style="display:none">
-                  <h3>Web Development</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="network" style="display:none">
-                  <h3>Networks</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="security" style="display:none">
-                  <h3>Computer & Network Security</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="ai" style="display:none">
-                  <h3>Artificial Intelligence</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="cpp" style="display:none">
-                  <h3>C++</h3>
-                  <table>
-                    <tr>
-                      <td><a href="Notebooks/CPP/cpp-overload.html">Overloading</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="Notebooks/CPP/pointers.html">Pointers</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="Notebooks/CPP/recurrsion.html">Recurrsion</a></td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="python" style="display:none">
-                  <h3>Python</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="java" style="display:none">
-                  <h3>Java</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-
-              </article>
-            </main>
-          </div>
-
-<!-- Cheat Sheets Tab -->
-          <div id="tab-3" class="tab" style="display:none">
-            <main class="front-page">
-              <div class="top">
-                <h1 class="title">Cheat Sheets</h1>
-                <h5 class="date">Date: 09/11/2017</h5>
-              </div>
-
-              <article>
-                <p>This is where I put all my programming cheat sheets.</p><br>
-
-                <div class="cheatsheet" id="VIM">
-                  <h3>VIM</h3>
-                </div>
-
-                <div class="cheatsheet" id="Tmux" style="display:none">
-                  <h3>Tmux</h3>
-                </div>
-
-                <div class="cheatsheet" id="Github" style="display:none">
-                  <h3>Github</h3>
-                </div>
-              </article>
-            </main>
-          </div>
-
 <!-- Projects Tab -->
           <div id="tab-4" class="tab" style="display:none">
             <main class="post">
@@ -335,102 +117,88 @@
               </div>
 
               <article>
-                <p>Still under construction...</p>
-                <h2>Editable List</h2>
+                <h2>Current Projects</h2>
+                <ul contenteditable="true" style="margin-left: 30px">
+                   <li>Python Learning</li>
+                   <li>ePorfolio</li>
+                   <li><a href="https://github.com/hsuanhauliu/AI-Project">Machine-Improvised-Music</a></li>
+                   <li><a href="https://github.com/hsuanhauliu/Lab03">Chatroom</a></li>
+                </ul>
+                <br>
 
-                 <ul contenteditable="true">
-                    <li> You can actually edit me! </li>
-                    <li> beep beep </li>
-                    <li> Hello World! </li>
-                 </ul>
+                <h2>Past Projects</h2>
+                <h3>Class Projects</h3>
+                <li><a href="https://github.com/hsuanhauliu/OldAssignments/blob/master/COMP3270%20Intro%20to%20Algorithms/Programming_Assignment/Source.cpp">
+                  Algorithm Analysis
+                </a></li>
+                <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP5000%20Web%20Development/Term_Project">
+                  Online Exam Web Application
+                </a></li>
+                <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP3220%20Principles%20of%20Programming%20Languages/HW6">
+                  Concurrent Programming - Bank Clerks Simulation
+                </a></li>
+                <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP4320%20Intro%20to%20Computer%20Networks/Lab1">
+                  String Processing Server & Client
+                </a></li>
+                <li><a href="https://github.com/hsuanhauliu/Computer-Networks-Lab02">
+                  Proxy DNS Server
+                </a></li>
+                <br>
+
+                <h3>Personal Projects</h3>
+                <li><a href="https://github.com/hsuanhauliu/GoogleChrome-Plugins/tree/master/RTNT">
+                  RTNT (Recommendation Thanks No Thanks)
+                </a></li>
+                <br>
+
+                <h2>Future Projects</h2>
+                <table contenteditable="true" style="white-space: nowrap">
+                  <tr style="font-size: 20px; background-color: #AEADAD; text-align: center">
+                    <th>Learning</th>
+                    <th>Programming Projects</th>
+                  </tr>
+                  <tr style="vertical-align: text-top;">
+                    <td>
+                      Programming Languages
+                      <li>C# Language</li>
+                      <li>PHP Language</li>
+                      Technology
+                      <li><a href="https://www.technologyreview.com/s/603495/10-breakthrough-technologies-2017-practical-quantum-computers/">Quantum Computer</a></li>
+                    </td>
+                    <td>
+                      Web (HTML & Javascript)
+                      <li>Sudoku Solver</li>
+                      <li>Tetris (w/ Javascript)</li>
+                      <li>Maze Path Finder</li>
+                      <li>Ragnarok Online Skill Simulator (w/ Javascript)</li>
+                      <li>Snake Game</li>
+                      <br>
+                      Software
+                      <li>Markdown Editor</li>
+                      <li>Pictures Encryption Program</li>
+                      <li>Web Scrapping (w/ Python)</li>
+                      <li>Messaging App</li>
+                      <li>AI Poker Player (Texas Hold'em specific)</li>
+                      <li>3D Interior Design Simulator</li>
+                    </td>
+                  </tr>
+                </table>
+
               </article>
             </main>
           </div>
 
-<!-- Schoolwork Tab -->
+<!-- Contacts Tab -->
           <div id="tab-5" class="tab" style="display:none">
-            <main class="front-page">
+            <main class="post">
               <div class="top">
-                <h1 class="title">Schoolwork</h1>
-                <h5 class="date">Date: 09/11/2017</h5>
+                <h1 class="title">Contacts</h1>
+                <h5 class="date">Date: 11/03/2017</h5>
               </div>
 
               <article>
-                <p>This is where I keep all my homework notes.</p>
-                <p>Please use the side menu on the left to navigate.</p>
-                <br>
-
-                <div class="course" id="course-4200">
-                  <h3>COMP4200 - Formal Languages</h3>
-                  <table>
-                    <tr>
-                      <th>Homework</th>
-                      <th>Study Notes</th>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="course" id="course-4320" style="display: none">
-                  <h3>COMP4320 - Intro to Computer Networks</h3>
-                  <table>
-                    <tr>
-                      <th>Homework</th>
-                      <th>Study Notes</th>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="course" id="course-5370" style="display: none">
-                  <h3>COMP5370 - Computer and Network Security</h3>
-                  <table>
-                    <tr>
-                      <th>Homework</th>
-                      <th>Study Notes</th>
-                    </tr>
-                    <tr>
-                      <td><a href="COMP5370/COMP5370-HW1.html">Homework 1 Notes</a></td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="course" id="course-5600" style="display: none">
-                  <h3>COMP5600 - Artificial Intelligence</h3>
-                  <table>
-                    <tr>
-                      <th>Homework</th>
-                      <th>Study Notes</th>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
+                <p style="font-size:24px">&nbsp;&nbsp;<i class="fa fa-mobile-phone" style="font-size:30px"></i>&nbsp; +1(205)876-3234</p>
+                <p style="font-size:24px"><i class="material-icons" style="font-size:30px">email</i> howardliu43@gmail.com</p>
 
               </article>
             </main>
@@ -439,9 +207,6 @@
           <br style="clear:both"><br><br><br><br>
 
 <!-- Footer -->
-        <audio controls loop>
-          <source src="Music/River-Flows-In-You-Yiruma.mp3" title="Music of the day!"/>
-        </audio>
 
         <div ng-include="'partials/footer.html'"></div>
 

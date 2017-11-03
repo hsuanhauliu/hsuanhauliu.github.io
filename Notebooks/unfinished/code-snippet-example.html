@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../../style/style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>Howard's Playground! - test</title>
+  </head>
+  <body ng-app="">
+    <div class="container">
+      <div ng-include="'../../partials/header-2.html'"></div>
+
+      <main class="post">
+        <div class="top">
+          <h1 class="title">Code Snippet Testing</h1>
+          <h5 class="date">Date: 10/1/2017</h5>
+        </div>
+
+        <article>
+          <p>So yeah. I'm a paragraph. What's up?</p><br>
+          <p></p>
+
+         <br><p>First snippet</p>
+         <div class="codesnippet">
+           <pre class="prettyprint">
+  #include &lt;iostream&gt;
+
+  using namespace std;
+
+  int main() {
+    cout << "Hello world\n";
+    cout << "this is a test\n";
+
+    return 0;
+  }
+            </pre>
+          </div><br>
+
+          <p>Second snippet</p>
+          <div class="codenippet">
+            <pre class="prettyprint">
+  //what if I do thisssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+            </pre>
+          </div><br>
+
+          <p>Third snippet</p>
+          <pre class="prettyprint">
+  hello hello world!
+          </pre><br><br>
+
+        </article>
+      </main>
+
+      <div ng-include="'../../partials/footer.html'"></div>
+    </div>
+  </body>
+</html>

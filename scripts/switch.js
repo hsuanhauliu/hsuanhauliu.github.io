@@ -1,4 +1,4 @@
-// Switch tabs on the main page
+// Change tabs
 function switchTab(evt, Name, Menu) {
   var i, x;
 
@@ -23,7 +23,7 @@ function switchTab(evt, Name, Menu) {
   document.getElementById(Menu).style.display = "block";
 }
 
-// Switch the pages under schoolwork tabs
+// Change pages
 function switchCourse(page, evt, Course) {
   var i, x;
 

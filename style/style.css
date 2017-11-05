@@ -1,5 +1,39 @@
 /*
     Style sheet for home page
+    _______________________________
+    |            body             |
+    |  _________________________  |
+    |  |      .container       |  |
+    |  |  ___________________  |  |
+    |  |  |      header     |  |  |
+    |  |  |_________________|  |  |
+    |  |  ___________________  |  |
+    |  |  |   .topmenu      |  |  |
+    |  |  |  _____________  |  |  |
+    |  |  |  |  .topnav  |  |  |  |
+    |  |  |  |  .banner  |  |  |  |
+    |  |  |  |___________|  |  |  |
+    |  |  |_________________|  |  |
+    |  |  ___________________  |  |
+    |  |  |    #main-body   |  |  |
+    |  |  |  _____________  |  |  |
+    |  |  |  | .sidemenu |  |  |  |
+    |  |  |  |___________|  |  |  |
+    |  |  |  _____________  |  |  |
+    |  |  |  |    .tab   |  |  |  |
+    |  |  |  | _________ |  |  |  |
+    |  |  |  | |  .top | |  |  |  |
+    |  |  |  | |_______| |  |  |  |
+    |  |  |  | _________ |  |  |  |
+    |  |  |  | |article| |  |  |  |
+    |  |  |  | |_______| |  |  |  |
+    |  |  |  | _________ |  |  |  |
+    |  |  |  | | footer| |  |  |  |
+    |  |  |  | |_______| |  |  |  |
+    |  |  |  |___________|  |  |  |
+    |  |  |_________________|  |  |
+    |  |_______________________|  |
+    |_____________________________|
 */
 
 /* Reset margin and padding */
@@ -20,14 +54,12 @@ body {
     background-size: 100% 100%;
 }
 
-.container {
-}
-
+/* Everything below top menu */
 #main-body {
     width: 90%;
 }
 
-/* Button formatting */
+/* Scroll to the top button formatting */
 #myBtn {
     display: none;
     position: fixed;
@@ -79,7 +111,7 @@ header {
     text-decoration: none;
 }
 
-/******************* Top Navigation *******************/
+/******************* Top Menu *******************/
 .topmenu {
     background-color: #333;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -92,10 +124,9 @@ header {
     float: left;
     width: 1100px;
     height: 100%;
-    font-family: "Arial Black", Gadget, sans-serif;
 }
 
-.tablink {
+.topnav, .tablink {
     font-family: "Arial Black", Gadget, sans-serif;
 }
 
@@ -109,6 +140,9 @@ header {
     cursor: pointer;
 }
 
+.topnav button:focus {
+    outline:0;
+}
 
 .topnav a {
     background-color: #333;
@@ -131,9 +165,6 @@ header {
     color: white;
 }
 
-button:focus {
-    outline:0;
-}
 
 /******************* Left navigation *******************/
 .sidemenu {
@@ -207,7 +238,7 @@ main {
 .top {
     border-bottom: 1px solid lightgray;
     height: 40px;
-    color: #726F6F;
+    color: #939292;
 }
 
 .title {
@@ -230,7 +261,12 @@ article {
 
 p {
     word-wrap: break-word;
-    font-size: 15px;
+    font-size: 18px;
+}
+
+.descriptions {
+    text-align: justify;
+    font-family: Optima, sans-serif;
 }
 
 iframe {
@@ -254,7 +290,6 @@ table {
     border-collapse: collapse;
     width: 250px;
     margin: 5px auto;
-
 }
 
 table, th, td {
@@ -265,8 +300,6 @@ table, th, td {
 tr:hover {
     background-color: #f5f5f5;
 }
-
-
 
 /******************* Audio *******************/
 audio {

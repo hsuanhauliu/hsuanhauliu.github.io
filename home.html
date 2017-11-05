@@ -11,39 +11,45 @@
     <script src="scripts/switch.js"></script>
     <script src="scripts/general.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- W3school icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Code snippet plugin -->
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <!-- Import HTML parts -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <title>Howard's Playground!</title>
+    <title>Hsuan-Hau Liu</title>
   </head>
 
   <body ng-app="">
     <div class="container">
 <!-- Header -->
-        <div ng-include="'partials/header-1.html'"></div>
+        <!--<div ng-include="'partials/header-1.html'"></div>-->
+        <header>
+          <a class="headerText" href="home.html">Hsuan-Hau Liu</a>
+        </header>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!-- Top navigation menu -->
         <div class="topmenu">
-            <nav class="topnav">
-              <button class="tablink" onclick="switchTab(event,'tab-1', 'side-1')">Home</button>
-              <a href="index.html">About</a>
-              <a href="Resume.html">Resume</a>
-              <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
-              <a href="notebook.html">Notebook</a>
-              <button class="tablink" onclick="switchTab(event,'tab-5')">Contacts</button>
-            </nav>
-            <div class="banner">
-              <img src="Pictures/banner.png" style="position: absolute; width: 150px; margin-top: -10px">
-            </div>
+          <nav class="topnav">
+            <button class="tablink" onclick="switchTab(event,'tab-1', 'side-1')">Home</button>
+            <a href="index.html">About</a>
+            <a href="Resume.html">Resume</a>
+            <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
+            <a href="notebook.html">Notebook</a>
+            <button class="tablink" onclick="switchTab(event,'tab-5')">Contacts</button>
+          </nav>
+          <div class="banner">
+            <img src="Pictures/banner.png" style="position: absolute; width: 150px; margin-top: -10px">
+          </div>
         </div>
 
 <!-- Main body begins here -->
         <div id="main-body">
 <!-- Left side navigation menu -->
           <!-- Home tab menu -->
-          <div id="side-1" class="sidemenu">
+          <div class="sidemenu" id="side-1">
             <div class="quote">
               <img src="Pictures/quote1.png" style="width:100%; box-shadow:5px 5px #AEB6BF;">
             </div><br><br>
@@ -60,7 +66,7 @@
 
 
 <!-- Home Tab -->
-          <div id="tab-1" class="tab" >
+          <div class="tab" id="tab-1">
             <main class="front-page">
               <div class="top">
                 <h1 class="title">std::cout << "Hello World!";</h1>
@@ -69,43 +75,107 @@
               <br><br>
 
               <article style="font-size: 23px">
-                <img style="border-radius: 50%; float: left" src="Pictures/profile.jpg" alt="" width="200" height="200">
-                <br><br><br>
-                <p> &emsp;&larr; This is me </p>
+                                <img src="Pictures/divider.png" width="100%">
 
-                <img style="border-radius: 50%; float: right" src="Pictures/Popcorn.jpg" alt="" width="200" height="200">
-                <br><br><br>
-                <p style="float: right"> This adorable creature is Popcorn &rarr;&emsp; </p>
-                <br><br><br>
+                <img style="float: left; padding: 10px" src="Pictures/Main-page/profile.jpg" alt="" width="30%">
+                <div class="descriptions">
+                  <p>
+                    My name is Hsuan-Hau Liu (劉軒豪). I go by the name Howard.
+                    I am currently a senior undergraduate student at Auburn University, majoring in Computer Science.
+                    Midway through my undergraduate years at Auburn, I discovered my passion and potential in programming.
+                    It is at that moment, I decided to switch from Electrical engineering major to Computer Science.
+                    Throughout my senior year, I have developed the skills needed to become a successful computer scientist.
+                    By the end of December, 2017, I will be graduating from Auburn University with a BS in Computer Science.
+                    In Spring 2018, I will be pursuing a Master's degree in Computer Science at the University of Southern California, specializing in Intelligent Robotics.
+                    <br><br>
+                    My interests in the field of Computer Science include: Artificial Intelligence, Networking, Web development, and Computer Security.
+                    I decided to go into Artificial Intelligence, due to its freshness and enormous potential.
+                    The challenge and excitement that this area has to offer is simply too tempting.
+                    In the future, I hope to use my skills to develop new techonology based on AI and make contribution to the advancement of society.
+                  </p><br>
+                </div>
 
-                <img style="border-radius: 50%; float: left" src="Pictures/Taiwan.jpg" alt="" width="200" height="200">
-                <br><br><br>
-                <p>  &emsp;&larr; I'm from Taiwan </p>
-                <br>
+                <img src="Pictures/divider.png" width="100%">
 
-                <p style="float: right"> &darr; CS student&emsp;&emsp;</p>
-                <br>
-                <img style="border-radius: 50%; float: right" src="Pictures/coding.jpg" alt="" width="130" height="130">
-                <br>
+                <img style="float: right; padding: 10px" src="Pictures/Main-page/Taiwan.jpg" alt="" width="30%">
+                <div class="descriptions">
+                  <h3 style="text-decoration: underline">Taiwan</h3>
+                  <p>
+                    I was born in Taiwan and lived there for the first 14 years of my life.
+                    My brother and I were both raised by my mother and grandparents, who we love dearly.
+                    I attended elementary and middle school while I was still living in Taiwan.
+                    When I was 14, I moved to the U.S. and studied at Army and Nevy Academy in Carlsbad, California.
+                  </p>
+                </div>
 
-                <p style="float: right"> &darr; Tennis enthusiast&emsp;&emsp;</p>
-                <br>
-                <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/tennis.jpg" alt="" width="130" height="130">
-                <br>
+                <img src="Pictures/divider.png" width="100%">
+                <div class="descriptions">
+                  <h3 style="text-decoration: underline">Howard the Programmer</h3>
+                  <p>
+                    My favorite programming language is C++ due to its speed and high-level syntax.
+                    Currently I'm in the process of learning Python through AI class project and Javascript through web development.
+                    I normally program on a Mac with VIM in terminal.
+                    With the help of a terminal application called Tmux, I can have two windows side by side: one for coding and one for testing.
+                    In a Windows environment, I use Visual Studio to code.
+                    For projects, I like to use Github for code sharing and program development.
+                  </p><br>
+                </div>
 
-                <p style="float: right"> &darr; Video game lover&emsp;&emsp;</p>
-                <br>
-                <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/gaming.jpg" alt="" width="130" height="130">
-                <br>
+                <img src="Pictures/divider.png" width="100%">
 
-                <p style="float: right"> &darr; Been playing since 5&emsp;</p>
-                <br>
-                <img style="border-radius: 50%; float: right; margin-right:20px" src="Pictures/piano.jpg" alt="" width="130" height="130">
-                <br>
+                <img style="float: left; padding: 5px" src="Pictures/Main-page/piano.jpg" alt="" height="130">
+                <img style="float: right; padding: 5px" src="Pictures/Main-page/cello.jpg" alt="" height="130">
+                <h4 style="text-decoration: underline">Music</h4>
+                <div class="descriptions">
+                  <p>
+                    At the age of 5, I started to learn how to play the piano.
+                    I joined the school orchestra when I entered middle school, and became first chair cellist when I was an eighth grader.
+                    I also played the clarinet in the highschool marching band when I was a freshman, as well as the organ in my senior year in high school.
+                  </p><br>
+                </div>
+
+                <img style="float: left; padding: 5px" src="Pictures/Main-page/tennis.jpg" alt="" height="130">
+                <img style="float: right; padding: 5px" src="Pictures/Main-page/iceskating.jpg" alt="" height="130">
+                <h4 style="text-decoration: underline">Sports</h4>
+                <div class="descriptions">
+                  <p>
+                    During my junior year in high school, I started playing tennis with my friends and later joined the school tennis team.
+                    I became more and more passionate about the game, and spent a lot of my time watching professional tennis tournaments.
+                    I've been playing tennis ever since still hoping to find ways to refine my skills.
+                  </p><br>
+                </div>
+
+                <img style="float: left; padding: 5px" src="Pictures/Main-page/basketball.jpg" alt="" height="130">
+                <img style="float: right; padding: 5px" src="Pictures/Main-page/pingpong.jpg" alt="" height="130">
+                <div class="descriptions">
+                  <p>
+                    Other than tennis, I also enjoy playing basketball, freestyle ice skating, ping pong, skiing and snowboarding, golf, and many other sports.
+                  </p><br><br><br>
+                </div>
+
+                <img style="float: left; padding: 5px" src="Pictures/Main-page/gaming.jpg" alt="" height="130">
+                <img style="float: right; padding: 5px" src="Pictures/Main-page/poker.jpg" alt="" height="130">
+                <h4 style="text-decoration: underline">Games</h4>
+                <div class="descriptions">
+                  <p>
+                    Like most of us, I like playing games.
+                    I especially like playing video games, board games, and card games.
+                  </p><br><br><br>
+                </div>
+
+                <img style="float: left; padding: 5px" src="Pictures/Main-page/coding.jpg" alt="" height="130">
+                <h4 style="text-decoration: underline">Coding</h4>
+                <div class="descriptions">
+                  <p>
+                    During my free times, I also spend some time practicing my coding skills.
+                    Sometimes I go on coding websites such as Kattis, Codewar, Leetcode and solve problems to sharpen my skills.
+                    I also plan to write some basic guides on the things that I learn, to serve as notes as well as tutorials for other people.
+                  </p>
+                </div>
 
                 <br><br><br><br><br><br><br><br><br><br>
               </article>
-            </man>
+            </main>
           </div>
 
 <!-- Projects Tab -->
@@ -116,7 +186,7 @@
                 <h5 class="date">Date: 09/11/2017</h5>
               </div>
 
-              <article>
+              <article style="font-family: Arial, Helvetica, sans-serif;">
                 <h2 style="text-decoration: underline; color: #0493B7">Current Projects</h2>
                    <li>Python Learning</li>
                    <li>ePorfolio</li>
@@ -195,9 +265,7 @@
               </div>
 
               <article>
-                <p style="font-size:24px">&nbsp;&nbsp;<i class="fa fa-mobile-phone" style="font-size:30px"></i>&nbsp; +1(205)876-3234</p>
                 <p style="font-size:24px"><i class="material-icons" style="font-size:30px">email</i> howardliu43@gmail.com</p>
-
               </article>
             </main>
           </div>
@@ -205,10 +273,8 @@
           <br style="clear:both"><br><br><br><br>
 
 <!-- Footer -->
-
-        <div ng-include="'partials/footer.html'"></div>
-
-      </div>
+          <div ng-include="'partials/footer.html'"></div>
+        </div>
     </div>
   </body>
 </html>

@@ -24,21 +24,24 @@
         <div id="main-body">
           <!-- Notebook tab menu -->
           <div class="sidemenu">
+            <p style="font-size:16px">Programming Languages</p>
+            <nav  class="sidenav">
+              <ul>
+                <li><a href="#" onclick="switchCourse('notebook', event,'cpp')">C++</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'C')">C</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'python')">Python</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'java')">Java</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'java')">Javascript</a></li>
+                <li><a href="#" onclick="switchCourse('notebook', event,'C#')">C#</a></li>
+              </ur>
+            </nav><br>
+
             <p style="font-size:16px">Cheatsheets</p>
             <nav  class="sidenav">
               <ul>
                 <li><a href="#" onclick="switchCourse('notebook', event,'VIM')">VIM</a></li>
                 <li><a href="#" onclick="switchCourse('notebook', event,'Tmux')">Tmux</a></li>
                 <li><a href="#" onclick="switchCourse('notebook', event,'Github')">Github</a></li>
-              </ur>
-            </nav><br>
-
-            <p style="font-size:16px">Programming Languages</p>
-            <nav  class="sidenav">
-              <ul>
-                <li><a href="#" onclick="switchCourse('notebook', event,'cpp')">C++</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'python')">Python</a></li>
-                <li><a href="#" onclick="switchCourse('notebook', event,'java')">Java</a></li>
               </ur>
             </nav><br>
 
@@ -66,8 +69,100 @@
               <p>All notes go here.</p>
               <br>
 
+<!-- Programming Languages -->
               <div class="notes" style="text-align: center">
-                <div class="notebook" id="VIM">
+                <div class="notebook" id="cpp">
+                  <h3>C++</h3>
+                  <table>
+                    <tr>
+                      <td><a href="Notebooks/CPP/cpp-overload.html">Overloading</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="Notebooks/CPP/pointers.html">Pointers</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="Notebooks/CPP/recursion.html">Recursion</a></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="C" style="display:none">
+                  <h3>C</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="python" style="display:none">
+                  <h3>Python</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="java" style="display:none">
+                  <h3>Java</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="javascript" style="display:none">
+                  <h3>Javascript</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="notebook" id="C#" style="display:none">
+                  <h3>C#</h3>
+                  <table>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                    </tr>
+                  </table>
+                </div>
+
+<!-- Cheatsheets -->
+                <div class="notebook" id="VIM" style="display:none">
                   <h3>VIM</h3>
                 </div>
 
@@ -79,6 +174,7 @@
                   <h3>Github</h3>
                 </div>
 
+<!-- Computer Science -->
                 <div class="notebook" id="algorithm" style="display:none">
                   <h3>Algorithm</h3>
                   <table>
@@ -156,51 +252,6 @@
 
                 <div class="notebook" id="ai" style="display:none">
                   <h3>Artificial Intelligence</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="cpp" style="display:none">
-                  <h3>C++</h3>
-                  <table>
-                    <tr>
-                      <td><a href="Notebooks/CPP/cpp-overload.html">Overloading</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="Notebooks/CPP/pointers.html">Pointers</a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="Notebooks/CPP/recursion.html">Recursion</a></td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="python" style="display:none">
-                  <h3>Python</h3>
-                  <table>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                    <tr>
-                      <td>-</td>
-                    </tr>
-                  </table>
-                </div>
-
-                <div class="notebook" id="java" style="display:none">
-                  <h3>Java</h3>
                   <table>
                     <tr>
                       <td>-</td>

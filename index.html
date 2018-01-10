@@ -7,350 +7,299 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <script src="scripts/switch.js"></script>
-    <script src="scripts/general.js"></script>
+    <script src="script.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- W3school icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <title>Hsuan-Hau Liu</title>
   </head>
 
   <body>
-    <div class="container">
 <!-- Header -->
-        <header>
-          <a class="headerText" href="home.html">Hsuan-Hau Liu</a>
-          <img src="Pictures/Main-page/MainHead.jpg" style="height: 40%; width: 100%">
-        </header>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+      <a class="headerText" href="index.html">Hsuan-Hau Liu</a>
+      <img src="images/main-page/main-head.jpg" style="height: 40%; width: 100%">
+    </header>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
 <!-- Top navigation menu -->
-        <div class="topmenu">
-          <nav class="topnav">
-            <button class="tablink" onclick="switchTab(event,'tab-1', 'side-1')">Home</button>
-            <a href="about.html">About</a>
-            <a href="Resume.html">Résumé</a>
-            <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
-            <a href="notebook.html">Notebook</a>
-            <button class="tablink" onclick="switchTab(event,'tab-5')">Contact</button>
-          </nav>
-          <div class="banner">
-            <img src="Pictures/banner.png" style="position: absolute; width: 150px; margin-top: -10px">
-          </div>
-        </div>
+    <div class="topmenu">
+      <nav class="topnav">
+        <button class="tablink" onclick="switchTab(event,'tab-1')">Home</button>
+        <a href="about.html">About</a>
+        <a href="resume.html">Résumé</a>
+        <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
+      </nav>
+    </div><br><br>
 
 <!-- Main body begins here -->
-        <div id="main-body">
-<!-- Left side navigation menu -->
-          <!-- Home tab menu -->
-          <div class="sidemenu" id="side-1">
-            <div class="quote">
-              <img src="Pictures/quote1.png" style="width:100%; box-shadow:5px 5px #AEB6BF;">
-            </div><br><br>
+    <div class="container">
 
-            <nav class="sidenav">
-              <p style="font-weight: bold; font-size: 20px">My other links:</p>
-              <ul>
-                <li><a href="https://howardliusite.wordpress.com/">Blog</a></li>
-                <li><a href="https://github.com/hsuanhauliu">Github</a></li>
-              </ul>
-            </nav>
-            <br>
+      <!-- Home tab -->
+      <div class="row tab" id="tab-1">
+        <!-- menu -->
+        <div class="col-md-2" id="side-1">
+          <div class="hidden-xs hidden-sm quote">
+            <img src="images/quote1.png" style="width:100%; box-shadow:5px 5px #AEB6BF;">
+          </div><br><br>
+
+          <nav class="sidenav">
+            <p style="font-weight: bold; font-size: 20px">My other links:</p>
+            <ul>
+              <li><a href="https://howardliusite.wordpress.com/">Blog</a></li>
+              <li><a href="https://github.com/hsuanhauliu">Github</a></li>
+            </ul>
+          </nav><br>
+        </div>
+
+        <div class="col-xs-12 col-md-8" style="font-size: 23px">
+          <h1 class="title">std::cout << "Hello World!";</h1>
+          <img src="images/divider.png" width="100%">
+          <img style="float: left; padding: 10px" src="images/Main-page/profile.jpg" alt="" width="30%">
+          <div class="descriptions">
+            <p>
+              Hey there! My name is Hsuan-Hau Liu (劉軒豪), nickname Howard.
+              I am currently a CS Master's student at the University of Southern California, specializing in Intelligent Robotics.
+              I love coding and learning everything I can about computers.
+              Mainly, I focus on Artificial Intelligence, Web development, and Networking.
+              In the future, I hope to use my skills to develop new AI techonology and make contribution to the advancement of our society.
+            </p><br>
           </div>
 
-
-<!-- Home Tab -->
-          <div class="tab" id="tab-1">
-            <main class="front-page">
-              <div class="top">
-                <h1 class="title">std::cout << "Hello World!";</h1>
-                <h5 class="date">Date: 12/30/2017</h5>
-              </div>
-              <br><br>
-
-              <article style="font-size: 23px">
-                <img src="Pictures/divider.png" width="100%">
-
-                <img style="float: left; padding: 10px" src="Pictures/Main-page/profile.jpg" alt="" width="30%">
-                <div class="descriptions">
-                  <p>
-                    Hey there! My name is Hsuan-Hau Liu (劉軒豪), nickname Howard.
-                    I am currently a CS Master's student at the University of Southern California, specializing in Intelligent Robotics.
-                    I love coding and learning everything I can about computers.
-                    Mainly, I focus on Artificial Intelligence, Web development, and Networking.
-                    In the future, I hope to use my skills to develop new AI techonology and make contribution to the advancement of our society.
-                  </p><br>
-                </div>
-
-                <img src="Pictures/divider.png" width="100%">
-
-                <img style="float: right; padding: 10px" src="Pictures/Main-page/Taiwan.jpg" alt="" width="30%">
-                <div class="descriptions">
-                  <h3 style="text-decoration: underline">Taiwan</h3>
-                  <p>
-                    I was born in Taiwan and raised by my mother and grandparents, whom I love dearly.
-                    Came to the U.S. for education when I was about 14 years old.
-                  </p>
-                </div>
-
-                <img src="Pictures/divider.png" width="100%">
-                <div class="descriptions">
-                  <h3 style="text-decoration: underline">Howard the Programmer</h3>
-                  <p>
-                    My favorite programming language is C++ due to its speed and high-level syntax.
-                    I have done a few projects using Java, C.
-                    Occasionally, I use Python to write simple scripts for myself and sometimes during coding practice.
-                    When writing websites, I use Javacript for obvious reasons.
-
-                    My programming tools are VIM, tmux, inside of a terminal on my Macbook Pro.
-                    In a Windows environment, I use Visual Studio to code.
-                    For projects, I like to use Github for code sharing and program development.
-                  </p><br>
-                </div>
-
-                <img src="Pictures/divider.png" width="100%">
-
-                <img style="float: left; padding: 5px" src="Pictures/Main-page/piano.jpg" alt="" height="130">
-                <img style="float: right; padding: 5px" src="Pictures/Main-page/cello.jpg" alt="" height="130">
-                <h4 style="text-decoration: underline">Music</h4>
-                <div class="descriptions">
-                  <p>
-                    At the age of 5, I started to learn how to play the piano.
-                    I joined the school orchestra when I entered middle school, and became first chair cellist when I was an eighth grader.
-                    I also played the clarinet in the highschool marching band when I was a freshman, as well as the organ in my senior year in high school.
-                  </p><br>
-                </div>
-
-                <img style="float: left; padding: 5px" src="Pictures/Main-page/tennis.jpg" alt="" height="130">
-                <img style="float: right; padding: 5px" src="Pictures/Main-page/iceskating.jpg" alt="" height="130">
-                <h4 style="text-decoration: underline">Sports</h4>
-                <div class="descriptions">
-                  <p>
-                    During my junior year in high school, I started playing tennis with my friends and later joined the school tennis team.
-                    I became more and more passionate about the game, and spent a lot of my time watching professional tennis tournaments.
-                    I've been playing tennis ever since still hoping to find ways to refine my skills.
-                  </p><br>
-                </div>
-
-                <img style="float: left; padding: 5px" src="Pictures/Main-page/basketball.jpg" alt="" height="130">
-                <img style="float: right; padding: 5px" src="Pictures/Main-page/pingpong.jpg" alt="" height="130">
-                <div class="descriptions">
-                  <p>
-                    Other than tennis, I also enjoy playing basketball, freestyle ice skating, ping pong, skiing and snowboarding, golf, and many other sports.
-                  </p><br><br><br>
-                </div>
-
-                <img style="float: left; padding: 5px" src="Pictures/Main-page/gaming.jpg" alt="" height="130">
-                <img style="float: right; padding: 5px" src="Pictures/Main-page/poker.jpg" alt="" height="130">
-                <h4 style="text-decoration: underline">Games</h4>
-                <div class="descriptions">
-                  <p>
-                    Like many of us, I like playing games.
-                    I especially like playing video games, board games, and card games.
-                  </p><br><br><br>
-                </div>
-
-                <img style="float: left; padding: 5px" src="Pictures/Main-page/coding.jpg" alt="" height="130">
-                <h4 style="text-decoration: underline">Coding</h4>
-                <div class="descriptions">
-                  <p>
-                    During my free time, I also spend some time practicing my coding skills.
-                    Sometimes I go on coding websites such as Kattis, Codewar, Leetcode and solve problems to sharpen my skills.
-                    I also plan to write some basic guides on the things that I learn, to serve as notes as well as tutorials for other people.
-                  </p>
-                </div>
-
-                <img src="Pictures/divider.png" width="100%">
-                <img src="Pictures/Main-page/skitrip.jpg" width="100%">
-
-              </article>
-            </main>
+          <img src="images/divider.png" width="100%">
+          <img style="float: right; padding: 10px" src="images/Main-page/Taiwan.jpg" alt="" width="30%">
+          <div class="descriptions">
+            <h3 class="headings">Taiwan</h3>
+            <p>
+              I was born in Taiwan and raised by my mother and grandparents, whom I love dearly.
+              Came to the U.S. for education when I was about 14 years old.
+            </p>
           </div>
 
-<!-- Projects Tab -->
-          <div id="tab-4" class="tab" style="display:none">
-            <main class="post">
-              <div class="top">
-                <h1 class="title">Projects</h1>
-                <h5 class="date">Date: 12/30/2017</h5>
-              </div>
+          <img src="images/divider.png" width="100%">
+          <div class="descriptions">
+            <h3 class="headings">Howard the Programmer</h3>
+            <p>
+              My favorite programming language is C++ due to its speed and high-level syntax.
+              I have done a few projects using Java, C.
+              Occasionally, I use Python to write simple scripts for myself and sometimes during coding practice.
+              Sometimes I write websites for myself using HTML, CSS, minimal Javascript, Bootstrap, SQL, etc.
 
-              <article>
-                <div class="projects" style="margin-left: 100px">
-                  <h2 style="color: #0493B7">Current Projects</h2>
-                  <ul>
-                    <li>Sudoku Solver</li>
-                    <li>Python Learning</li>
-                    <li>Web technology learning (bootstrap, Javascript, Ajax, jQuery...)</li>
-                  </ul>
-                  <br>
-                </div>
-
-                <div class="projects" style="margin-left: 100px">
-                  <h2 style="color: #0493B7">Past Projects</h2>
-                  <h3>Class Projects</h3>
-                  <ul>
-                    <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab02">
-                      Distributed AubieBook Messaging System
-                    </a></li>
-                    <p>- AubieBook Messaging software written in C++. This was a individual lab assignment for Software Construction class.</p>
-
-                    <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab03">
-                      The Maze Runner with Snakes and Ladders
-                    </a></li>
-                    <p>
-                      - With pre-designed game map, the program creates a maze runner game with snakes and ladders.
-                      The program was written in C++.
-                      This was a individual lab assignment for Software Construction class.
-                    </p>
-
-                    <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab04">
-                      Bank Transaction System
-                    </a></li>
-                    <p>- A simple bank transaction system written in C++. This was a individual lab assignment for Software Construction class.</p>
-
-                    <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP3220%20Principles%20of%20Programming%20Languages/HW6">
-                      Concurrent Programming - Bank Clerks Simulation
-                    </a></li>
-                    <p>
-                      - A simple bank simulation program created using concurrent programming technique.
-                      The program was written in Java.
-                      This was a programming assignment for Principles of Programming Languages class.
-                    </p>
-
-                    <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP3270%20Intro%20to%20Algorithms/Programming_Assignment">
-                      Algorithm Analysis
-                    </a></li>
-                    <p>
-                      - Empirical analysis of four different algorithms. The program was written in C++.
-                      This was a programming assignment for Algorithm class.
-                    </p>
-
-                    <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP5000%20Web%20Development/Term_Project">
-                      Online Exam Web Application
-                    </a></li>
-                    <p>
-                      - An online web application for taking exams. The whole system was made using JSP, XML, and MySQL.
-                      This was a group project for our Web Development class.
-                    </p>
-
-                    <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP4320%20Intro%20to%20Computer%20Networks/Lab1">
-                      String Processing Server & Client
-                    </a></li>
-                    <p>
-                      - The goal of this project was to create two string processing servers and clients using TCP and UDP.
-                      Both servers were written in C and clients were written in Java.
-                      This was a group lab assignment in our Computer Networks class.
-                    </p>
-
-                    <li><a href="https://github.com/hsuanhauliu/Computer-Networks-Lab02">
-                      Proxy DNS Server
-                    </a></li>
-                    <p>
-                      - We created a simple proxy DNS server and client using UDP.
-                      The server was written in C and client was written in Java.
-                      This was a group lab assignment in our Computer Networks class.
-                    </p>
-
-                    <li><a href="https://github.com/hsuanhauliu/AI-Project">
-                      Machine-Improvised-Music
-                    </a></li>
-                    <p>
-                      - Using modified Hill Climbing algorithm, we were able to create a simple program that can make music.
-                      The program was written entirely using Python and an open-source library called python-midi on Github.
-                      This program was made for a final project in our AI class.
-                    </p>
-
-                    <li><a href="https://github.com/hsuanhauliu/Lab03">
-                      Chatroom program
-                    </a></li>
-                    <p>
-                      - Programs designed to be used as a chatroom system using UDP and TCP connections.
-                      The client program was written in C and the server program was written in Java.
-                      This was a group lab assignment in our Computer Networks class.
-                    </p>
-                  </ul>
-                  <br>
-
-                  <h3>Personal Projects</h3>
-                  <ul>
-                    <li><a href="https://github.com/hsuanhauliu/GoogleChrome-Plugins/tree/master/RTNT">
-                      RTNT (Recommendation Thanks No Thanks)
-                    </a></li>
-                    <p> - A simple Google Chrome plugin that hides the recommendation section of Youtube.</p>
-                  </ul>
-                  <br>
-
-                  <h2 style="color: #0493B7">Future Projects</h2>
-                </div>
-                <table contenteditable="true" style="white-space: nowrap">
-                  <tr style="font-size: 20px; background-color: #AEADAD; text-align: center">
-                    <th>Learning</th>
-                    <th>Programming Projects</th>
-                  </tr>
-                  <tr style="vertical-align: text-top;">
-                    <td>
-                      Programming Languages
-                      <li>C# Language</li>
-                      <li>PHP Language</li>
-                      Technology
-                      <li><a href="https://www.technologyreview.com/s/603495/10-breakthrough-technologies-2017-practical-quantum-computers/">Quantum Computer</a></li>
-                    </td>
-                    <td>
-                      Web (HTML & Javascript)
-                      <li>Tetris (w/ Javascript)</li>
-                      <li>Maze Path Finder</li>
-                      <li>Ragnarok Online Skill Simulator (w/ Javascript)</li>
-                      <li>Snake Game</li>
-                      <br>
-                      Software
-                      <li>Markdown Editor</li>
-                      <li>Pictures Encryption Program</li>
-                      <li>Web Scrapping (w/ Python)</li>
-                      <li>Messaging App</li>
-                      <li>AI Poker Player (Texas Hold'em specific)</li>
-                      <li>3D Interior Design Simulator</li>
-                    </td>
-                  </tr>
-                </table>
-
-              </article>
-            </main>
+              My programming tools are VIM, tmux, inside of a terminal on my Macbook Pro.
+              In a Windows environment, I use Visual Studio to code.
+              For projects, I like to use Github for code sharing and program development.
+            </p><br>
           </div>
 
-<!-- Contact Tab -->
-          <div id="tab-5" class="tab" style="display:none">
-            <main class="post">
-              <div class="top">
-                <h1 class="title">Contact</h1>
-                <h5 class="date">Date: 11/03/2017</h5>
-              </div>
-
-              <article style="background-color: gray; color: white; width: 100%; height: 300px">
-                <div class="blocks" id="block-1" style="float: left; width: 50%; text-align: center; margin-top: 40px">
-                  <h1 style="text-decoration: underline">Hsuan-Hau Liu</h1>
-                  <p style="font-size:24px">
-                    Computer Science<br>
-                    Auburn University class of 2017<br>
-                    <i class="material-icons" style="font-size:30px">email</i> <a href="mailto:howardliu43@gmail.com" style="text-decoration: none; color: white; font-size: 20px">howardliu43@gmail.com</a>
-                  </p>
-                </div>
-                <div class="blocks" id="block-2" style="float: right; width: 50%; height: 100%">
-                  <img style="height: 100%" src="Pictures/Main-page/Auburn.jpg" alt="">
-                </div>
-              </article>
-            </main>
+          <img src="images/divider.png" width="100%">
+          <img style="float: left; padding: 5px" src="images/Main-page/piano.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/Main-page/cello.jpg" alt="" height="130">
+          <p class="headings">Music</p>
+          <div class="descriptions">
+            <p>
+              At the age of 5, I learned to play the piano.
+              I became the first chair cellist in the the school orchestra when I was an eighth grader.
+              I also played the clarinet in highschool marching band, as well as the organ in my senior year in high school.
+            </p><br>
           </div>
 
-          <br style="clear:both"><br><br><br><br>
+          <img style="float: left; padding: 5px" src="images/Main-page/tennis.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/Main-page/iceskating.jpg" alt="" height="130">
+          <p class="headings">Sports</p>
+          <div class="descriptions">
+            <p>
+              During my junior year in high school, I started playing tennis with my friends and later joined the school tennis team.
+              I love playing tennis and spending my time watching professional tennis tournaments.
+            </p><br>
+          </div>
+
+          <img style="float: left; padding: 5px" src="images/Main-page/basketball.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/Main-page/pingpong.jpg" alt="" height="130">
+          <div class="descriptions">
+            <p>
+              Other than tennis, I also enjoy playing basketball, freestyle ice skating, ping pong, skiing and snowboarding, golf, and many other sports.
+            </p><br><br><br>
+          </div>
+
+          <img style="float: left; padding: 5px" src="images/Main-page/gaming.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/Main-page/poker.jpg" alt="" height="130">
+          <p class="headings">Games</p>
+          <div class="descriptions">
+            <p>
+              Like many people, I like playing games.
+              I especially like playing video games, board games, and card games.
+            </p><br><br><br>
+          </div>
+
+          <img style="float: left; padding: 5px" src="images/Main-page/coding.jpg" alt="" height="130">
+          <p class="headings">Coding</p>
+          <div class="descriptions">
+            <p>
+              During my free time, I enjoy spending my time practicing my programming skills.
+              Sometimes I go on coding websites such as Kattis, Codewar, Leetcode and solve problems to sharpen my skills.
+            </p>
+          </div>
+
+          <img src="images/divider.png" width="100%">
+          <img src="images/Main-page/skitrip.jpg" width="100%">
+        </div>
+
+        <div class="hidden-xs hidden-sm col-md-2 banner">
+          <img src="images/banner.png" style="position: absolute; width: 150px; margin-top: -100px">
+        </div>
+      </div>
+
+  <!-- Projects Tab -->
+      <div class="row tab" id="tab-4" style="display:none">
+        <h1 class="title">Projects</h1>
+
+        <div class="projects" style="margin-left: 100px">
+          <h2 style="color: #0493B7">Current Projects</h2>
+          <ul>
+            <li>Sudoku Solver</li>
+            <li>Python Learning</li>
+            <li>Web technology learning (bootstrap, Javascript, Ajax, jQuery...)</li>
+          </ul><br>
+        </div>
+
+        <div class="projects" style="margin-left: 100px">
+          <h2 style="color: #0493B7">Past Projects</h2>
+          <h3>Class Projects</h3>
+          <ul>
+            <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab02">
+              Distributed AubieBook Messaging System
+            </a></li>
+          <p>- AubieBook Messaging software written in C++. This was a individual lab assignment for Software Construction class.</p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab03">
+            The Maze Runner with Snakes and Ladders
+          </a></li>
+          <p>
+            - With pre-designed game map, the program creates a maze runner game with snakes and ladders.
+            The program was written in C++.
+            This was a individual lab assignment for Software Construction class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab04">
+            Bank Transaction System
+          </a></li>
+          <p>- A simple bank transaction system written in C++. This was a individual lab assignment for Software Construction class.</p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP3220%20Principles%20of%20Programming%20Languages/HW6">
+            Concurrent Programming - Bank Clerks Simulation
+          </a></li>
+          <p>
+            - A simple bank simulation program created using concurrent programming technique.
+            The program was written in Java.
+            This was a programming assignment for Principles of Programming Languages class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP3270%20Intro%20to%20Algorithms/Programming_Assignment">
+            Algorithm Analysis
+          </a></li>
+          <p>
+            - Empirical analysis of four different algorithms. The program was written in C++.
+            This was a programming assignment for Algorithm class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP5000%20Web%20Development/Term_Project">
+            Online Exam Web Application
+          </a></li>
+          <p>
+            - An online web application for taking exams. The whole system was made using JSP, XML, and MySQL.
+            This was a group project for our Web Development class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP4320%20Intro%20to%20Computer%20Networks/Lab1">
+            String Processing Server & Client
+          </a></li>
+          <p>
+            - The goal of this project was to create two string processing servers and clients using TCP and UDP.
+            Both servers were written in C and clients were written in Java.
+            This was a group lab assignment in our Computer Networks class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/Computer-Networks-Lab02">
+            Proxy DNS Server
+          </a></li>
+          <p>
+            - We created a simple proxy DNS server and client using UDP.
+            The server was written in C and client was written in Java.
+            This was a group lab assignment in our Computer Networks class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/AI-Project">
+            Machine-Improvised-Music
+          </a></li>
+          <p>
+            - Using modified Hill Climbing algorithm, we were able to create a simple program that can make music.
+            he program was written entirely using Python and an open-source library called python-midi on Github.
+            This program was made for a final project in our AI class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/Lab03">
+            Chatroom program
+          </a></li>
+            <p>
+              - Programs designed to be used as a chatroom system using UDP and TCP connections.
+              The client program was written in C and the server program was written in Java.
+              This was a group lab assignment in our Computer Networks class.
+            </p>
+          </ul><br>
+
+          <h3>Personal Projects</h3>
+            <ul>
+              <li><a href="https://github.com/hsuanhauliu/GoogleChrome-Plugins/tree/master/RTNT">
+                RTNT (Recommendation Thanks No Thanks)
+              </a></li>
+              <p> - A simple Google Chrome plugin that hides the recommendation section of Youtube.</p>
+            </ul><br>
+
+          <h2 style="color: #0493B7">Future Projects</h2>
+        </div>
+        <table contenteditable="true" style="white-space: nowrap">
+          <tr style="font-size: 20px; background-color: #AEADAD; text-align: center">
+            <th>Learning</th>
+            <th>Programming Projects</th>
+          </tr>
+          <tr style="vertical-align: text-top;">
+            <td>
+              Programming Languages
+              <li>C# Language</li>
+              <li>PHP Language</li>
+              Technology
+              <li><a href="https://www.technologyreview.com/s/603495/10-breakthrough-technologies-2017-practical-quantum-computers/">Quantum Computer</a></li>
+            </td>
+
+            <td>
+              Web (HTML & Javascript)
+              <li>Tetris (w/ Javascript)</li>
+              <li>Maze Path Finder</li>
+              <li>Ragnarok Online Skill Simulator (w/ Javascript)</li>
+              <li>Snake Game</li><br>
+              Software
+              <li>Markdown Editor</li>
+              <li>images Encryption Program</li>
+              <li>Web Scrapping (w/ Python)</li>
+              <li>Messaging App</li>
+              <li>AI Poker Player (Texas Hold'em specific)</li>
+              <li>3D Interior Design Simulator</li>
+            </td>
+          </tr>
+        </table>
+      </div><br style="clear:both"><br><br><br><br>
 
 <!-- Footer -->
-          <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>
-        </div>
+      <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>
     </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 // Change tabs
-function switchTab(evt, Name, Menu) {
+function switchTab(evt, Name) {
   var i, x;
 
   // Get all class "tab" tags
@@ -10,17 +10,8 @@ function switchTab(evt, Name, Menu) {
       x[i].style.display = "none";
   }
 
-  // Get all side menus
-  x = document.getElementsByClassName("sidemenu");
-
-  // Change all display styles to "none" to hide them.
-  for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-  }
-
   // Display current tab content.
   document.getElementById(Name).style.display = "block";
-  document.getElementById(Menu).style.display = "block";
 }
 
 // Change pages
@@ -37,4 +28,21 @@ function switchCourse(page, evt, Course) {
 
   // Display current tab content.
   document.getElementById(Course).style.display = "block";
+}
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

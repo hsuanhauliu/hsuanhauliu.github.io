@@ -1,67 +1,25 @@
-/*
-    Style sheet for home page
-    _______________________________
-    |            body             |
-    |  _________________________  |
-    |  |      .container       |  |
-    |  |  ___________________  |  |
-    |  |  |      header     |  |  |
-    |  |  |_________________|  |  |
-    |  |  ___________________  |  |
-    |  |  |   .topmenu      |  |  |
-    |  |  |  _____________  |  |  |
-    |  |  |  |  .topnav  |  |  |  |
-    |  |  |  |  .banner  |  |  |  |
-    |  |  |  |___________|  |  |  |
-    |  |  |_________________|  |  |
-    |  |  ___________________  |  |
-    |  |  |    #main-body   |  |  |
-    |  |  |  _____________  |  |  |
-    |  |  |  | .sidemenu |  |  |  |
-    |  |  |  |___________|  |  |  |
-    |  |  |  _____________  |  |  |
-    |  |  |  |    .tab   |  |  |  |
-    |  |  |  | _________ |  |  |  |
-    |  |  |  | |  .top | |  |  |  |
-    |  |  |  | |_______| |  |  |  |
-    |  |  |  | _________ |  |  |  |
-    |  |  |  | |article| |  |  |  |
-    |  |  |  | |_______| |  |  |  |
-    |  |  |  | _________ |  |  |  |
-    |  |  |  | | footer| |  |  |  |
-    |  |  |  | |_______| |  |  |  |
-    |  |  |  |___________|  |  |  |
-    |  |  |_________________|  |  |
-    |  |_______________________|  |
-    |_____________________________|
-*/
-
 /* Reset margin and padding */
 * {
     margin:0;
-    padding:0;
+}
+
+html {
+    font-family: "Roboto", serif;
+    background: #262626;
 }
 
 body {
     height: 100%;
     width: 100%;
     background-color: #262626;
-    background-image: url("../Pictures/background.jpg");
+    background-image: url("images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-size: 100% 100%;
 }
 
-.container {
-  font-family: "Roboto", serif;
-}
-
 /* Everything below top menu */
-#main-body {
-    width: 90%;
-}
-
 /* Scroll to the top button formatting */
 #myBtn {
     display: none;
@@ -129,10 +87,6 @@ header {
     height: 100%;
 }
 
-.topnav, .tablink {
-    font-family: "Arial Black", Gadget, sans-serif;
-}
-
 .topnav button{
     background-color: #333;
     float: left;
@@ -140,7 +94,7 @@ header {
     color: #f2f2f2;
     padding: 15px 16px;
     font-size: 17px;
-    cursor: pointer;
+    font-family: "Arial Black", Gadget, sans-serif;
 }
 
 .topnav button:focus {
@@ -148,19 +102,19 @@ header {
 }
 
 .topnav a {
-    background-color: #333;
     float: left;
     display: block;
     color: #f2f2f2;
     padding: 15px 16px;
     font-size: 17px;
-    cursor: pointer;
     text-decoration: none;
+    font-family: "Arial Black", Gadget, sans-serif;
 }
 
 .topnav a:hover, .topnav button:hover {
     background-color: #ddd;
     color: black;
+    text-decoration: none;
 }
 
 .topnav a.active, .topnav button.active {
@@ -170,18 +124,8 @@ header {
 
 
 /******************* Left navigation *******************/
-.sidemenu {
-    width: 180px;
-    float: left;
-    width: 180px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 12px;
-    padding: 20px;
-}
-
 .sidenav {
-    font-family: Papyrus, fantasy;
+    text-align: center;
 }
 
 .sidenav ul {
@@ -217,51 +161,25 @@ header {
     color: white;
 }
 
-/************************************ Main ************************************/
-main {
-    margin-left: 30px;
-    margin-top: 30px;
-    width: 800px;
-    min-height: 100vh;
-}
-
-/* Used for main page */
-.front-page{
-    float: left;
-}
-
-/* Posts format */
-.post {
-    margin-left: auto;
-    margin-right: auto;
-    font-family: fantasy;
-}
-
-/******************* Header *******************/
-.top {
-    border-bottom: 1px solid lightgray;
-    height: 40px;
-    color: #494949;
-}
-
+/******************* Title *******************/
 .title {
+    font-family: fantasy;
+    border-bottom: 1px solid lightgray;
+    color: #494949;
     text-align:left;
-    float:left;
     font-size: 40px;
 }
 
-.date {
-    text-align:right;
-    float:right;
-    margin-top: 28px;
-    white-space:pre;
+.headings {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.post {
+    margin: 0 auto;
 }
 
 /******************* Artifcle *******************/
-article {
-    clear: both;
-}
-
 p {
     word-wrap: break-word;
     font-size: 18px;
@@ -269,12 +187,7 @@ p {
 
 .descriptions {
     text-align: justify;
-    font-family: Optima, sans-serif;
-}
-
-iframe {
-    display: block;
-    margin: 0 auto;
+    font-size: 12px;
 }
 
 /* Code snippet formatting */
@@ -283,7 +196,6 @@ iframe {
 }
 
 pre {
-    max-width:600px;
     margin-left:0;
     overflow-y: scroll;
 }
@@ -302,15 +214,6 @@ table, th, td {
 
 tr:hover {
     background-color: #f5f5f5;
-}
-
-/******************* Audio *******************/
-audio {
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 24px;
-    position: fixed;
 }
 
 /******************* Copyright footer *******************/

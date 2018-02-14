@@ -1,197 +1,304 @@
 <!--
-    About Page
-    Built using W3School template:
-      https://www.w3schools.com/w3css/tryw3css_templates_bw_portfolio.htm
+    Main Page
 -->
 
 <!DOCTYPE html>
 
 <html>
-<title>Howard's Playground - About</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-  .w3-row-padding img {margin-bottom: 12px}
-  .bgimg {
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('images/profile2.jpg');
-    min-height: 100%;
-  }
-</style>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="script.js"></script>
 
-<body>
-    <!-- Sidebar with image -->
-    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
-      <div class="bgimg"></div>
-    </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- W3school icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-    <nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-      <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
-        <i class="fa fa-remove"></i>
-      </a>
-      <div class="w3-bar-block w3-center">
-        <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
-        <a href="#about" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">About</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Contact</a>
-      </div>
-    </nav>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Page Content -->
-    <div class="w3-main w3-padding-large" style="margin-left:40%">
+    <title>Hsuan-Hau Liu</title>
+  </head>
 
-      <!-- Menu icon to open sidebar -->
-      <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <body>
+<!-- Header -->
+    <header>
+      <a class="headerText" href="about.html">Hsuan-Hau Liu</a>
+      <img src="images/main-page/main-head.jpg" style="height: 40%; width: 100%">
+    </header>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-      <!-- Header -->
-      <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-        <h1 class="w3-jumbo"><b>Hsuan-Hau Liu</b></h1>
-        <p>CS Master's student</p>
-        <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:60%;margin:auto;">
-        <img src="/w3images/profile_girl.jpg" class="w3-image w3-hide-large w3-hide-medium w3-round" width="1000" height="1333">
-        <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-          <i class="fa fa-download"></i><a href="resume.html">My Resume</a>
-        </button>
-        <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-           <a href="index.html">My Website</a>
-        </button>
-        <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
-           <a href="https://github.com/hsuanhauliu">Github</a>
-        </button>
-      </header>
+<!-- Top navigation menu -->
+    <div class="topmenu">
+      <nav class="topnav">
+        <button class="tablink" onclick="switchTab(event,'tab-1')">Home</button>
+        <a href="index.html">About</a>
+        <a href="resume.html">Résumé</a>
+        <button class="tablink" onclick="switchTab(event,'tab-4')">Projects</button>
+      </nav>
+    </div><br><br>
 
-      <!-- Portfolio Section -->
-      <div class="w3-padding-32 w3-content" id="portfolio">
-        <!-- Grid for photos -->
-        <div class="w3-row-padding" style="margin:0 -16px">
-          <div class="w3-half">
-            <img src="images/about1.jpg" style="width:100%">
-            <img src="images/about2.jpg" style="width:100%">
-            <img src="images/about3.jpg" style="width:100%">
-            <img src="images/about4.jpg" style="width:100%">
+<!-- Main body begins here -->
+    <div class="container">
+
+      <!-- Home tab -->
+      <div class="row tab" id="tab-1">
+        <!-- menu -->
+        <div class="col-md-2" id="side-1">
+          <div class="hidden-xs hidden-sm quote">
+            <img src="images/quote1.png" style="width:100%; box-shadow:5px 5px #AEB6BF;">
+          </div><br><br>
+
+          <nav class="sidenav">
+            <p style="font-weight: bold; font-size: 20px">My other links:</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/hsuanhauliu/">LinkedIn</a></li>
+              <li><a href="https://github.com/hsuanhauliu">Github</a></li>
+            </ul>
+          </nav><br>
+        </div>
+
+        <div class="col-xs-12 col-md-8" style="font-size: 23px">
+          <h1 class="title">Hello World!</h1>
+          <img src="images/divider.png" width="100%">
+          <img style="float: left; padding: 10px" src="images/main-page/profile.jpg" alt="" width="30%">
+          <div class="descriptions">
+            <p>
+              Hey there! My name is Hsuan-Hau Liu (劉軒豪), nickname Howard.
+              I am currently a CS Master's student at the University of Southern California, specializing in Intelligent Robotics.
+              I love coding and learning everything I can about computers.
+              Mainly, I focus on Artificial Intelligence, Web development, and Networking.
+              In the future, I hope to use my skills to develop new AI techonology and make contribution to the advancement of our society.
+            </p><br>
           </div>
 
-          <div class="w3-half">
-            <img src="images/about5.jpg" style="width:100%">
-            <img src="images/about6.jpg" style="width:100%">
-            <img src="images/about7.jpg" style="width:100%">
+          <img src="images/divider.png" width="100%">
+          <img style="float: right; padding: 10px" src="images/main-page/Taiwan.jpg" alt="" width="30%">
+          <div class="descriptions">
+            <h3 class="headings">Taiwan</h3>
+            <p>
+              I was born in Taiwan and raised by my mother and grandparents, whom I love dearly.
+              Came to the U.S. for education when I was about 14 years old.
+            </p>
           </div>
-        <!-- End photo grid -->
+
+          <img src="images/divider.png" width="100%">
+          <div class="descriptions">
+            <h3 class="headings">Howard the Programmer</h3>
+            <p>
+              My favorite programming language is C++ due to its speed and high-level syntax.
+              I have done a few projects using Java, C.
+              Occasionally, I use Python to write simple scripts for myself and sometimes during coding practice.
+              Sometimes I write websites for myself using HTML, CSS, minimal Javascript, Bootstrap, SQL, etc.
+
+              My programming tools are VIM, tmux, inside of a terminal on my Macbook Pro.
+              In a Windows environment, I use Visual Studio to code.
+              For projects, I like to use Github for code sharing and program development.
+            </p><br>
+          </div>
+
+          <img src="images/divider.png" width="100%">
+          <img style="float: left; padding: 5px" src="images/main-page/piano.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/main-page/cello.jpg" alt="" height="130">
+          <p class="headings">Music</p>
+          <div class="descriptions">
+            <p>
+              At the age of 5, I learned to play the piano.
+              I became the first chair cellist in the the school orchestra when I was an eighth grader.
+              I also played the clarinet in highschool marching band, as well as the organ in my senior year in high school.
+            </p><br>
+          </div>
+
+          <img style="float: left; padding: 5px" src="images/main-page/tennis.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/main-page/iceskating.jpg" alt="" height="130">
+          <p class="headings">Sports</p>
+          <div class="descriptions">
+            <p>
+              During my junior year in high school, I started playing tennis with my friends and later joined the school tennis team.
+              I love playing tennis and spending my time watching professional tennis tournaments.
+            </p><br>
+          </div>
+
+          <img style="float: left; padding: 5px" src="images/main-page/basketball.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/main-page/pingpong.jpg" alt="" height="130">
+          <div class="descriptions">
+            <p>
+              Other than tennis, I also enjoy playing basketball, freestyle ice skating, ping pong, skiing and snowboarding, golf, and many other sports.
+            </p><br><br><br>
+          </div>
+
+          <img style="float: left; padding: 5px" src="images/main-page/gaming.jpg" alt="" height="130">
+          <img style="float: right; padding: 5px" src="images/main-page/poker.jpg" alt="" height="130">
+          <p class="headings">Games</p>
+          <div class="descriptions">
+            <p>
+              Like many people, I like playing games.
+              I especially like playing video games, board games, and card games.
+            </p><br><br><br>
+          </div>
+
+          <img style="float: left; padding: 5px" src="images/main-page/coding.jpg" alt="" height="130">
+          <p class="headings">Coding</p>
+          <div class="descriptions">
+            <p>
+              During my free time, I enjoy spending my time practicing my programming skills.
+              Sometimes I go on coding websites such as Kattis, Codewar, Leetcode and solve problems to sharpen my skills.
+            </p>
+          </div>
+
+          <img src="images/divider.png" width="100%">
+          <img src="images/main-page/skitrip.jpg" width="100%">
         </div>
-      <!-- End Portfolio Section -->
+
+        <div class="hidden-xs hidden-sm col-md-2 banner">
+          <img src="images/banner.png" style="position: absolute; width: 150px; margin-top: -100px">
+        </div>
       </div>
 
-      <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-        <h2>About</h2>
-        <hr class="w3-opacity">
-        <p>Hey there! My name is Hsuan-Hau Liu, nicknamed Howard.
-           I am from a small island country called Taiwan.
-           It has been 8 years since I moved to the U.S.
-           I recently received my Bachelor's degree in Computer Science from Auburn Univeristy.
-           Next semester, I'll be pursuing a Master's degree in Computer Science at the University of Southern California.
-        </p><br>
-        <h3>My Professional Skills</h3>
-        <hr class="w3-opacity">
-        <p class="w3-wide">Programming</p>
-        <div class="w3-light-grey">
-          <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">1+ yr</div>
-        </div>
-        <p class="w3-wide">Web Development</p>
-        <div class="w3-light-grey">
-          <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:70%">1 year</div>
+  <!-- Projects Tab -->
+      <div class="row tab" id="tab-4" style="display:none">
+        <h1 class="title">Projects</h1>
+
+        <div class="projects" style="margin-left: 100px">
+          <h2 style="color: #0493B7">Current Projects</h2>
+          <ul>
+            <li>Web technology learning (bootstrap, Javascript, Ajax, jQuery...)</li>
+            <li>USC Autonomous Underwater Vehicle navigation team project</li>
+          </ul><br>
         </div>
 
-        <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
-          <div class="w3-threequarter w3-section">
-            <span class="w3-xlarge">Programming Languages</span><br>
-            Main: C/C++, Java <br>
-            Others: HTML, Javascript, CSS<br>
-            Learning: Python
-          </div>
-          <div class="w3-quarter w3-section">
-            <span class="w3-xlarge">Tools</span><br>
-            VIM + Tmux<br>
-            Visual Studio<br>
-          </div>
+        <div class="projects" style="margin-left: 100px">
+          <h2 style="color: #0493B7">Past Projects</h2>
+          <h3>Class Projects</h3>
+          <ul>
+            <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab02">
+              Distributed AubieBook Messaging System
+            </a></li>
+          <p>- AubieBook Messaging software written in C++. This was a individual lab assignment for Software Construction class.</p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab03">
+            The Maze Runner with Snakes and Ladders
+          </a></li>
+          <p>
+            - With pre-designed game map, the program creates a maze runner game with snakes and ladders.
+            The program was written in C++.
+            This was a individual lab assignment for Software Construction class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP2710/Lab04">
+            Bank Transaction System
+          </a></li>
+          <p>- A simple bank transaction system written in C++. This was a individual lab assignment for Software Construction class.</p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP3220%20Principles%20of%20Programming%20Languages/HW6">
+            Concurrent Programming - Bank Clerks Simulation
+          </a></li>
+          <p>
+            - A simple bank simulation program created using concurrent programming technique.
+            The program was written in Java.
+            This was a programming assignment for Principles of Programming Languages class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP3270%20Intro%20to%20Algorithms/Programming_Assignment">
+            Algorithm Analysis
+          </a></li>
+          <p>
+            - Empirical analysis of four different algorithms. The program was written in C++.
+            This was a programming assignment for Algorithm class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP5000%20Web%20Development/Term_Project">
+            Online Exam Web Application
+          </a></li>
+          <p>
+            - An online web application for taking exams. The whole system was made using JSP, XML, and MySQL.
+            This was a group project for our Web Development class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/OldAssignments/tree/master/COMP4320%20Intro%20to%20Computer%20Networks/Lab1">
+            String Processing Server & Client
+          </a></li>
+          <p>
+            - The goal of this project was to create two string processing servers and clients using TCP and UDP.
+            Both servers were written in C and clients were written in Java.
+            This was a group lab assignment in our Computer Networks class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/Computer-Networks-Lab02">
+            Proxy DNS Server
+          </a></li>
+          <p>
+            - We created a simple proxy DNS server and client using UDP.
+            The server was written in C and client was written in Java.
+            This was a group lab assignment in our Computer Networks class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/AI-Project">
+            Machine-Improvised-Music
+          </a></li>
+          <p>
+            - Using modified Hill Climbing algorithm, we were able to create a simple program that can make music.
+            he program was written entirely using Python and an open-source library called python-midi on Github.
+            This program was made for a final project in our AI class.
+          </p>
+
+          <li><a href="https://github.com/hsuanhauliu/Lab03">
+            Chatroom program
+          </a></li>
+            <p>
+              - Programs designed to be used as a chatroom system using UDP and TCP connections.
+              The client program was written in C and the server program was written in Java.
+              This was a group lab assignment in our Computer Networks class.
+            </p>
+          </ul><br>
+
+          <h3>Personal Projects</h3>
+            <ul>
+              <li><a href="https://github.com/hsuanhauliu/GoogleChrome-Plugins/tree/master/RTNT">
+                RTNT (Recommendation Thanks No Thanks)
+              </a></li>
+              <p> - A simple Google Chrome plugin that hides the recommendation section of Youtube.</p>
+            </ul><br>
+
+          <h2 style="color: #0493B7">Future Projects</h2>
         </div>
+        <table contenteditable="true" style="white-space: nowrap">
+          <tr style="font-size: 20px; background-color: #AEADAD; text-align: center">
+            <th>Learning</th>
+            <th>Programming Projects</th>
+          </tr>
+          <tr style="vertical-align: text-top;">
+            <td>
+              Programming Languages
+              <li>C# Language</li>
+              <li>PHP Language</li>
+              Technology
+              <li><a href="https://www.technologyreview.com/s/603495/10-breakthrough-technologies-2017-practical-quantum-computers/">Quantum Computer</a></li>
+            </td>
 
-        <button class="w3-button w3-light-grey w3-padding-large w3-section">
-          <i class="fa fa-download"></i> <a href="resume.html">My Resume</a>
-        </button>
-        <br><br>
+            <td>
+              Web (HTML & Javascript)
+              <li>Tetris (w/ Javascript)</li>
+              <li>Maze Path Finder</li>
+              <li>Ragnarok Online Skill Simulator (w/ Javascript)</li>
+              <li>Snake Game</li><br>
+              Software
+              <li>Markdown Editor</li>
+              <li>images Encryption Program</li>
+              <li>Web Scrapping (w/ Python)</li>
+              <li>Messaging App</li>
+              <li>AI Poker Player (Texas Hold'em specific)</li>
+              <li>3D Interior Design Simulator</li>
+            </td>
+          </tr>
+        </table>
+      </div><br style="clear:both"><br><br><br><br>
 
-        <!-- Education -->
-        <h3>Education</h3>
-        <hr class="w3-opacity">
-
-        <p><span class="w3-large w3-text-black w3-margin-right">University of Southern California</span>Los Angeles, CA</p>
-        <p>Master of Science, Computer Science in Intelligent Robotics</p>
-        <p>Jan. 2018 - Present</p><br>
-
-        <p><span class="w3-large w3-text-black w3-margin-right">Auburn University</span>Auburn, AL</p>
-        <p>Bachelor of Science, Computer Science</p>
-        <p>Aug. 2013 - Dec. 2017</p><br>
-
-        <p><span class="w3-large w3-text-black w3-margin-right">St. Bernard Prep. School</span>Cullman, AL</p>
-        <p>High school degree</p>
-        <p>Graduated on May 2013</p><br><br>
-
-        <!-- Work Experience -->
-        <h3>Work Experience</h3>
-        <hr class="w3-opacity">
-        <p><span class="w3-large w3-text-black w3-margin-right">Auburn University</span> COMP1000 Undergraduate Teaching Assistant</p>
-        <p>August 21st - September 22nd, 2017</p><br>
-
-        <p><span class="w3-large w3-text-black w3-margin-right">DrayTek Corp.</span> Intern in the Product Quality Control Department</p>
-        <p>June 1st - July 31st, 2015</p><br>
-
-      <!-- End About Section -->
-      </div>
-
-      <!-- Contact Section -->
-      <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
-        <h2>Contact</h2>
-        <hr class="w3-opacity">
-
-        <div class="w3-section">
-          <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Los Angeles, CA, U.S.</p>
-          <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 205-876-3234</p>
-          <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: howardliu43@gmail.com</p>
-        </div>
-
-      <!-- End Contact Section -->
-      </div>
-
-      <!-- Footer -->
-      <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
-        <i class="fa fa-github w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p class="w3-medium">Copyright &copy; 2017 Hsuan-Hau Liu</p>
-      <!-- End footer -->
-      </footer>
-
-    <!-- END PAGE CONTENT -->
+<!-- Footer -->
+      <footer>Copyright &copy; 2017 Hsuan-Hau Liu.</footer>
     </div>
-
-    <script>
-    // Open and close sidebar
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "60%";
-        document.getElementById("mySidebar").style.display = "block";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidebar").style.display = "none";
-    }
-    </script>
-
   </body>
 </html>

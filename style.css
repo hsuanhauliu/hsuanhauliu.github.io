@@ -9,18 +9,29 @@ ul {
   margin-top: 0;
 }
 
+footer {
+  color: white;
+  height: 24px;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
 #profile {
   max-width: 60%;
   max-height: 60%;
   display:block;
   margin:auto;
+  margin-bottom: 10px;
   border-radius: 50%;
 }
 
 #name {
-  text-align: center;
-  font-family: "Brush Script MT", cursive;
-  margin: 0;
+  font-family: "Times New Roman";
+  margin-bottom: 0;
   padding: 0;
 }
 
@@ -68,11 +79,6 @@ ul {
 
 .content {
   margin: 5px; padding: 5px
-}
-
-.description {
-  margin: 15px;
-  font-size: 16px;
 }
 
 a {

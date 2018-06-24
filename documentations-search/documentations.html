@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A collection of documentations.">
+    <meta name="author" content="Hsuan-Hau Liu">
+    <title>Hsuan-Hau Liu</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico?v=2" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="container-fluid bg-dark headerText">
+      <a href="../index.html">Hsuan-Hau Liu</a>
+    </div>
+
+    <div class="container">
+      <!-- Search bar -->
+      <div class="row text-center" id="search-bar">
+        <form>
+          <label class="text-info"><i>Keyword Search</i></label>
+          <div class="col-sm-12">
+            <input type="text" class="form-control" onkeyup="mySearch()" id="search" placeholder="Search">
+          </div>
+        </form>
+      </div><!-- end of first row -->
+
+      <!-- Actual content -->
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="bootstrap">
+          <div class="card border-primary h-80">
+            <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"><img class="card-img-top" src="images/bootstrap.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Bootstrap</a>
+              </h5>
+              <p class="card-text">An open-source front-end framework for designing websites and web applications.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="docker">
+          <div class="card border-primary h-80">
+            <a href="https://docs.docker.com/get-started/"><img class="card-img-top" src="images/docker.jpg"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Docker</a>
+              </h5>
+              <p class="card-text">Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="tensorflow">
+          <div class="card border-primary h-80">
+            <a href="https://www.tensorflow.org/get_started/"><img class="card-img-top" src="images/tensorflow.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Tensorflow</a>
+              </h5>
+              <p class="card-text">An open source machine learning framework created by the Google Brain team.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="sklearn">
+          <div class="card border-primary h-80">
+            <a href="http://scikit-learn.org/stable/documentation.html"><img class="card-img-top" src="images/scikit.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Scikit Learn</a>
+              </h5>
+              <p class="card-text">A machine learning Python library that provides simple and efficient tools for data mining and data analysis</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="pandas">
+          <div class="card border-primary h-80">
+            <a href="https://pandas.pydata.org/pandas-docs/stable/"><img class="card-img-top" src="images/pandas.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Pandas</a>
+              </h5>
+              <p class="card-text">A Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="fontawesome">
+          <div class="card border-primary h-80">
+            <a href="https://fontawesome.com/icons?d=gallery"><img class="card-img-top" src="images/font_awesome.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Font Awesome</a>
+              </h5>
+              <p class="card-text">A font and icon toolkit based on CSS and LESS.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="jupyter">
+          <div class="card border-primary h-80">
+            <a href="https://jupyter.readthedocs.io/en/latest/running.html#running"><img class="card-img-top" src="images/jupyter.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Jupyter</a>
+              </h5>
+              <p class="card-text">An open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="pycharm">
+          <div class="card border-primary h-80">
+            <a href="https://www.jetbrains.com/pycharm/documentation/"><img class="card-img-top" src="images/PyCharm.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">PyCharm</a>
+              </h5>
+              <p class="card-text">an integrated development environment (IDE) used in computer programming, specifically for the Python language.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="vimawesome">
+          <div class="card border-primary h-80">
+            <a href="https://vimawesome.com/"><img class="card-img-top" src="images/vimawesome.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Vim Awesome</a>
+              </h5>
+              <p class="card-text">A collection of awesome vim plugins.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="vim">
+          <div class="card border-primary h-80">
+            <a href="https://vim.rtorr.com/"><img class="card-img-top" src="images/vim.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Vim Cheatsheet</a>
+              </h5>
+              <p class="card-text">A cheatsheet for VIM.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="python">
+          <div class="card border-primary h-80">
+            <a href="https://docs.python.org/2/index.html"><img class="card-img-top" src="images/python.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">Python 2.7</a>
+              </h5>
+              <p class="card-text">Python 2.7 documentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="c++">
+          <div class="card border-primary h-80">
+            <a href="http://devdocs.io/cpp/"><img class="card-img-top" src="images/cpp.png"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#">C++</a>
+              </h5>
+              <p class="card-text">C++ Reference.</p>
+            </div>
+          </div>
+        </div>
+
+        <!--
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item" id="">
+          <div class="card border-primary h-80">
+            <a href=""><img class="card-img-top" src="images/"></a>
+            <div class="card-body">
+              <h5 class="card-title">
+                <a href="#"></a>
+              </h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>-->
+
+      </div><!-- end of second row -->
+
+    </div><!-- end of container -->
+
+    <script>
+      function mySearch() {
+        var keyword = document.getElementById("search").value;
+        var docs = document.getElementsByClassName("portfolio-item");
+        for (var i = 0; i < docs.length; i++) {
+          var port_id = docs[i].id;
+          if (port_id.search(keyword) != -1) {
+            docs[i].style.display = "block";
+          }
+          else {
+            docs[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+
+  <footer>
+    <div class="container pt-4 mt-4">
+      <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="https://github.com/hsuanhauliu"> Hsuan-Hau Liu</a>
+      </div>
+    </div>
+  </footer>
+</html>

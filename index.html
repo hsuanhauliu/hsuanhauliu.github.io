@@ -43,12 +43,12 @@
               </div>
               <hr>
               <div style="font-size: 20px">
-                <span style="font-size: 16px">Links:</span>
+                <span style="font-size: 18px">Links:</span>
                 <a title="Github" href="https://github.com/hsuanhauliu" class="fab fa-github-square"></a>
                 <a title="LinkedIn" href="https://www.linkedin.com/in/hsuanhauliu/" class="fab fa-linkedin"></a>
                 <a title="Blog" href="https://howardliusite.wordpress.com/" class="fab fa-wordpress"></a>
-                <a title="About" href="about.html" class="fas fa-desktop"></a>
-                <a href="resume.html" class="btn btn-success btn-sm" style="margin-left: 2px" role="button">Resume</a>
+                <a title="About" href="about.html" class="fas fa-address-book"></a>
+                <a href="resume.html" class="btn btn-success btn-sm" style="margin-left: 2px; font-size: 14px; padding: 0px 3px" role="button">Resume</a>
               </div>
             </div>
           </div><br>
@@ -75,9 +75,10 @@
               <h5 class="title"><i class="fas fa-wrench"></i> Tools</h5>
               <ul>
                 <li>Git</li>
-                <li><a href="https://www.visualstudio.com/">MS Visual Studio</a></li>
-                <li><a href="http://jupyter.org/">Jupyter Notebook</a></li>
                 <li><a href="https://www.vim.org/">VIM</a></li>
+                <li><a href="http://jupyter.org/">Jupyter Notebook</a></li>
+                <li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+                <li><a href="https://www.visualstudio.com/">MS Visual Studio</a></li>
               </ul>
             </div>
           </div><br>
@@ -90,11 +91,10 @@
               <div class="badge badge-primary">Machine Learning</div>
               <div class="badge badge-dark">Computer Vision</div>
               <div class="badge badge-success">Deep Learning</div>
-              <div class="badge badge-warning">Programming</div>
-              <div class="badge badge-danger">Cryptography</div>
+              <div class="badge badge-warning">Software Development</div>
               <div class="badge badge-info">Web Development</div>
-              <div class="badge badge-success">Software Development</div>
               <div class="badge badge-secondary">App Development</div>
+              <div class="badge badge-danger">Cryptography</div>
             </div>
           </div><br>
 
@@ -150,7 +150,7 @@
                 for customers, and performed bug reproduction to identify root causes.</li>
               </ul>
 
-              <div class="text-center"><a href="resume.html" class="btn btn-danger" role="button">My Resume</a></div>
+              <div class="text-center"><a href="resume.html" class="btn btn-danger" role="button">View My Resume</a></div>
             </div>
           </div><br>
 
@@ -159,10 +159,17 @@
             <div class="content">
               <h3><i class="fas fa-project-diagram"></i> Projects</h3><hr>
 
+              <p class="title"><b>Random Text Generator</b> | Python | Summer 2018<br><i>Personal Project</i></p>
+              <ul>
+                <li>Created a program that generates random word sentences based on user inputs.</li>
+                <li>Implemented using Naïve Bayes and Hidden Markov Model techniques.</li>
+              </ul>
+
               <p class="title"><b>Grid World Intelligent Agent</b> | Python | Spring 2018<br><i>AI Course Project</i></p>
               <ul>
-                <li>Created an intelligent agent using Markov Decision Process that can find an optimal sequence of actions to reach the goal from any grid of the world.</li>
-                <li>Implemented Policy Iteration algorithm to solve a discrete and stochastic environment.</li>
+                <li>Constructed an intelligent agent that finds an optimal sequence of actions to reach the
+                goal from any state of the pre-built game world.</li>
+                <li>Employed Policy Iteration algorithm to solve the Markov Decision Process problem.</li>
               </ul>
 
               <p class="title"><b>AI Checker Player</b> | Python | Spring 2018<br><i>AI Course Project</i></b></p>
@@ -184,13 +191,6 @@
                 devise algorithms to generate consistent and pleasant melodies.</li>
               </ul>
 
-              <p class="title"><b>Message System with Needham-Schroeder Protocol</b> | C, Java | Fall 2017<br><i>Computer Security Course Project</i></p>
-              <ul>
-                <li>Devised a one-to-one message system with a shared-key authentication protocol.</li>
-                <li>Utilized symmetric and asymmetric encryption techniques to implement XOR cipher and
-                RSA algorithms for Needham-Schroeder protocol.</li>
-              </ul>
-
               <p class="title"><b>Online Exam Web Application</b> | JSP, XML, CSS, MySQL | Spring 2017<br><i>Web Development Final Project</i></p>
               <ul>
                 <li>Built a web application to administer online exams for students and test makers, including
@@ -199,8 +199,8 @@
               </ul>
 
               <div class="text-center">
-                <a href="web-projects.html" class="btn btn-danger" role="button">Web Projects</a>
-                <a href="https://github.com/hsuanhauliu" class="btn btn-danger" role="button">My Github</a>
+                <a href="https://github.com/hsuanhauliu" class="btn btn-danger" role="button">More Projects</a>
+                <a href="web-projects.html" class="btn btn-danger" role="button">Web Apps</a>
               </div>
             </div>
           </div><br>
@@ -211,6 +211,12 @@
               <h3><i class="fas fa-school"></i> Relevant Coursework</h3><hr>
               <h4>Graduate</h4>
               <table class="table">
+                <tr>
+                  <th>Fall 2018</th>
+                  <td class="table-info">Augmented, Virtual, and Mixed Reality</td>
+                  <td class="table-info"></td>
+                </tr>
+
                 <tr>
                   <th>Summer 2018</th>
                   <td class="table-info">Machine Learning</td>
@@ -226,8 +232,8 @@
               </table>
 
               <h4>Undergraduate</h4>
-              <table class="table">
-                <tr class="table-info">
+              <table class="table table-info">
+                <tr>
                   <td>Artificial Intelligence</td>
                   <td>Web App. Development</td>
                 </tr>
@@ -237,7 +243,7 @@
                   <td>Intro. To Algorithms</td>
                 </tr>
 
-                <tr class="table-info">
+                <tr>
                   <td>Software Construction</td>
                   <td>Software Modeling And Design</td>
                 </tr>
@@ -247,11 +253,10 @@
                   <td>Discrete Structures</td>
                 </tr>
 
-                <tr class="table-info">
+                <tr>
                   <td>Intro. To Operating Systems</td>
                   <td>Prin. Of Programming Languages</td>
                 </tr>
-                <tr><td></td><td></td></tr>
               </table>
             </div>
           </div><br>

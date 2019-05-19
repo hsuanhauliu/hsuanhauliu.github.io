@@ -9,17 +9,15 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
     <link href="styles/style.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico?v=2" />
   </head>
 
   <body>
     <!-- header -->
-    <div class="container-fluid bg-dark headerText">
+    <div class="container-fluid bg-dark page-header">
       Hsuan-Hau Liu
     </div>
 
@@ -28,90 +26,91 @@
       <div class="row">
         <!-- Left column -->
         <div class="col-md-4">
-          <!-- Section 1: Basic information -->
+          <!-- Section 1: information -->
           <div class="bg-light-white shadow p-3 rounded">
-            <div class="content text-center">
+            <div class="section text-center">
               <img id="profile" class="shadow" src="images/profile.jpg">
-              <div>
-                <h3 id="name">Hsuan-Hau Liu</h3>
-                <p><i class="fas fa-keyboard"></i> Computer Science Master's Student</p>
-              </div>
-              <hr>
-              <div>
-                <p><i class="fas fa-address-card"></i> hsuanhal@usc.edu</p>
-                <p><i class="fas fa-location-arrow"></i> Los Angeles, CA</p>
-              </div>
-              <hr>
-              <div style="font-size: 20px">
-                <span style="font-size: 18px">Links:</span>
+              <h3 id="name">Hsuan-Hau Liu</h3>
+              Computer Science MS Student
+              <div id="links">
                 <a title="Github" href="https://github.com/hsuanhauliu" class="fab fa-github-square"></a>
                 <a title="LinkedIn" href="https://www.linkedin.com/in/hsuanhauliu/" class="fab fa-linkedin"></a>
                 <a title="Blog" href="https://howardliusite.wordpress.com/" class="fab fa-wordpress"></a>
-                <a title="About" href="about.html" class="fas fa-address-book"></a>
-                <a href="https://drive.google.com/open?id=127lTiCtVaUWMORjv8yNofKC48cBCIJ1G" class="btn btn-success btn-sm" style="margin-left: 2px; font-size: 14px; padding: 0px 3px" role="button">Resume</a>
+                <a title="Resume" href="https://drive.google.com/open?id=127lTiCtVaUWMORjv8yNofKC48cBCIJ1G" class="fas fa-id-card"></a>
+              </div>
+              <hr>
+
+              <div>
+                <p><i class="fas fa-envelope"></i> hsuanhal@usc.edu</p>
+                <p><i class="fas fa-location-arrow"></i> Los Angeles, CA</p>
               </div>
             </div>
           </div><br>
 
           <!-- Section 2: Skills -->
-          <div class="bg-blue shadow p-3 rounded" style="color: white">
-            <div class="content">
-              <h3><i class="fas fa-id-card"></i> Skills</h3>
+          <div class="bg-green shadow p-3 rounded">
+            <div class="section">
+              <p class="section-header"><i class="fas fa-id-card"></i> Skills</p>
               <hr>
-              <h5 class="title"><i class="fas fa-terminal"></i> Programming Languages</h5>
-              <ul>
-                <li>Proficient: Python & C++</li>
-                <li>Familiar: Java & C</li>
-              </ul>
 
-              <h5 class="title"><i class="fas fa-file-alt"></i> Web Development</h5>
-              <ul>
+              <p class="section-title"><i class="fas fa-terminal"></i> Programming Languages</>
+              <div class="tab">
+                Proficient:
+                <li>Python</li>
+
+                Have experience with:
+                <li>C++</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>Golang</li>
+                <li>R</li>
+                <li>Scala</li>
+                <li>C</li>
+              </div>
+
+              <p class="section-title"><i class="fas fa-file-alt"></i> Web Development</p>
+              <div class="tab">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
                 <li>Bootstrap</li>
-              </ul>
+              </div>
 
-              <h5 class="title"><i class="fas fa-wrench"></i> Tools</h5>
-              <ul>
+              <p class="section-title"><i class="fas fa-wrench"></i> Tools</p>
+              <div class="tab">
                 <li><a href="https://github.com/hsuanhauliu">Git</a></li>
-                <li><a href="https://www.vim.org/">VIM</a></li>
+                <li><a href="https://www.numpy.org/">Numpy</a></li>
                 <li><a href="https://www.tensorflow.org/">TensorFlow</a></li>
                 <li><a href="https://opencv.org/">OpenCV</a></li>
-                <li><a href="https://unity3d.com/">Unity</a></li>
-                <li><a href="https://www.visualstudio.com/">MS Visual Studio</a></li>
                 <li><a href="http://jupyter.org/">Jupyter Notebook</a></li>
-                <li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
-              </ul>
-
-
+                <li><a href="https://unity3d.com/">Unity</a></li>
+                <li><a href="https://www.visualstudio.com/">Visual Studio</a></li>
+              </div>
             </div>
           </div><br>
 
           <!-- Section 3: Interests section -->
           <div class="bg-light-white shadow p-3 rounded">
-            <div class="content">
-              <h3><i class="fas fa-star"></i> Interests</h3>
+            <div class="section">
+              <p class="section-header"><i class="fas fa-star"></i> Interests</p>
               <hr>
               <div class="badge badge-primary">Machine Learning</div>
-              <div class="badge badge-dark">Computer Vision</div>
               <div class="badge badge-success">Deep Learning</div>
-              <div class="badge badge-warning">Software Development</div>
+              <div class="badge badge-danger">Computer Vision</div>
               <div class="badge badge-info">Web Development</div>
-              <div class="badge badge-secondary">App Development</div>
-              <div class="badge badge-danger">Cryptography</div>
+              <div class="badge badge-warning">App Development</div>
             </div>
           </div><br>
 
           <!-- Section 4: Languages -->
           <div class="bg-light-white shadow p-3 rounded">
-            <div class="content">
-              <h3><i class="fas fa-language"></i> Languages</h3>
+            <div class="section">
+              <p class="section-header"><i class="fas fa-language"></i> Languages</p>
               <hr>
-              <ul>
+              <div class="tab">
                 <li>English</li>
-                <li>Chinese (Mandarin)</li>
-              <ul>
+                <li>Chinese</li>
+              </div>
             </div>
           </div>
         </div> <!-- End left column -->
@@ -120,8 +119,9 @@
         <div class="col-md-8">
           <!-- Education section -->
           <div class="bg-light-white shadow p-3 rounded">
-            <div class="content">
-              <h3><i class="fas fa-university"></i> Education</h3><hr>
+            <div class="section">
+              <p class="section-header"><i class="fas fa-university"></i> Education</h3></p>
+              <hr>
               <p><b>University of Southern California</b>, Los Angeles, CA</p>
               <p>Master of Science, Computer Science in Intelligent Robotics</p>
               <p>Jan. 2018 - <b>Present</b> | Exp. December 2019</p>
@@ -140,22 +140,30 @@
 
           <!-- Work experience section -->
           <div class="bg-light-white shadow p-3 rounded">
-            <div class="content">
-              <h3><i class="fas fa-briefcase"></i> Work Experience</h3><hr>
+            <div class="section">
+              <p class="section-header"><i class="fas fa-briefcase"></i> Work Experience</p>
+              <hr>
+
+              <p>
+                <b>Researcher Intern</b>, University of Southern California<br>
+                Summer 2019
+              </p>
+              <ul>
+                <li>Developing a tool to support automated analysis of various kinds of UML diagrams with machine learning techniques.</li>
+              </ul>
 
               <!-- Military -->
-              <p class="title">
-                <span class="badge badge-danger">Current</span>
+              <p>
                 <b>Republic of China Army</b>, Taiwan<br>
-                Dec 26 2018 - April 26 2018
+                Dec 2018 - April 2018
               </p>
               <ul>
                 <li>Serving in Taiwanese military.</li>
               </ul>
 
               <!-- DR Intern -->
-              <p class="title">
-                <b>Directed Research Developer Intern</b>, University of Southern California<br>
+              <p>
+                <b>Developer Intern</b>, University of Southern California<br>
                 Fall 2018
               </p>
               <ul>
@@ -165,7 +173,7 @@
               </ul>
 
               <!-- UTA -->
-              <p class="title">
+              <p>
                 <b>Undergraduate Teaching Assistant</b>, Auburn University<br>
                 Fall 2017
               </p>
@@ -175,8 +183,8 @@
               </ul>
 
               <!-- DrayTek Intern -->
-              <p class="title">
-                <b>Intern in Product Quality Control Department</b>, DrayTek Corp.<br>
+              <p>
+                <b>Product Quality Control Intern</b>, DrayTek Corp.<br>
                 Summer 2015
               </p>
               <ul>
@@ -191,35 +199,30 @@
 
           <!-- Project section -->
           <div class="bg-light-white shadow p-3 rounded">
-            <div class="content">
-              <h3><i class="fas fa-project-diagram"></i> Projects</h3><hr>
+            <div class="section">
+              <p class="section-header"><i class="fas fa-project-diagram"></i> Projects</p>
+              <hr>
 
-              <p class="title"><b>RuGo</b> | C#, Unity, HTC Vive | Fall 2018<br><i>Augmented, Virtual, and Mixed Reality Course Project</i></p>
+              <p><b>RuGo</b> | C#, Unity, HTC Vive | Fall 2018<br><i>Augmented, Virtual, and Mixed Reality Course Project</i></p>
               <ul>
                 <li>Designed a virtual space to create, visualize, and share Rube Goldberg machines.
                   Unlike the physical world, RuGo allows people to prototype their creations in a sandbox environment where space and resources are not constrained.</li>
               </ul>
 
-              <p class="title"><b>Random Text Generator</b> | Python | Summer 2018<br><i>Personal Project</i></p>
+              <p><b>Random Text Generator</b> | Python | Summer 2018<br><i>Personal Project</i></p>
               <ul>
                 <li>Created a sentence generating program which can produce natural sounding sentences based on sentences users input into the program,
                    implemented using Naïve Bayes and Hidden Markov Model techniques.</li>
               </ul>
 
-              <p class="title"><b>Hidden-Message Image</b> | Python | Spring 2018<br><i>Personal project</i></p>
-              <ul>
-                <li>Designed a program that allows the users to embed hidden messages in their images.</li>
-                <li>Implemented algorithms for both encrypting and decrypting the images and return secret messages.</li>
-              </ul>
-
-              <p class="title"><b>Machine-Improvised Music</b> | Python | Fall 2017<br><i>AI Final Project</i></p>
+              <p><b>Machine-Improvised Music</b> | Python | Fall 2017<br><i>Artificial Intelligence Course Final Project</i></p>
               <ul>
                 <li>Developed an intelligent system which can learn musical melodies and produce music of its own,
                    by conducting statistical analysis on input music files and in combination of Hill Climbing algorithm technique to generate consistent and pleasant musical melodies.</li>
                 <li>Constructed data structure for optimizing statistical analysis phase speed and performance.</li>
               </ul>
 
-              <p class="title"><b>Online Exam Web Application</b> | JSP, XML, CSS, MySQL | Spring 2017<br><i>Web Development Final Project</i></p>
+              <p><b>Online Exam Web Application</b> | JSP, XML, CSS, MySQL | Spring 2017<br><i>Web Development Course Final Project</i></p>
               <ul>
                 <li>Built a web application to administer online exams for students and test makers,
                   including features such as account creation, login, name search, exam creation, and result review.</li>
@@ -235,10 +238,17 @@
 
           <!-- Courses section -->
           <div class="bg-light-white shadow p-3 rounded">
-            <div class="content">
-              <h3><i class="fas fa-school"></i> Relevant Coursework</h3><hr>
+            <div class="section">
+              <p class="section-header"><i class="fas fa-school"></i> Relevant Coursework</p>
+              <hr>
+
               <h4>Graduate</h4>
               <table class="table">
+                <tr>
+                  <th>Summer 2019</th>
+                  <td class="table-info">Data Mining</td>
+                </tr>
+
                 <tr>
                   <th>Fall 2018</th>
                   <td class="table-info">Advanced Computer Vision</td>
@@ -294,7 +304,7 @@
     </div> <!-- /.container -->
 
     <footer class="container-fluid bg-dark">
-      Copyright &copy; 2018 Hsuan-Hau Liu.
+      Copyright &copy; 2019 Hsuan-Hau Liu.
       Powered by <a href="https://getbootstrap.com/">Bootstrap</a> | Icons by <a href="https://fontawesome.com/">Font Awesome</a>
     </footer>
 

@@ -60,21 +60,6 @@ footer {
     font-size: 50px;
 }
 
-.page-header:visited {
-    color:white;
-    text-decoration: none;
-}
-
-.page-header:hover {
-    color:white;
-    text-decoration: none;
-}
-
-.page-header:active {
-    color:gray;
-    text-decoration: none;
-}
-
 /****************************/
 .bg-green {
   background-color: #20B2AA;

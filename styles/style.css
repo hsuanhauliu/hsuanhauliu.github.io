@@ -70,6 +70,10 @@ footer {
   background-color: #FFFFFD;
 }
 
+.btn-sm {
+  padding: 0px;
+}
+
 .container {
   margin-top: 20px;
   margin-bottom: 20px;

@@ -28,8 +28,8 @@
       <!-- ############################## Tabs ############################## -->
       <div class="row">
         <div class="col-md-12 text-center">
-          <button type="button" class="btn btn-secondary" onclick="switch_tab('home')">Home</button>
-          <button type="button" class="btn btn-secondary" onclick="switch_tab('projects')">Projects</button>
+          <button type="button" id="btn-home" class="btn btn-primary tab-btn" onclick="switch_tab('home')">Home</button>
+          <button type="button" id="btn-projects" class="btn btn-secondary tab-btn" onclick="switch_tab('projects')">Projects</button>
         </div>
       </div><br>
 
@@ -42,7 +42,8 @@
             <div class="section text-center">
               <img id="profile" class="shadow" src="images/profile.jpg">
               <h3 id="name">Hsuan-Hau Liu</h3>
-              <p>Computer Science MS Student</p>
+              <i><p>Computer Science MS Student</p></i>
+              <i><p>Deep Learning & Computer Vision Enthusiast</p></i>
 
               <a title="Resume" href="https://drive.google.com/open?id=127lTiCtVaUWMORjv8yNofKC48cBCIJ1G" class="btn btn-success btn-sm">
                 Resume
@@ -169,9 +170,9 @@
                 May 2019 – Aug 2019
               </p>
               <ul>
-                <li>Developed web-based tool to automate analysis of UML diagrams.</li>
                 <li>Tuned hyperparameters of neural network model to predict project effort.</li>
                 <li>Collected and preprocessed open-sourced Android projects on Github using R.</li>
+                <li>Created neural network visualization to better understand the model.</li>
               </ul>
 
               <!-- Military -->
@@ -225,66 +226,253 @@ stop signs, and traffic lights from dashcam recordings.</li>
 
       <!-- ############################## Project Tab ############################## -->
       <div class="row section_tab" id="projects" style="display: none">
-        <div class="col-md-12">
-          <div class="bg-light-white shadow p-3 rounded">
-            <div class="section">
-              <p class="section-header"><i class="fas fa-project-diagram"></i> Projects</p>
-              <hr>
 
-              <p>
-                <b>RuGo</b> | C#, Unity, HTC Vive<br>
-                <i>Augmented, Virtual, and Mixed Reality Course Project</i>
-                <a href="https://github.com/hsuanhauliu/RuGo" class="btn btn-info btn-sm" role="button">Github Link</a>
-                <a href="https://hsuanhauliu.github.io/RuGo/" class="btn btn-info btn-sm" role="button">Website</a>
-              </p>
-              <ul>
-                <li>Designed a virtual space to create, visualize, and share Rube Goldberg machines.
-                  Unlike the physical world, RuGo allows people to prototype their creations in a sandbox environment where space and resources are not constrained.</li>
-              </ul>
-              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FUSCViterbi%2Fvideos%2F2334075519949811%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden;width:100%;" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+        <!-- Computer Vision section -->
+        <div class="row w-100">
+          <div class="col-12">
+            <p class="section-header text-center">Computer Vision & Image/Video Processing</p>
+          </div>
 
-              <p>
-                <b>Security Webcam</b> | Python, OpenCV<br>
-                <i>Personal Project </i>
-                <a href="https://github.com/hsuanhauliu/security-webcam" class="btn btn-info btn-sm" role="button">Github Link</a>
-              </p>
-              <ul>
-                <li>Simple and easy to setup security camera system right on your computer.</li>
-              </ul>
-
-              <p>
-                <b>Green Screen</b> | Python<br>
-                <i>Personal Project </i><a href="https://github.com/hsuanhauliu/green-screen" class="btn btn-info btn-sm" role="button">Github Link</a>
-              </p>
-              <ul>
-                <li>Simple tool for setting up green screen.</li>
-              </ul>
-
-              <p>
-                <b>Machine-Improvised Music</b> | Python<br>
-                <i>Artificial Intelligence Course Final Project</i>
-                <a href="https://github.com/hsuanhauliu/machine-improvised-music" class="btn btn-info btn-sm" role="button">Github Link</a>
-              </p>
-              <ul>
-                <li>Intelligent system which can learn musical melodies and produce music of its own.</li>
-              </ul>
-
-
-              <p>
-                <b>Do Good</b> | Python, JavaScript, HTML, CSS<br>
-                <i>Personal Project </i>
-                <a href="https://github.com/abhatt95/do-good" class="btn btn-info btn-sm" role="button">Github Link</a>
-                </i><a href="https://abhatt95.github.io/do-good/" class="btn btn-info btn-sm" role="button">Website</a>
-              </p>
-              <ul>
-                <li>A website that provides non-profit organization information with location-based searching feature.</li>
-              </ul>
-
-              <div class="text-center">
-                <a href="https://github.com/hsuanhauliu" class="btn btn-danger" role="button">More Projects on Github</a>
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Security Webcam</h5>
+                <p class="card-text">
+                  Simple and easy to setup security camera system right on your computer.
+                </p>
+                <a href="https://github.com/hsuanhauliu/security-webcam" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, OpenCV</small>
               </div>
             </div>
           </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Green Screen</h5>
+                <p class="card-text">
+                  Simple tool for setting up green screen.
+                </p>
+                <a href="https://github.com/hsuanhauliu/green-screen" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, OpenCV</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Hidden Message Image</h5>
+                <p class="card-text">
+                  A simple program that allows you to hide messages in images.
+                </p>
+                <a href="https://github.com/hsuanhauliu/hidden-message-image" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, Pillow</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">FCN Semantic Segmentation</h5>
+                <p class="card-text">
+                  Built and trained a modified Fully Convolutional Network FCN-32 to do semantic segmentation from images.
+                </p>
+                <a href="https://github.com/hsuanhauliu/FCN-semantic-segmentation" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, TensorFlow, OpenCV, Matplotlib</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Structure From Motion with OpenCV</h5>
+                <p class="card-text">
+                  Exercise simple structure from motion pipeline.
+                </p>
+                <a href="https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, OpenCV</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Machine Learning section -->
+        <div class="row w-100">
+          <div class="col-12">
+            <p class="section-header text-center">Machine Learning</p>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Machine-Improvised Music</h5>
+                <p class="card-text">
+                  Intelligent system which can learn musical melodies and produce music of its own.
+                </p>
+                <a href="https://github.com/hsuanhauliu/machine-improvised-music" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, PythonMIDI</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Weather Prediction</h5>
+                <p class="card-text">
+                  A simple weather prediction program implemented using Viterbi algorithm.
+                </p>
+                <a href="https://github.com/hsuanhauliu/weather-prediction" class="btn btn-info btn-sm">Github</a>
+                <a href="https://hsuanhauliu.github.io/weather-prediction/" class="btn btn-info btn-sm">Website</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">HTML, Javascript, Bootstrap</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Random Text Generator</h5>
+                <p class="card-text">
+                  A simple text generator implemented using Hidden Markov Model.
+                </p>
+                <a href="https://github.com/hsuanhauliu/random-text-generator" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AR & VR section -->
+        <div class="row w-100">
+          <div class="col-12">
+            <p class="section-header text-center">Augmented & Virtual Reality</p>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-img-top">
+                <iframe class="card-img-top" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FUSCViterbi%2Fvideos%2F2334075519949811%2F&show_text=0&width=560" style="border:none;overflow:hidden;width:100%;height:130%" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">RuGo</h5>
+                <p class="card-text">
+                  Designed a virtual space to create, visualize, and share Rube Goldberg machines.
+                  Unlike the physical world, RuGo allows people to prototype their creations in a sandbox environment where space and resources are not constrained.
+                </p>
+                <a href="https://github.com/hsuanhauliu/RuGo" class="btn btn-info btn-sm">Github</a>
+                <a href="https://hsuanhauliu.github.io/RuGo/" class="btn btn-info btn-sm">Website</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">C#, Unity, HTC Vive</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Mining section -->
+        <div class="row w-100">
+          <div class="col-12">
+            <p class="section-header text-center">Data Mining</p>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Yelp Recommendation System</h5>
+                <p class="card-text">
+                  Yelp recommendation system using collaborative-filtering algorithms.
+                </p>
+                <a href="https://github.com/hsuanhauliu/yelp-recommendation-system" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, Spark, SparkML</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Community Detection</h5>
+                <p class="card-text">
+                  Find the optimal community clustering of a Yelp user network using Girvan-Newman algorithm.
+                </p>
+                <a href="https://github.com/hsuanhauliu/girvan-newman-community-detection" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, Spark</small>
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+
+        <!--  Web Develpment section -->
+        <div class="row w-100">
+          <div class="col-12">
+            <p class="section-header text-center">Web Develpment</p>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Do Good</h5>
+                <p class="card-text">
+                  A website that provides non-profit organization information with location-based searching feature.
+                </p>
+                <a href="https://github.com/abhatt95/do-good" class="btn btn-info btn-sm">Github</a>
+                <a href="https://abhatt95.github.io/do-good/" class="btn btn-info btn-sm">Website</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Python, JavaScript, HTML, CSS</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  Mobile App Development section -->
+        <div class="row w-100">
+          <div class="col-12">
+            <p class="section-header text-center">Mobile App Development</h2>
+          </div>
+
+          <div class="col-md-4 py-2">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Concentration Game App</h5>
+                <p class="card-text">
+                  A simple two-player concentration game on iPhone.
+                </p>
+                <a href="https://github.com/hsuanhauliu/concentration-game" class="btn btn-info btn-sm">Github</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Swift</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 text-center">
+          <a href="https://github.com/hsuanhauliu" class="btn btn-danger" role="button">More Projects on Github</a>
         </div>
       </div> <!-- Project - End row -->
 

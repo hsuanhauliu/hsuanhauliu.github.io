@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en" class="bg-dark">
   <head>
     <meta charset="utf-8">
@@ -12,7 +13,8 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="styles/style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.ico?v=2" />
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico?v=2"/>
   </head>
 
   <body>
@@ -23,7 +25,16 @@
 
     <!-- Page Content -->
     <div class="container">
+      <!-- ############################## Tabs ############################## -->
       <div class="row">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-secondary" onclick="switch_tab('home')">Home</button>
+          <button type="button" class="btn btn-secondary" onclick="switch_tab('projects')">Projects</button>
+        </div>
+      </div><br>
+
+      <!-- ############################## Home Tab ############################## -->
+      <div class="row section_tab" id="home">
         <!-- Left column -->
         <div class="col-md-4">
           <!-- Section 1: information -->
@@ -97,8 +108,8 @@
               <div class="badge badge-primary">Machine Learning</div>
               <div class="badge badge-danger">Computer Vision</div>
               <div class="badge badge-success">Deep Learning</div>
-              <div class="badge badge-secondary">Image Processing</div>
-              <div class="badge badge-dark">AR & VR</div>
+              <div class="badge badge-info">Image Processing</div>
+              <div class="badge badge-warning">AR & VR</div>
               <div class="badge badge-primary">Game Development</div>
               <div class="badge badge-info">Web Development</div>
               <div class="badge badge-danger">App Development</div>
@@ -114,10 +125,10 @@
               <div class="badge badge-danger">Ice Skating</div>
               <div class="badge badge-info">Ping-Pong</div>
               <div class="badge badge-success">Piano</div>
-              <div class="badge badge-secondary">Photography</div>
+              <div class="badge badge-info">Photography</div>
               <div class="badge badge-primary">Video Editing</div>
               <div class="badge badge-danger">Gaming</div>
-              <div class="badge badge-dark">Reading</div>
+              <div class="badge badge-warning">Reading</div>
               <div class="badge badge-success">Traveling</div>
             </div>
           </div>
@@ -209,7 +220,12 @@ stop signs, and traffic lights from dashcam recordings.</li>
             </div>
           </div><br>
 
-          <!-- Project section -->
+        </div> <!-- End right column -->
+      </div> <!-- Home - End row -->
+
+      <!-- ############################## Project Tab ############################## -->
+      <div class="row section_tab" id="projects" style="display: none">
+        <div class="col-md-12">
           <div class="bg-light-white shadow p-3 rounded">
             <div class="section">
               <p class="section-header"><i class="fas fa-project-diagram"></i> Projects</p>
@@ -263,15 +279,15 @@ stop signs, and traffic lights from dashcam recordings.</li>
               <ul>
                 <li>A website that provides non-profit organization information with location-based searching feature.</li>
               </ul>
-              
+
               <div class="text-center">
                 <a href="https://github.com/hsuanhauliu" class="btn btn-danger" role="button">More Projects on Github</a>
               </div>
             </div>
-          </div><br>
+          </div>
+        </div>
+      </div> <!-- Project - End row -->
 
-        </div> <!-- End right column -->
-      </div> <!-- End row -->
     </div> <!-- /.container -->
 
     <footer class="container-fluid bg-dark">

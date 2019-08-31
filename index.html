@@ -8,8 +8,11 @@
     <meta name="author" content="Hsuan-Hau Liu">
     <title>Hsuan-Hau Liu</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="styles/style.css" rel="stylesheet">
@@ -28,484 +31,495 @@
       <!-- ############################## Tabs ############################## -->
       <div class="row">
         <div class="col-md-12 text-center">
-          <button type="button" id="btn-home" class="btn btn-primary tab-btn" onclick="switch_tab('home')">Home</button>
-          <button type="button" id="btn-projects" class="btn btn-secondary tab-btn" onclick="switch_tab('projects')">Projects</button>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active text-dark" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
+            </li>
+          </ul>
         </div>
-      </div><br>
+      </div>
 
-      <!-- ############################## Home Tab ############################## -->
-      <div class="row section_tab" id="home">
-        <!-- Left column -->
-        <div class="col-md-4">
-          <!-- Section 1: information -->
-          <div class="bg-light-white shadow p-3 rounded">
-            <div class="section text-center">
-              <img id="profile" class="shadow" src="images/profile.jpg">
-              <h3 id="name">Hsuan-Hau Liu</h3>
-              <p><i>Computer Science MS Student</i></p>
-              <p><i>Deep Learning & Computer Vision Enthusiast</i></p>
+      <div class="tab-content" id="myTabContent">
+        <!-- ############################## Home Tab ############################## -->
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="row">
+            <!-- Left column -->
+            <div class="col-md-4">
+              <!-- Section 1: information -->
+              <div class="bg-light-white shadow p-3 rounded">
+                <div class="section text-center">
+                  <img id="profile" class="shadow" src="images/profile.jpg">
+                  <h3 id="name">Hsuan-Hau Liu</h3>
+                  <p><i>Computer Science MS Student</i></p>
+                  <p><i>Deep Learning & Computer Vision Enthusiast</i></p>
 
-              <a title="Resume" href="https://drive.google.com/open?id=127lTiCtVaUWMORjv8yNofKC48cBCIJ1G" class="btn btn-success btn-sm">
-                Resume
-              </a>
+                  <a title="Resume" href="https://drive.google.com/open?id=127lTiCtVaUWMORjv8yNofKC48cBCIJ1G" class="btn btn-success btn-sm">
+                    Resume
+                  </a>
 
-              <hr>
+                  <hr>
 
-              <div>
-                <p><i class="fas fa-envelope"></i> hsuanhal@usc.edu</p>
-                <p><i class="fas fa-location-arrow"></i> Los Angeles, CA</p>
-                <div id="links">
-                  <a title="Github" href="https://github.com/hsuanhauliu" class="fab fa-github-square"></a>
-                  <a title="LinkedIn" href="https://www.linkedin.com/in/hsuanhauliu/" class="fab fa-linkedin"></a>
+                  <div>
+                    <p><i class="fas fa-envelope"></i> hsuanhal@usc.edu</p>
+                    <p><i class="fas fa-location-arrow"></i> Los Angeles, CA</p>
+                    <div id="links">
+                      <a title="Github" href="https://github.com/hsuanhauliu" class="fab fa-github-square"></a>
+                      <a title="LinkedIn" href="https://www.linkedin.com/in/hsuanhauliu/" class="fab fa-linkedin"></a>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+
+              <!-- Section 2: Skills -->
+              <div class="bg-green shadow p-3 rounded">
+                <div class="section">
+                  <h3 class="section-header"><i class="fas fa-id-card"></i> Skills</h3>
+                  <hr>
+
+                  <h5 class="section-title"><i class="fas fa-terminal"></i> Programming Languages</h5>
+                  <div class="tab">
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>C</li>
+                    <li>C#</li>
+                    <li>Golang</li>
+                    <li>R</li>
+                  </div>
+
+                  <h5 class="section-title"><i class="fas fa-file-alt"></i> Web Development</h5>
+                  <div class="tab">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>React</li>
+                    <li>Bootstrap</li>
+                  </div>
+
+                  <h5 class="section-title"><i class="fas fa-wrench"></i> Tools</h5>
+                  <div class="tab">
+                    <li><a href="https://github.com/hsuanhauliu">Git</a></li>
+                    <li><a href="https://unity3d.com/">Unity3D</a></li>
+                    <li><a href="http://jupyter.org/">Jupyter Notebook</a></li>
+                    <li><a href="https://www.tensorflow.org/">TensorFlow</a></li>
+                    <li><a href="https://keras.io/">Keras</a></li>
+                    <li><a href="https://matplotlib.org/">dlib</a></li>
+                    <li><a href="https://opencv.org/">OpenCV</a></li>
+                    <li><a href="http://dlib.net/">Matplotlib</a></li>
+                    <li><a href="https://www.numpy.org/">Numpy</a></li>
+                  </div>
+                </div>
+              </div><br>
+
+              <!-- Section 3: Interests section -->
+              <div class="bg-light-white shadow p-3 rounded">
+                <div class="section">
+                  <h3><i class="fas fa-star"></i> Interests</h3>
+                  <hr>
+                  <div class="badge badge-primary">Computer Vision</div>
+                  <div class="badge badge-danger">Machine Learning</div>
+                  <div class="badge badge-warning">Deep Learning</div>
+                  <div class="badge badge-info">Image Processing</div>
+                  <div class="badge badge-success">AR & VR</div>
+                  <div class="badge badge-info">Game Development</div>
+                  <div class="badge badge-primary">Web Development</div>
+                  <div class="badge badge-danger">Mobile App Development</div>
+                </div>
+              </div><br>
+
+              <!-- Section 4: Languages -->
+              <div class="bg-light-white shadow p-3 rounded">
+                <div class="section">
+                  <h3><i class="fas fa-table-tennis"></i> Hobbies</h3>
+                  <hr>
+                  <div class="badge badge-primary">Tennis</div>
+                  <div class="badge badge-danger">Ice Skating</div>
+                  <div class="badge badge-info">Ping-Pong</div>
+                  <div class="badge badge-success">Piano</div>
+                  <div class="badge badge-info">Photography</div>
+                  <div class="badge badge-primary">Video Editing</div>
+                  <div class="badge badge-danger">Gaming</div>
+                  <div class="badge badge-warning">Reading</div>
+                  <div class="badge badge-success">Traveling</div>
+                </div>
+              </div>
+            </div> <!-- End left column -->
+
+            <!-- Right column -->
+            <div class="col-md-8">
+              <!-- Education section -->
+              <div class="bg-light-white shadow p-3 rounded">
+                <div class="section">
+                  <h3><i class="fas fa-university"></i> Education</h3>
+                  <hr>
+                  <p><b>University of Southern California</b>, Los Angeles, CA</p>
+                  <p>Master of Science, Computer Science</p>
+                  <p>Jan. 2018 - Dec. 2019</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 85.7%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div><br>
+
+                  <p><b>Auburn University</b>, Auburn, AL</p>
+                  <p>Bachelor of Science, Computer Science</p>
+                  <p>Aug. 2013 - Dec. 2017</p>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div><br>
+
+              <!-- Work experience section -->
+              <div class="bg-light-white shadow p-3 rounded">
+                <div class="section">
+                  <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                  <hr>
+
+                  <!-- Playing Forward Intern -->
+                  <p>
+                    <h5>
+                      <b>Computer Vision Research Intern</b>
+                      <small>at <a href="https://playingforward.com/">Playing Forward LLC</a></small>
+                    </h5>
+                    <i>Sep 2019 – Present</i>
+                  </p>
+                  <ul>
+                    <li>Researching <mark>facial recognition</mark> and <mark>human motion analysis</mark> techniques.</li>
+                  </ul>
+
+                  <!-- DR Intern 2 -->
+                  <p>
+                    <h5>
+                      <b>Machine Learning Researcher Intern</b>
+                      <small>at <a href="https://www.usc.edu/">University of Southern California</a></small>
+                    </h5>
+                    <i>May 2019 – Aug 2019</i>
+                  </p>
+                  <ul>
+                    <li>Tuned hyperparameters of <mark>neural network</mark> model to predict project effort.</li>
+                    <li>Collected and preprocessed open-sourced Android projects on Github using R.</li>
+                    <li>Created neural network <mark>visualization</mark> to better understand the model.</li>
+                  </ul>
+
+                  <!-- Military -->
+                  <p>
+                    <h5>
+                      <b>Republic of China Army</b>
+                      <small>in Taiwan</small>
+                    </h5>
+                    <i>Dec 2018 - Apr 2019</i>
+                  </p>
+                  <ul>
+                    <li>Served in Taiwanese military.</li>
+                  </ul>
+
+                  <!-- DR Intern 1 -->
+                  <p>
+                    <h5>
+                      <b>Software Developer Intern</b>
+                      <small>at <a href="http://www.carma-cam.com/">CarmaCam</a></small>
+                    </h5>
+                    <i>Aug 2018 – Nov 2018</i>
+                  </p>
+                  <ul>
+                    <li>Performed <mark>object detection</mark> using YOLO and Faster RCNN ResNet on TensorFlow to detect vehicles,
+    stop signs, and traffic lights from dashcam recordings.</li>
+                    <li>Designed <mark>automated</mark> report review pipeline with multiple <mark>machine learning</mark> models.</li>
+                    <li>Pitched our reckless-driver report application to potential investors.</li>
+                  </ul>
+
+                  <!-- UTA -->
+                  <p>
+                    <h5>
+                      <b>Undergraduate Teaching Assistant</b>
+                      <small>at <a href="http://www.auburn.edu/">Auburn University</a></small>
+                    </h5>
+                    <i>Aug 2017 - Sep 2017</i>
+                  </p>
+                  <ul>
+                    <li>Prepared course material prior to class time and assisted lecturers monitoring exams.</li>
+                    <li>Guided students through finishing lab assignments and helped resolve technical issues.</li>
+                  </ul>
+
+                  <!-- DrayTek Intern -->
+                  <p>
+                    <h5>
+                      <b>Product Quality Control Intern</b>
+                      <small>at <a href="https://www.draytek.com/">DrayTek Corp.</a></small>
+                    </h5>
+                    <i>Jul 2015 - Aug 2015</i>
+                  </p>
+                  <ul>
+                    <li>Conducted firmware testing on internet routers, APs, modems and delivered detailed reports.</li>
+                    <li>Corresponded with an engineering team to provide technical support for customers,
+                       performed bug reproduction to identify root causes, and tested new firmware features before release.</li>
+                  </ul>
+
+                  <div class="text-center"><a href="https://drive.google.com/open?id=127lTiCtVaUWMORjv8yNofKC48cBCIJ1G" class="btn btn-danger" role="button">View My Resume</a></div>
+                </div>
+              </div><br>
+
+            </div> <!-- End right column -->
+          </div> <!-- Home - End row -->
+        </div> <!-- End of home tab -->
+
+        <!-- ############################## Project Tab ############################## -->
+        <div class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+          <div class="row">
+            <!-- Computer Vision section -->
+            <div class="row w-100">
+              <div class="col-12">
+                <h3 class="text-center">Computer Vision & Image/Video Processing</h3>
+              </div>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Security Webcam</h5>
+                    <p class="card-text">
+                      Simple and easy to setup security camera system right on your computer.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/security-webcam" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, OpenCV</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Green Screen</h5>
+                    <p class="card-text">
+                      Simple tool for setting up green screen.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/green-screen" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, OpenCV</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Hidden Message Image</h5>
+                    <p class="card-text">
+                      A simple program that allows you to hide messages in images.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/hidden-message-image" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, Pillow</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">FCN Semantic Segmentation</h5>
+                    <p class="card-text">
+                      Built and trained a modified Fully Convolutional Network FCN-32 to do semantic segmentation from images.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/FCN-semantic-segmentation" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, TensorFlow, OpenCV, Matplotlib</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Structure From Motion with OpenCV</h5>
+                    <p class="card-text">
+                      Exercise simple structure from motion pipeline.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, OpenCV</small>
+                  </div>
                 </div>
               </div>
             </div>
-          </div><br>
 
-          <!-- Section 2: Skills -->
-          <div class="bg-green shadow p-3 rounded">
-            <div class="section">
-              <h3 class="section-header"><i class="fas fa-id-card"></i> Skills</h3>
-              <hr>
-
-              <h5 class="section-title"><i class="fas fa-terminal"></i> Programming Languages</h5>
-              <div class="tab">
-                <li>Python</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>C</li>
-                <li>C#</li>
-                <li>Golang</li>
-                <li>R</li>
+            <!-- Machine Learning section -->
+            <div class="row w-100">
+              <div class="col-12">
+                <hr>
+                <h3 class="text-center">Machine Learning</h3>
               </div>
 
-              <h5 class="section-title"><i class="fas fa-file-alt"></i> Web Development</h5>
-              <div class="tab">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React</li>
-                <li>Bootstrap</li>
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Machine-Improvised Music</h5>
+                    <p class="card-text">
+                      Intelligent system which can learn musical melodies and produce music of its own.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/machine-improvised-music" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, PythonMIDI</small>
+                  </div>
+                </div>
               </div>
 
-              <h5 class="section-title"><i class="fas fa-wrench"></i> Tools</h5>
-              <div class="tab">
-                <li><a href="https://github.com/hsuanhauliu">Git</a></li>
-                <li><a href="https://unity3d.com/">Unity3D</a></li>
-                <li><a href="http://jupyter.org/">Jupyter Notebook</a></li>
-                <li><a href="https://www.tensorflow.org/">TensorFlow</a></li>
-                <li><a href="https://keras.io/">Keras</a></li>
-                <li><a href="https://matplotlib.org/">dlib</a></li>
-                <li><a href="https://opencv.org/">OpenCV</a></li>
-                <li><a href="http://dlib.net/">Matplotlib</a></li>
-                <li><a href="https://www.numpy.org/">Numpy</a></li>
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Weather Prediction</h5>
+                    <p class="card-text">
+                      A simple weather prediction program implemented using Viterbi algorithm.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/weather-prediction" class="btn btn-info btn-sm">Github</a>
+                    <a href="https://hsuanhauliu.github.io/weather-prediction/" class="btn btn-info btn-sm">Website</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">HTML, Javascript, Bootstrap</small>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div><br>
 
-          <!-- Section 3: Interests section -->
-          <div class="bg-light-white shadow p-3 rounded">
-            <div class="section">
-              <h3><i class="fas fa-star"></i> Interests</h3>
-              <hr>
-              <div class="badge badge-primary">Computer Vision</div>
-              <div class="badge badge-danger">Machine Learning</div>
-              <div class="badge badge-warning">Deep Learning</div>
-              <div class="badge badge-info">Image Processing</div>
-              <div class="badge badge-success">AR & VR</div>
-              <div class="badge badge-info">Game Development</div>
-              <div class="badge badge-primary">Web Development</div>
-              <div class="badge badge-danger">Mobile App Development</div>
-            </div>
-          </div><br>
-
-          <!-- Section 4: Languages -->
-          <div class="bg-light-white shadow p-3 rounded">
-            <div class="section">
-              <h3><i class="fas fa-table-tennis"></i> Hobbies</h3>
-              <hr>
-              <div class="badge badge-primary">Tennis</div>
-              <div class="badge badge-danger">Ice Skating</div>
-              <div class="badge badge-info">Ping-Pong</div>
-              <div class="badge badge-success">Piano</div>
-              <div class="badge badge-info">Photography</div>
-              <div class="badge badge-primary">Video Editing</div>
-              <div class="badge badge-danger">Gaming</div>
-              <div class="badge badge-warning">Reading</div>
-              <div class="badge badge-success">Traveling</div>
-            </div>
-          </div>
-        </div> <!-- End left column -->
-
-        <!-- Right column -->
-        <div class="col-md-8">
-          <!-- Education section -->
-          <div class="bg-light-white shadow p-3 rounded">
-            <div class="section">
-              <h3><i class="fas fa-university"></i> Education</h3>
-              <hr>
-              <p><b>University of Southern California</b>, Los Angeles, CA</p>
-              <p>Master of Science, Computer Science</p>
-              <p>Jan. 2018 - Dec. 2019</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-primary" role="progressbar" style="width: 85.7%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div><br>
-
-              <p><b>Auburn University</b>, Auburn, AL</p>
-              <p>Bachelor of Science, Computer Science</p>
-              <p>Aug. 2013 - Dec. 2017</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Random Text Generator</h5>
+                    <p class="card-text">
+                      A simple text generator implemented using Hidden Markov Model.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/random-text-generator" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python</small>
+                  </div>
+                </div>
               </div>
             </div>
-          </div><br>
 
-          <!-- Work experience section -->
-          <div class="bg-light-white shadow p-3 rounded">
-            <div class="section">
-              <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
-              <hr>
-
-              <!-- Playing Forward Intern -->
-              <p>
-                <h5>
-                  <b>Computer Vision Research Intern</b>
-                  <small>at <a href="https://playingforward.com/">Playing Forward LLC</a></small>
-                </h5>
-                <i>Sep 2019 – Present</i>
-              </p>
-              <ul>
-                <li>Researching <mark>facial recognition</mark> and <mark>human motion analysis</mark> techniques.</li>
-              </ul>
-
-              <!-- DR Intern 2 -->
-              <p>
-                <h5>
-                  <b>Machine Learning Researcher Intern</b>
-                  <small>at <a href="https://www.usc.edu/">University of Southern California</a></small>
-                </h5>
-                <i>May 2019 – Aug 2019</i>
-              </p>
-              <ul>
-                <li>Tuned hyperparameters of <mark>neural network</mark> model to predict project effort.</li>
-                <li>Collected and preprocessed open-sourced Android projects on Github using R.</li>
-                <li>Created neural network <mark>visualization</mark> to better understand the model.</li>
-              </ul>
-
-              <!-- Military -->
-              <p>
-                <h5>
-                  <b>Republic of China Army</b>
-                  <small>in Taiwan</small>
-                </h5>
-                <i>Dec 2018 - Apr 2019</i>
-              </p>
-              <ul>
-                <li>Served in Taiwanese military.</li>
-              </ul>
-
-              <!-- DR Intern 1 -->
-              <p>
-                <h5>
-                  <b>Software Developer Intern</b>
-                  <small>at <a href="http://www.carma-cam.com/">CarmaCam</a></small>
-                </h5>
-                <i>Aug 2018 – Nov 2018</i>
-              </p>
-              <ul>
-                <li>Performed <mark>object detection</mark> using YOLO and Faster RCNN ResNet on TensorFlow to detect vehicles,
-stop signs, and traffic lights from dashcam recordings.</li>
-                <li>Designed <mark>automated</mark> report review pipeline with multiple <mark>machine learning</mark> models.</li>
-                <li>Pitched our reckless-driver report application to potential investors.</li>
-              </ul>
-
-              <!-- UTA -->
-              <p>
-                <h5>
-                  <b>Undergraduate Teaching Assistant</b>
-                  <small>at <a href="http://www.auburn.edu/">Auburn University</a></small>
-                </h5>
-                <i>Aug 2017 - Sep 2017</i>
-              </p>
-              <ul>
-                <li>Prepared course material prior to class time and assisted lecturers monitoring exams.</li>
-                <li>Guided students through finishing lab assignments and helped resolve technical issues.</li>
-              </ul>
-
-              <!-- DrayTek Intern -->
-              <p>
-                <h5>
-                  <b>Product Quality Control Intern</b>
-                  <small>at <a href="https://www.draytek.com/">DrayTek Corp.</a></small>
-                </h5>
-                <i>Jul 2015 - Aug 2015</i>
-              </p>
-              <ul>
-                <li>Conducted firmware testing on internet routers, APs, modems and delivered detailed reports.</li>
-                <li>Corresponded with an engineering team to provide technical support for customers,
-                   performed bug reproduction to identify root causes, and tested new firmware features before release.</li>
-              </ul>
-
-              <div class="text-center"><a href="https://drive.google.com/open?id=127lTiCtVaUWMORjv8yNofKC48cBCIJ1G" class="btn btn-danger" role="button">View My Resume</a></div>
-            </div>
-          </div><br>
-
-        </div> <!-- End right column -->
-      </div> <!-- Home - End row -->
-
-      <!-- ############################## Project Tab ############################## -->
-      <div class="row section_tab" id="projects" style="display: none">
-        <!-- Computer Vision section -->
-        <div class="row w-100">
-          <div class="col-12">
-            <h3 class="text-center">Computer Vision & Image/Video Processing</h3>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Security Webcam</h5>
-                <p class="card-text">
-                  Simple and easy to setup security camera system right on your computer.
-                </p>
-                <a href="https://github.com/hsuanhauliu/security-webcam" class="btn btn-info btn-sm">Github</a>
+            <!-- AR & VR section -->
+            <div class="row w-100">
+              <div class="col-12">
+                <hr>
+                <h3 class="text-center">Augmented & Virtual Reality</h3>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, OpenCV</small>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">RuGo</h5>
+                    <p class="card-text">
+                      Designed a virtual space to create, visualize, and share Rube Goldberg machines.
+                      Unlike the physical world, RuGo allows people to prototype their creations in a sandbox environment where space and resources are not constrained.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/RuGo" class="btn btn-info btn-sm">Github</a>
+                    <a href="https://hsuanhauliu.github.io/RuGo/" class="btn btn-info btn-sm">Website</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">C#, Unity, HTC Vive</small>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Green Screen</h5>
-                <p class="card-text">
-                  Simple tool for setting up green screen.
-                </p>
-                <a href="https://github.com/hsuanhauliu/green-screen" class="btn btn-info btn-sm">Github</a>
+            <!-- Data Mining section -->
+            <div class="row w-100">
+              <div class="col-12">
+                <hr>
+                <h3 class="text-center">Data Mining</h3>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, OpenCV</small>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Yelp Recommendation System</h5>
+                    <p class="card-text">
+                      Yelp recommendation system using collaborative-filtering algorithms.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/yelp-recommendation-system" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, Spark, SparkML</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Community Detection</h5>
+                    <p class="card-text">
+                      Find the optimal community clustering of a Yelp user network using Girvan-Newman algorithm.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/girvan-newman-community-detection" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, Spark</small>
+                  </div>
+                </div>
+              </div>
+            </div><br><br>
+
+            <!--  Web Develpment section -->
+            <div class="row w-100">
+              <div class="col-12">
+                <hr>
+                <h3 class="text-center">Web Develpment</h3>
+              </div>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Do Good</h5>
+                    <p class="card-text">
+                      A website that provides non-profit organization information with location-based searching feature.
+                    </p>
+                    <a href="https://github.com/abhatt95/do-good" class="btn btn-info btn-sm">Github</a>
+                    <a href="https://abhatt95.github.io/do-good/" class="btn btn-info btn-sm">Website</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Python, JavaScript, HTML, CSS</small>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Hidden Message Image</h5>
-                <p class="card-text">
-                  A simple program that allows you to hide messages in images.
-                </p>
-                <a href="https://github.com/hsuanhauliu/hidden-message-image" class="btn btn-info btn-sm">Github</a>
+            <!--  Mobile App Development section -->
+            <div class="row w-100">
+              <div class="col-12">
+                <hr>
+                <h3 class="text-center">Mobile App Development</h3>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, Pillow</small>
+
+              <div class="col-md-4 py-2">
+                <div class="card h-100 shadow">
+                  <div class="card-body">
+                    <h5 class="card-title">Concentration Game App</h5>
+                    <p class="card-text">
+                      A simple two-player concentration game on iOS.
+                    </p>
+                    <a href="https://github.com/hsuanhauliu/concentration-game" class="btn btn-info btn-sm">Github</a>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Swift</small>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">FCN Semantic Segmentation</h5>
-                <p class="card-text">
-                  Built and trained a modified Fully Convolutional Network FCN-32 to do semantic segmentation from images.
-                </p>
-                <a href="https://github.com/hsuanhauliu/FCN-semantic-segmentation" class="btn btn-info btn-sm">Github</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, TensorFlow, OpenCV, Matplotlib</small>
-              </div>
+            <div class="col-12 text-center"><br>
+              <a href="https://github.com/hsuanhauliu" class="btn btn-danger" role="button">More Projects on Github</a>
             </div>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Structure From Motion with OpenCV</h5>
-                <p class="card-text">
-                  Exercise simple structure from motion pipeline.
-                </p>
-                <a href="https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV" class="btn btn-info btn-sm">Github</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, OpenCV</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Machine Learning section -->
-        <div class="row w-100">
-          <div class="col-12">
-            <hr>
-            <h3 class="text-center">Machine Learning</h3>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Machine-Improvised Music</h5>
-                <p class="card-text">
-                  Intelligent system which can learn musical melodies and produce music of its own.
-                </p>
-                <a href="https://github.com/hsuanhauliu/machine-improvised-music" class="btn btn-info btn-sm">Github</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, PythonMIDI</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Weather Prediction</h5>
-                <p class="card-text">
-                  A simple weather prediction program implemented using Viterbi algorithm.
-                </p>
-                <a href="https://github.com/hsuanhauliu/weather-prediction" class="btn btn-info btn-sm">Github</a>
-                <a href="https://hsuanhauliu.github.io/weather-prediction/" class="btn btn-info btn-sm">Website</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">HTML, Javascript, Bootstrap</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Random Text Generator</h5>
-                <p class="card-text">
-                  A simple text generator implemented using Hidden Markov Model.
-                </p>
-                <a href="https://github.com/hsuanhauliu/random-text-generator" class="btn btn-info btn-sm">Github</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Python</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AR & VR section -->
-        <div class="row w-100">
-          <div class="col-12">
-            <hr>
-            <h3 class="text-center">Augmented & Virtual Reality</h3>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">RuGo</h5>
-                <p class="card-text">
-                  Designed a virtual space to create, visualize, and share Rube Goldberg machines.
-                  Unlike the physical world, RuGo allows people to prototype their creations in a sandbox environment where space and resources are not constrained.
-                </p>
-                <a href="https://github.com/hsuanhauliu/RuGo" class="btn btn-info btn-sm">Github</a>
-                <a href="https://hsuanhauliu.github.io/RuGo/" class="btn btn-info btn-sm">Website</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">C#, Unity, HTC Vive</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Data Mining section -->
-        <div class="row w-100">
-          <div class="col-12">
-            <hr>
-            <h3 class="text-center">Data Mining</h3>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Yelp Recommendation System</h5>
-                <p class="card-text">
-                  Yelp recommendation system using collaborative-filtering algorithms.
-                </p>
-                <a href="https://github.com/hsuanhauliu/yelp-recommendation-system" class="btn btn-info btn-sm">Github</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, Spark, SparkML</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Community Detection</h5>
-                <p class="card-text">
-                  Find the optimal community clustering of a Yelp user network using Girvan-Newman algorithm.
-                </p>
-                <a href="https://github.com/hsuanhauliu/girvan-newman-community-detection" class="btn btn-info btn-sm">Github</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, Spark</small>
-              </div>
-            </div>
-          </div>
-        </div><br><br>
-
-        <!--  Web Develpment section -->
-        <div class="row w-100">
-          <div class="col-12">
-            <hr>
-            <h3 class="text-center">Web Develpment</h3>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Do Good</h5>
-                <p class="card-text">
-                  A website that provides non-profit organization information with location-based searching feature.
-                </p>
-                <a href="https://github.com/abhatt95/do-good" class="btn btn-info btn-sm">Github</a>
-                <a href="https://abhatt95.github.io/do-good/" class="btn btn-info btn-sm">Website</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Python, JavaScript, HTML, CSS</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--  Mobile App Development section -->
-        <div class="row w-100">
-          <div class="col-12">
-            <hr>
-            <h3 class="text-center">Mobile App Development</h3>
-          </div>
-
-          <div class="col-md-4 py-2">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">Concentration Game App</h5>
-                <p class="card-text">
-                  A simple two-player concentration game on iOS.
-                </p>
-                <a href="https://github.com/hsuanhauliu/concentration-game" class="btn btn-info btn-sm">Github</a>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Swift</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 text-center"><br>
-          <a href="https://github.com/hsuanhauliu" class="btn btn-danger" role="button">More Projects on Github</a>
-        </div>
-      </div> <!-- Project - End row -->
-
+          </div> <!-- Project - End row -->
+        </div> <!-- Project tab -->
+      </div>
       <br><br>
     </div> <!-- /.container -->
 

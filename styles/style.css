@@ -19,6 +19,11 @@ footer {
   text-align: center;
 }
 
+.hightlight {
+  color: #2f89cc;
+  font-size: 18px;
+}
+
 .tab {
   padding-left: 2em;
 }

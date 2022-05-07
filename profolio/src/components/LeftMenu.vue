@@ -1,23 +1,26 @@
 <template>
-  <v-card
-    flat
-    color="transparent"
-  >
-    <v-list-item
-      v-for="(link, i) in links"
-      :key="i"
-    >
-      <v-list-item-content>
-        <v-list-item-title>
-          <v-icon>mid-minus</v-icon>
-          <a :href="link.link">
-            <v-icon>{{ link.icon }}</v-icon>
-          </a>
-        </v-list-item-title>
-      </v-list-item-content>
-    </v-list-item>
-
-  </v-card>
+  <v-row style="position: absolute" align=start>
+    <v-col cols="1" style="height: 100vh; display: flex; align-items: center">
+      <v-card
+        flat
+        color="transparent"
+      >
+        <v-list-item
+          v-for="(link, i) in links"
+          :key="i"
+        >
+          <v-list-item-content>
+            <v-list-item-title>
+              <v-icon>mid-minus</v-icon>
+              <a :href="link.link" target="_blank">
+                <v-icon>{{ link.icon }}</v-icon>
+              </a>
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -54,8 +57,4 @@ a {
   text-decoration: none;
 }
 
-.v-card {
-  position: fixed;
-  top: 48vh;
-}
 </style>

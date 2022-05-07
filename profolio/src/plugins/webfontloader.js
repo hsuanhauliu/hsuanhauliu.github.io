@@ -9,7 +9,7 @@ export async function loadFonts () {
 
   webFontLoader.load({
     google: {
-      families: ['Cormorant+Garamond:100,300,400,500,700,900&display=swap'],
+      families: ['Cormorant+Garamond&display=swap', 'Dancing+Script&display=swap'],
     },
   })
 }

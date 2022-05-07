@@ -1,7 +1,7 @@
 <template>
   <v-container id="experience_section">
     <v-row>
-      <v-col col="12" style="height: 100vh">
+      <v-col col="12">
         <v-timeline>
           <v-timeline-item
             v-for="(experience, i) in experiences"
@@ -26,6 +26,10 @@
             </v-card>
           </v-timeline-item>
         </v-timeline>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" style="height: 50vh">
       </v-col>
     </v-row>
   </v-container>

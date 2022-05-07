@@ -1,14 +1,11 @@
 <template>
-  <v-card>
-    <v-app-bar fixed flat color="transparent">
+  <v-app-bar fixed flat color="transparent">
+    <v-spacer></v-spacer>
 
-      <v-spacer></v-spacer>
-
-      <div v-for="(section, i) in sections" :key="i">
-        <a :href="section.id" class="section underline">{{ section.title }}</a>
-      </div>
-    </v-app-bar>
-  </v-card>
+    <div v-for="(section, i) in sections" :key="i">
+      <a :href="section.id" class="section underline">{{ section.title }}</a>
+    </div>
+  </v-app-bar>
 </template>
 
 <script>

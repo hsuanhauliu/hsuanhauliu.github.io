@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar fixed flat color="transparent">
+  <v-app-bar flat color="transparent">
     <v-spacer></v-spacer>
 
     <div v-for="(section, i) in sections" :key="i">
@@ -34,9 +34,9 @@ export default {
 
 <style scoped>
 .section {
-  margin: 0px 10px;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: 'Cormorant Garamond', serif;
+  margin: 0px 8px;
+  font-size: 22px;
+  font-family: "Gill Sans", sans-serif;
 }
+
 </style>

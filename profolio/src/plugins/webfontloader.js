@@ -9,7 +9,7 @@ export async function loadFonts () {
 
   webFontLoader.load({
     google: {
-      families: ['Cormorant+Garamond&display=swap', 'Dancing+Script&display=swap'],
+      families: [],
     },
   })
 }

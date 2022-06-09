@@ -1,5 +1,5 @@
 <template>
-  <v-row style="position: absolute" align=start>
+  <v-row style="position: fixed" align=start>
     <v-col cols="1" style="height: 100vh; display: flex; align-items: center">
       <v-card
         flat
@@ -11,7 +11,6 @@
         >
           <v-list-item-content>
             <v-list-item-title>
-              <v-icon>mid-minus</v-icon>
               <a :href="link.link" target="_blank">
                 <v-icon>{{ link.icon }}</v-icon>
               </a>

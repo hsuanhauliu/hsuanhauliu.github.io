@@ -5,7 +5,6 @@
       <LeftMenu/>
       <HomeSection/>
       <ExperienceSection/>
-      <AboutSection/>
     </v-main>
   </v-app>
 </template>
@@ -14,7 +13,6 @@
 import TopBar from './components/TopBar.vue'
 import LeftMenu from './components/LeftMenu.vue'
 import HomeSection from './components/Home.vue'
-import AboutSection from './components/About.vue'
 import ExperienceSection from './components/Experience.vue'
 
 export default {
@@ -22,7 +20,6 @@ export default {
 
   components: {
     HomeSection,
-    AboutSection,
     ExperienceSection,
     TopBar,
     LeftMenu
@@ -53,7 +50,6 @@ a {
 
 .btn-border {
   border: 2px solid;
-  border-color: #f8d22a;
 }
 
 </style>

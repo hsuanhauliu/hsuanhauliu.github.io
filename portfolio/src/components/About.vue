@@ -1,11 +1,11 @@
 <template>
-  <v-container-fluid id="about_section">
+  <v-container-fluid id="about_section" height="100vh">
     <v-row style="margin-bottom: 100px">
       <v-col cols=3></v-col>
-      <v-col cols=6 style="height: 50vh">
+      <v-col cols=6 style="height: 100vh; display: flex; align-items: center">
         <v-row>
           <v-col cols=12 md=4 style="display: flex; align-items: center">
-            <v-img width=300 src="../assets/selfie_1.jpg"></v-img>
+            <v-img width=300 src="../assets/logo.png"></v-img>
           </v-col>
 
           <v-col cols=12 md=8 style="display: flex; align-items: center">
@@ -14,7 +14,7 @@
                 Hi!
               </v-card-title>
               <v-card-text>
-                My name is Hsuan-Hau, but I go by the nickname Howard.
+                My name is Hsuan-Hau, but I go by Howard.
                 I'm a full-stack software engineer currently working at Google in the Bay Area.
               </v-card-text>
             </v-card>
@@ -40,5 +40,9 @@ export default {
 <style scoped>
 div {
   font-size: 20px;
+}
+
+.corner_icon {
+  transform: rotate(90deg);
 }
 </style>

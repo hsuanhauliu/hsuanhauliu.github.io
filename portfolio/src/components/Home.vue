@@ -18,12 +18,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-      <v-col cols="2">
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="8" style="height: 25vh">
-      </v-col>
+      <v-col cols="2"></v-col>
     </v-row>
   </v-container-fluid>
 </template>
@@ -68,4 +63,7 @@ export default {
   color: #ffe46e;
 }
 
+.corner_icon {
+  transform: rotate(-90deg);
+}
 </style>

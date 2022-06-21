@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 a {
-  font-size: 22px;
+  font-size: 20px;
   text-decoration: none;
 }
 

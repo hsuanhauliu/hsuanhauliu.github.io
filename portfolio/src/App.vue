@@ -4,6 +4,7 @@
       <TopBar/>
       <LeftMenu/>
       <HomeSection/>
+      <AboutSection/>
       <ExperienceSection/>
     </v-main>
   </v-app>
@@ -13,6 +14,7 @@
 import TopBar from './components/TopBar.vue'
 import LeftMenu from './components/LeftMenu.vue'
 import HomeSection from './components/Home.vue'
+import AboutSection from './components/About.vue'
 import ExperienceSection from './components/Experience.vue'
 
 export default {
@@ -20,6 +22,7 @@ export default {
 
   components: {
     HomeSection,
+    AboutSection,
     ExperienceSection,
     TopBar,
     LeftMenu

@@ -24,18 +24,20 @@
                 {{ experience.location }}
               </v-card-subtitle>
               <v-card-text class="white_text" style="text-align: left">
+                <!-- description section -->
                 <p
                   v-for="(desc, j) in experience.descriptions"
                   :key="j"
                 >
                   <v-icon>mdi-menu-right</v-icon>{{ desc }}
                 </p>
-                <br>
+
+                <!-- tags section -->
                 <v-chip
                   v-for="(tag, j) in experience.tags"
                   :key="j"
                   size="x-small"
-                  class="ma-1"
+                  class="mx-1 mt-3"
                 >
                   {{ tag }}
                 </v-chip>
@@ -53,7 +55,6 @@
 </template>
 
 <script>
-
 export default {
   name: "ExperienceSection",
 
@@ -75,13 +76,22 @@ export default {
           location: "Redwood City, CA",
           descriptions: [
             `I joined the company when there were about 25 employees, and worked mostly as an individual contributor.
-            Over two years, I built various internal tools, services, and libraries that were used across the company, and also maintained telemetry infrastructure in production.
-            As one of the members on the data platform team, I implemented various data pipelines, logging library, and data infrastructure components.
+            Over two years, I built various internal tools, services, and libraries that were used across the company, and also maintained telemetry infrastructure in production.`,
+            `As one of the members on the data platform team, I implemented various data pipelines, logging library, and data infrastructure components.
             Some of my other notable contributions include software deployment automation, camera calibration automation, service orchestration tool, etc.
             I also did some data analysis, server provisioning, cloud infra development, and was involved in the engineering hiring effort as well.
             `
           ],
-          tags: ["Data engineering", "Full-stack development", "Developer toolings", "Software infrastructure", "Computer Vision"],
+          tags: [
+            "Data Engineering",
+            "Full-stack Development",
+            "Software Infrastructure",
+            "Software Deployment",
+            "Distributed System",
+            "Cloud Infrastructure",
+            "Computer Vision",
+            "Deep Learning",
+          ],
           date: "Feb 19, 2020 - June 3, 2022",
         },
         {
@@ -92,7 +102,12 @@ export default {
             `During the internship, my responsibility was to help our AI engineer build tools and experiment with different Deep Learning models.
             My main contributions include data analysis, processing, visualization, and model implementation.`
           ],
-          tags: ["Machine Learning", "Game Development", "Data engineering", "Data analysis"],
+          tags: [
+            "Deep Learning",
+            "Data Engineering",
+            "Game Development",
+            "Data Analysis"
+          ],
           date: "Sep 9, 2019 - Dec 9, 2019",
         },
         {

@@ -1,7 +1,10 @@
 <template>
   <v-app-bar flat color="transparent">
+    <v-btn icon disabled>
+      <v-img src="../assets/logo.png"></v-img>
+    </v-btn>
+      
     <v-spacer></v-spacer>
-
     <div v-for="(section, i) in sections" :key="i">
       <a :href="section.id" class="section underline">{{ section.title }}</a>
     </div>
@@ -9,7 +12,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'TopBar',
 
@@ -38,5 +40,4 @@ export default {
   font-size: 22px;
   font-family: "Gill Sans", sans-serif;
 }
-
 </style>

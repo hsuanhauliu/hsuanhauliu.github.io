@@ -1,5 +1,5 @@
 <template>
-  <v-container-fluid>
+  <v-container fluid>
     <v-row class="background_color" justify="center">
       <v-col cols="2">
       </v-col>
@@ -20,7 +20,7 @@
       </v-col>
       <v-col cols="2"></v-col>
     </v-row>
-  </v-container-fluid>
+  </v-container>
 </template>
 
 <script>

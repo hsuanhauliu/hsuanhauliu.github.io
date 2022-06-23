@@ -1,24 +1,25 @@
 <template>
-  <v-container id="experience_section">
-    <v-row>
-      <v-col col="12">
-        <v-timeline line-thickness=1>
+  <v-container fluid>
+    <v-row class="mb-10">
+      <v-spacer></v-spacer>
+      <v-col cols="10">
+        <v-timeline side="end" line-thickness=1>
           <v-timeline-item
             v-for="(experience, i) in experiences"
             :key="i"
             size="x-small"
-            dot-color="#ffe262"
-            fill-dot
+            dot-color="yellow"
+            icon="mdi-compass-rose"
           >
             <template v-slot:opposite>
               <span
-                :class="`headline`"
+                class="text-subtitle-2"
                 v-text="experience.date"
               ></span>
             </template>
             <v-card elevation="0" border="1" dark class="border-warning">
-              <v-card-title class="text-h6 title_color">
-                {{ experience.role }}<v-spacer></v-spacer><p class="text-subtitle-2">@ {{ experience.company }}</p>
+              <v-card-title class="text-subtitle-1 title_color">
+                {{ experience.role }}<v-spacer></v-spacer><p class="text-caption">@{{ experience.company }}</p>
               </v-card-title>
               <v-card-subtitle class="pt-1">
                 {{ experience.location }}
@@ -46,10 +47,7 @@
           </v-timeline-item>
         </v-timeline>
       </v-col>
-    </v-row>
-    <v-row>
-      <v-col cols="12" style="height: 25vh">
-      </v-col>
+      <v-spacer></v-spacer>
     </v-row>
   </v-container>
 </template>
@@ -65,10 +63,10 @@ export default {
           company: "Google",
           location: "Mountain View, CA",
           descriptions: [
-            "Joining as a full-stack developer at Youtube."
+            "Full-stack developer at Youtube."
           ],
           tags: ["Full-stack development"],
-          date: "June 20, 2022",
+          date: "6/20/22 - present",
         },
         {
           role: "Robotics Engineer",
@@ -92,7 +90,7 @@ export default {
             "Computer Vision",
             "Deep Learning",
           ],
-          date: "Feb 19, 2020 - June 3, 2022",
+          date: "2/19/20 - 6/3/22",
         },
         {
           role: "Software Development Engineering Intern",
@@ -108,7 +106,35 @@ export default {
             "Game Development",
             "Data Analysis"
           ],
-          date: "Sep 9, 2019 - Dec 9, 2019",
+          date: "9/9/19 - 12/9/19",
+        },
+        {
+          role: "Machine Learning Research Intern",
+          company: "USC UMLx Project",
+          location: "Los Angeles, CA",
+          descriptions: [
+            `Tuned hyperparameters of neural network model to predict project effort.`,
+            `Collected and preprocessed open-sourced Android projects on Github using R.`,
+            `Created neural network visualization to better understand the model.`
+          ],
+          tags: [
+            "Machine Learning",
+          ],
+          date: "5/15/19 - 8/6/19",
+        },
+        {
+          role: "Software Developer Intern",
+          company: "CarmaCam",
+          location: "Los Angeles, CA",
+          descriptions: [
+            `Performed object detection using YOLO and Faster RCNN ResNet on TensorFlow to detect vehicles, stop signs, and traffic lights from dashcam recordings.`,
+            `Designed automated report review pipeline with multiple machine learning models.`,
+            `Pitched our machine learning capability to potential investors.`
+          ],
+          tags: [
+            "Machine Learning",
+          ],
+          date: "8/29/18 - 11/30/18",
         },
         {
           role: "Master's in CS",
@@ -117,7 +143,7 @@ export default {
           descriptions: [
             "Obtained master's degree in Computer Science."
           ],
-          date: "Jan 8, 2018 - Dec 18, 2019",
+          date: "1/8/18 - 12/18/19",
         },
         {
           role: "Bachelor's in CS",
@@ -126,7 +152,7 @@ export default {
           descriptions: [
             "Obtained bachelor's degree in Computer Science."
           ],
-          date: "Aug 21, 2013 - Dec 16, 2017",
+          date: "8/21/13 - 12/16/17",
         }
     ]
   }),

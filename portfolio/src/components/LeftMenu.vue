@@ -9,13 +9,11 @@
           v-for="(link, i) in links"
           :key="i"
         >
-          <v-list-item-content>
-            <v-list-item-title>
-              <a :href="link.link" target="_blank">
-                <v-icon>{{ link.icon }}</v-icon>
-              </a>
-            </v-list-item-title>
-          </v-list-item-content>
+          <v-list-item-title>
+            <a :href="link.link" target="_blank">
+              <v-icon>{{ link.icon }}</v-icon>
+            </a>
+          </v-list-item-title>
         </v-list-item>
       </v-card>
     </v-col>
@@ -52,7 +50,7 @@ export default {
 
 <style scoped>
 a {
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
 }
 

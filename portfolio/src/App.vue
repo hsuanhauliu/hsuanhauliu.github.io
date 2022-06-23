@@ -4,8 +4,25 @@
       <TopBar/>
       <LeftMenu/>
       <HomeSection/>
+      <v-row class="mb-3" id="about_section">
+        <v-spacer></v-spacer>
+        <v-col cols=10>
+          <v-subheader inset class="text-h5"><v-icon size="x-small" color="#f8d22a">mdi-music-clef-treble</v-icon> About Me</v-subheader>
+          <v-divider inset></v-divider>
+        </v-col>
+        <v-spacer></v-spacer>
+      </v-row>
       <AboutSection/>
+      <v-row class="mb-3" id="experience_section">
+        <v-spacer></v-spacer>
+        <v-col cols=10>
+          <v-subheader inset class="text-h5"><v-icon size="x-small" color="#f8d22a">mdi-music-clef-bass</v-icon> Work Experience</v-subheader>
+          <v-divider inset></v-divider>
+        </v-col>
+        <v-spacer></v-spacer>
+      </v-row>
       <ExperienceSection/>
+      <ContactSection/>
     </v-main>
   </v-app>
 </template>
@@ -16,6 +33,7 @@ import LeftMenu from './components/LeftMenu.vue'
 import HomeSection from './components/Home.vue'
 import AboutSection from './components/About.vue'
 import ExperienceSection from './components/Experience.vue'
+import ContactSection from './components/Contact.vue'
 
 export default {
   name: 'App',
@@ -24,6 +42,7 @@ export default {
     HomeSection,
     AboutSection,
     ExperienceSection,
+    ContactSection,
     TopBar,
     LeftMenu
   },
@@ -34,6 +53,10 @@ export default {
 </script>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 a, a:visited, a:hover, a:active {
   color: inherit;
 }

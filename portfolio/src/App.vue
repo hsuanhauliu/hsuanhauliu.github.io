@@ -1,13 +1,14 @@
 <template>
   <v-app>
     <v-main>
+      <StarBackground/>
       <TopBar/>
       <LeftMenu/>
       <HomeSection/>
       <v-row class="mb-3" id="about_section">
         <v-spacer></v-spacer>
         <v-col cols=10>
-          <v-subheader inset class="text-h5"><v-icon size="x-small" color="#f8d22a">mdi-music-clef-treble</v-icon> About Me</v-subheader>
+          <div class="text-h5"><v-icon size="x-small" color="#f8d22a">mdi-music-clef-treble</v-icon> About Me</div>
           <v-divider inset></v-divider>
         </v-col>
         <v-spacer></v-spacer>
@@ -16,7 +17,7 @@
       <v-row class="mb-3" id="experience_section">
         <v-spacer></v-spacer>
         <v-col cols=10>
-          <v-subheader inset class="text-h5"><v-icon size="x-small" color="#f8d22a">mdi-music-clef-bass</v-icon> Work Experience</v-subheader>
+          <div class="text-h5"><v-icon size="x-small" color="#f8d22a">mdi-music-clef-bass</v-icon> Work Experience</div>
           <v-divider inset></v-divider>
         </v-col>
         <v-spacer></v-spacer>
@@ -34,6 +35,7 @@ import HomeSection from './components/Home.vue'
 import AboutSection from './components/About.vue'
 import ExperienceSection from './components/Experience.vue'
 import ContactSection from './components/Contact.vue'
+import StarBackground from './components/StarBackground.vue'
 
 export default {
   name: 'App',
@@ -44,7 +46,8 @@ export default {
     ExperienceSection,
     ContactSection,
     TopBar,
-    LeftMenu
+    LeftMenu,
+    StarBackground
   },
 
   data: () => ({

@@ -39,7 +39,7 @@ export default {
       anime({
         targets: '#top_icon',
         translateX: {
-          value: [-100, 0],
+          value: ["-100px", "0px"],
           duration: 100
         },
         rotate: {

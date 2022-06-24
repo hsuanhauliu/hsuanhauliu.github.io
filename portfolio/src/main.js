@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
-import { loadFonts } from './plugins/webfontloader'
+//import { loadFonts } from './plugins/webfontloader'
 
-loadFonts()
+// disable font loading
+//loadFonts()
 
 createApp(App)
   .use(vuetify)

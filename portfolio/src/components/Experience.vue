@@ -63,22 +63,20 @@ export default {
           company: "Google",
           location: "Mountain View, CA",
           descriptions: [
-            "Full-stack developer at Youtube."
+            "YouTube Billing & Checkout team."
           ],
-          tags: ["Full-stack development"],
+          tags: ["Web development", "Data Analysis", "Data Visualization"],
           date: "6/20/22 - present",
         },
         {
-          role: "Robotics Engineer",
+          role: "Software Robotics Engineer",
           company: "Dexterity",
           location: "Redwood City, CA",
           descriptions: [
-            `I joined the company when there were about 25 employees, and worked mostly as an individual contributor.
-            Over two years, I built various internal tools, services, and libraries that were used across the company, and also maintained telemetry infrastructure in production.`,
-            `As one of the members on the data platform team, I implemented various data pipelines, logging library, and data infrastructure components.
-            Some of my other notable contributions include software deployment automation, camera calibration automation, service orchestration tool, etc.
-            I also did some data analysis, server provisioning, cloud infra development, and was involved in the engineering hiring effort as well.
-            `
+            `I joined the company as the 2x-th member, and worked mostly as an individual contributor.
+            During my tenure, I built various core libraries and services for both internal development system and production system.
+            Some of my notable work include building data pipelines & infrastructure, developing a robot control application to automate camera calibration, implementing software packaging & deployment pipelines.
+            The experience exposed me to various aspects of software engineering and helped me grow as a engineer, and I'm truly grateful for that.`
           ],
           tags: [
             "Data Engineering",
@@ -88,7 +86,6 @@ export default {
             "Distributed System",
             "Cloud Infrastructure",
             "Computer Vision",
-            "Deep Learning",
           ],
           date: "2/19/20 - 6/3/22",
         },
@@ -97,8 +94,7 @@ export default {
           company: "Playing Forward",
           location: "Santa Monica, CA",
           descriptions: [
-            `During the internship, my responsibility was to help our AI engineer build tools and experiment with different Deep Learning models.
-            My main contributions include data analysis, processing, visualization, and model implementation.`
+            `During the internship, I worked on data processing, data visualization, and Deep Learning model training & evaluation.`
           ],
           tags: [
             "Deep Learning",
@@ -113,12 +109,11 @@ export default {
           company: "USC UMLx Project",
           location: "Los Angeles, CA",
           descriptions: [
-            `Tuned hyperparameters of neural network model to predict project effort.`,
-            `Collected and preprocessed open-sourced Android projects on Github using R.`,
-            `Created neural network visualization to better understand the model.`
+            `During the internship, I helped ML model hyper-parameter tuning, data processing and collection ML model visualization, etc.`
           ],
           tags: [
             "Machine Learning",
+            "Data Visualization"
           ],
           date: "5/15/19 - 8/6/19",
         },
@@ -141,7 +136,7 @@ export default {
           company: "USC",
           location: "Los Angeles, CA",
           descriptions: [
-            "Obtained master's degree in Computer Science."
+            "Enrolled in Computer Science Master's degree program."
           ],
           date: "1/8/18 - 12/18/19",
         },
@@ -150,7 +145,7 @@ export default {
           company: "Auburn University",
           location: "Auburn, AL",
           descriptions: [
-            "Obtained bachelor's degree in Computer Science."
+            "Enrolled in Computer Science Bachelor's degree program."
           ],
           date: "8/21/13 - 12/16/17",
         }

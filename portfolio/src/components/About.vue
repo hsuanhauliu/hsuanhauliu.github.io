@@ -15,18 +15,14 @@
           <v-col cols=12 lg=6>
             <v-card flat color="transparent" class="px-3">
               <v-card-text class="text-white text-body-1">
-                Hey there! My name is Hsuan-Hau, but I go by the name Howard.
-                I'm a software developer interested in <div class="highlight text-body-1">computer vision</div>, <div class="highlight text-body-1">data engineering</div>, and <div class="highlight text-body-1">app development</div>.
-                Shortly after I graduated from USC, I worked for Dexterity, a robotics, unicorn startup, where I did everything from full-stack development, software infrastructure, to system deployment.
-                Recently, I've joined <div class="highlight text-body-1">Google</div> Youtube team as a software engineer.
+                Hey there! My name is Hsuan-Hau Liu, but I go by Howard.
+                I'm a software engineer interested in <div class="highlight text-body-1">computer vision</div>, <div class="highlight text-body-1">data engineering</div>, and <div class="highlight text-body-1">software infrastructure</div>.
+                Shortly after I finished my Master's, I joined a robotics startup and worked on data pipeline & infrastructure, full-stack development, software deployment, among other things.
+                Most recently, I'm working at <div class="highlight text-body-1">Google</div> on web development stuff.
                 <br/><br/>
-
-                When I'm not coding, I enjoy playing tennis, piano, photography, video editing and many other things.
-                I also love making new friends, so feel free to reach out to me via email or LinkedIn!
-
+                When I'm not coding or wasting time on YouTube, I enjoy playing tennis, bouldering, playing instruments, video editing and many other things.
               </v-card-text>
             </v-card>
-
           </v-col>
         </v-row>
       </v-col>

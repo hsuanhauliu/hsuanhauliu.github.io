@@ -109,7 +109,7 @@ export default {
           company: "USC UMLx Project",
           location: "Los Angeles, CA",
           descriptions: [
-            `During the internship, I helped ML model hyper-parameter tuning, data processing and collection ML model visualization, etc.`
+            `During the internship, I worked on ML model hyper-parameter tuning, data processing and collection, ML model visualization, etc.`
           ],
           tags: [
             "Machine Learning",

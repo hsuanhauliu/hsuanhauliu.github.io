@@ -1,3 +1,3 @@
-# My ePortfolio
+# My Website
 
-See my portfolio [here](https://hsuanhauliu.github.io/).
+Check out my website [here](https://hsuanhauliu.github.io/).

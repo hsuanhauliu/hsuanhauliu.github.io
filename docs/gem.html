@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Howard Liu - Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0f1f;
+            /* Dark blue, almost black */
+            color: #e0e0e0;
+            /* Light gray for text */
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Starry Night Sky Background */
+        #starry-sky-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Behind all content */
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+            overflow: hidden;
+            /* Important to hide shooting stars before they enter */
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation-name: twinkle;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            /* Width of the tail */
+            height: 80px;
+            /* Length of the tail */
+            background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+            opacity: 0;
+            animation-name: shoot;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            /* Play once */
+            transform-origin: bottom center;
+        }
+
+        .shooting-star::before {
+            /* The bright head of the shooting star */
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #fff, 0 0 10px #fff, 0 0 15px #fff;
+        }
+
+
+        @keyframes shoot {
+            0% {
+                opacity: 0;
+                transform: translateY(var(--start-y)) translateX(var(--start-x)) rotate(var(--angle)) scaleY(0.5);
+            }
+
+            10% {
+                opacity: 1;
+                transform: translateY(var(--start-y)) translateX(var(--start-x)) rotate(var(--angle)) scaleY(1);
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(calc(var(--start-y) + var(--travel-distance-y))) translateX(calc(var(--start-x) + var(--travel-distance-x))) rotate(var(--angle)) scaleY(1.5);
+            }
+        }
+
+        /* Gemini Constellation Styles */
+        #gemini-constellation-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            /* Base z-index for the overlay within starry-sky-container */
+        }
+
+        .constellation-star {
+            position: absolute;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            box-shadow: 0 0 7px rgba(255, 255, 255, 0.9), 0 0 15px rgba(173, 216, 230, 0.7), 0 0 22px rgba(173, 216, 230, 0.5);
+            opacity: 0.85;
+            z-index: 2;
+            /* Stars above lines */
+        }
+
+        .constellation-star.pollux {
+            width: 5px;
+            height: 5px;
+        }
+
+        .constellation-star.castor {
+            width: 4.5px;
+            height: 4.5px;
+        }
+
+        .constellation-star.alhena {
+            width: 4px;
+            height: 4px;
+        }
+
+        .constellation-star.tejat {
+            width: 3.5px;
+            height: 3.5px;
+        }
+
+        .constellation-star.other {
+            width: 3px;
+            height: 3px;
+        }
+
+        .constellation-line {
+            position: absolute;
+            background-color: rgba(200, 220, 255, 0.7);
+            /* Base color when visible */
+            height: 1px;
+            opacity: 0;
+            /* Initially hidden */
+            transform-origin: 0 50%;
+            z-index: 1;
+            transition: opacity 0.5s ease-in-out;
+            /* Smooth fade in/out */
+        }
+
+        /* Section padding and max-width for content */
+        section {
+            padding: 6rem 1rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            section {
+                padding: 6rem 2rem;
+            }
+        }
+
+        /* Header styling */
+        header {
+            background-color: rgba(10, 15, 31, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Active nav link */
+        .nav-link.active {
+            color: #64b5f6;
+            font-weight: 600;
+        }
+
+        /* Skill tag styling */
+        .skill-tag {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background-color: #334155;
+            border-color: #64b5f6;
+            color: #fff;
+        }
+
+        /* Project card hover effect */
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(100, 181, 246, 0.15);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <div id="starry-sky-container">
+        <div id="gemini-constellation-overlay">
+            <div id="gem-pollux" class="constellation-star pollux" style="top: 44.4%; left: 19%;"></div>
+            <div id="gem-upsilon" class="constellation-star other" style="top: 50%; left: 23.8%;"></div>
+            <div id="gem-kappa" class="constellation-star other" style="top: 58.3%; left: 21.4%;"></div>
+            <div id="gem-lota" class="constellation-star other" style="top: 45%; left: 30%;"></div>
+            <div id="gem-wasat" class="constellation-star other" style="top: 61.1%; left: 38.1%;"></div>
+            <div id="gem-mekbuda" class="constellation-star other" style="top: 63.9%; left: 50%;"></div>
+            <div id="gem-alhena" class="constellation-star alhena" style="top: 72.2%; left: 70.5%;"></div>
+            <div id="gem-epsilon" class="constellation-star other" style="top: 88.9%; left: 66.7%;"></div>
+
+            <div id="gem-castor" class="constellation-star castor" style="top: 33.3%; left: 23.8%;"></div>
+            <div id="gem-tau" class="constellation-star other" style="top: 34%; left: 38.1%;"></div>
+            <div id="gem-theta" class="constellation-star other" style="top: 20%; left: 46%;"></div>
+            <div id="gem-mebsuta" class="constellation-star other" style="top: 44.4%; left: 59.4%;"></div>
+            <div id="gem-tejat" class="constellation-star tejat" style="top: 50%; left: 73.8%;"></div>
+            <div id="gem-propus" class="constellation-star other" style="top: 49%; left: 78.6%;"></div>
+            <div id="gem-one" class="constellation-star other" style="top: 43%; left: 85.7%;"></div>
+            <div id="gem-nu" class="constellation-star other" style="top: 58.3%; left: 71.4%;"></div>
+        </div>
+    </div>
+
+    <header class="fixed top-0 left-0 right-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#about" class="nav-link-header text-3xl font-bold text-white">Howard Liu</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition duration-300">About</a>
+                    <a href="#experience"
+                        class="nav-link text-gray-300 hover:text-white transition duration-300">Experience</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white transition duration-300">Skills</a>
+                    <a href="#projects"
+                        class="nav-link text-gray-300 hover:text-white transition duration-300">Projects</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-300 hover:text-white transition duration-300">Contact</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 bg-opacity-95">
+            <a href="#about"
+                class="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">About</a>
+            <a href="#experience"
+                class="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">Experience</a>
+            <a href="#skills"
+                class="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">Skills</a>
+            <a href="#projects"
+                class="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">Projects</a>
+            <a href="#contact"
+                class="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <section id="about" class="min-h-screen flex flex-col justify-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-center text-white">Hi, I'm Howard Liu</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+                A Google engineer experienced in full-stack development, machine learning, computer vision, and DevOps.
+            </p>
+            <p class="text-lg text-gray-400 text-center max-w-2xl mx-auto">
+                I'm pretty good at problem solving, system design, coding, and shipping products.
+            </p>
+            <div class="mt-10 text-center">
+                <a href="#experience"
+                    class="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300"
+                    aria-label="Scroll to next section">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">Experience</h2>
+            <div class="space-y-10">
+                <div class="bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-1">Software Engineer</h3>
+                    <p class="text-gray-400 mb-1">Google | Jun 2022 - Present</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1 pl-2">
+                        <li>Contributed to building the next generation of YouTube billing backend system and features.
+                        </li>
+                        <li>Collaborated with various YouTube product teams to support billing infrastructure features.
+                        </li>
+                        <li>Built event logging features for various product purchases on various device platforms.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-1">Robotics Engineer</h3>
+                    <p class="text-gray-400 mb-1">Dexterity Inc. | Feb 2020 – Jun 2022</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1 pl-2">
+                        <li>Developed and deployed several key robot system features, including system orchestration and
+                            camera calibration.</li>
+                        <li>Built and managed critical data & ETL pipelines and infrastructure for production and
+                            development systems.</li>
+                        <li>Created dozens of developer tools to support research effort and product development.</li>
+                        <li>Delivered solutions to gather key business metrics, system performance metrics, and data
+                            visualization.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-1">Software Engineering Intern</h3>
+                    <p class="text-gray-400 mb-1">Playing Forward LLC | Sep 2019 – Dec 2019</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1 pl-2">
+                        <li>Trained custom Deep Learning models and created data pre-processing pipelines.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-1">Software Developer Intern</h3>
+                    <p class="text-gray-400 mb-1">CarmaCam | Aug 2018 – Nov 2018</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-1 pl-2">
+                        <li>Trained object detection models using custom dataset and designed scoring algorithm.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-1">M.S. in Computer Science</h3>
+                    <p class="text-gray-400 mb-1">University of Southern California | Jan 2018 – Dec 2019</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg shadow-xl border border-slate-700">
+                    <h3 class="text-2xl font-semibold text-blue-400 mb-1">B.S. in Computer Science</h3>
+                    <p class="text-gray-400 mb-1">Auburn University | May 2013 – Dec 2017</p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="https://drive.google.com/file/d/127lTiCtVaUWMORjv8yNofKC48cBCIJ1G/view""
+                    rel=" noopener noreferrer"
+                    class="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                    Download Full Resume (PDF)
+                </a>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">Technical Skills</h2>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">Machine Learning &
+                    Computer Vision</h3>
+                <div class="flex flex-wrap justify-center sm:justify-start gap-3">
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Python</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">C++</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">TensorFlow</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">PyTorch</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Keras</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">OpenCV</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Jupyter Notebook</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Deep Learning</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Supervised Learning</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">ML Infrastructure</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Model Deployment</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">MLOps</span>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">Data Engineering &
+                    Backend</h3>
+                <div class="flex flex-wrap justify-center sm:justify-start gap-3">
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Airflow</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Prometheus</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Apache Kafka</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Docker</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Kubernetes</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">ETL Pipelines</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">Databases</h3>
+                <div class="flex flex-wrap justify-center sm:justify-start gap-3">
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Redis</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Elasticsearch</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">Postgres</span>
+                    <span class="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">MySQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700">
+                    <img src="https://placehold.co/600x400/1e293b/90caf9?text=RuGo" alt="RuGo"
+                        class="w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e293b/e0e0e0?text=RuGo';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-2">RuGo</h3>
+                        <p class="text-gray-300 mb-3 text-sm">VR Rube Goldberg experiment game.</p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Tech:</strong> Unity, C#, HTC Vive</p>
+                        <div class="flex space-x-3">
+                            <a href="https://www.youtube.com/watch?v=0fqfMIYmBng" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition duration-300 font-medium">Video</a>
+                            <a href="https://hsuanhauliu.github.io/RuGo/" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition duration-300 font-medium">Website</a>
+                            <a href="https://github.com/hsuanhauliu/RuGo" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition duration-300 font-medium">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700">
+                    <img src="https://placehold.co/600x400/1e293b/81d4fa?text=Security+Webcam" alt="Security Webcam"
+                        class="w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e293b/e0e0e0?text=Security+Webcam';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-2">Security Webcam</h3>
+                        <p class="text-gray-300 mb-3 text-sm">Simple webcam monitoring program using facial recognition
+                            and motion detection to auto-record and save footage.</p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Tech:</strong> Python, OpenCV</p>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/hsuanhauliu/security-webcam" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition duration-300 font-medium">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700">
+                    <img src="https://placehold.co/600x400/1e293b/a5d6a7?text=Structure+From+Motion"
+                        alt="Structure From Motion" class="w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e293b/e0e0e0?text=Structure+From+Motion';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-2">Structure From Motion</h3>
+                        <p class="text-gray-300 mb-3 text-sm">Demonstration of structure from motion with OpenCV.</p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Tech:</strong> Python, OpenCV</p>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition duration-300 font-medium">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700">
+                    <img src="https://placehold.co/600x400/1e293b/ce93d8?text=Weather+Prediction"
+                        alt="Weather Prediction" class="w-full h-48 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e293b/e0e0e0?text=Weather+Prediction';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-blue-400 mb-2">Weather Prediction Exercise</h3>
+                        <p class="text-gray-300 mb-3 text-sm">A simple web app to demonstrate weather prediction using
+                            Viterbi algorithm.</p>
+                        <p class="text-xs text-gray-400 mb-4"><strong>Tech:</strong> HTML, Javascript, CSS</p>
+                        <div class="flex space-x-3">
+                            <a href="https://hsuanhauliu.github.io/weather-prediction/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition duration-300 font-medium">Link</a>
+                            <a href="https://github.com/hsuanhauliu/weather-prediction" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 transition duration-300 font-medium">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="pb-20">
+            <h2 class="text-4xl font-bold mb-12 text-center text-white">You can find me on...</h2>
+            <div class="flex justify-center items-center space-x-8">
+                <a href="https://github.com/hsuanhauliu" target="_blank" rel="noopener noreferrer"
+                    class="text-blue-400 hover:text-blue-300 transition duration-300 flex flex-col items-center group">
+                    <svg class="w-10 h-10 mb-1 group-hover:scale-110 transition-transform" fill="currentColor"
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/hsuanhauliu" target="_blank" rel="noopener noreferrer"
+                    class="text-blue-400 hover:text-blue-300 transition duration-300 flex flex-col items-center group">
+                    <svg class="w-10 h-10 mb-1 group-hover:scale-110 transition-transform" fill="currentColor"
+                        viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                        </path>
+                    </svg>
+                    <span class="text-sm">LinkedIn</span>
+                </a>
+                <a href="mailto:hsuanhauliu@gmail.com"
+                    class="text-blue-400 hover:text-blue-300 transition duration-300 flex flex-col items-center group">
+                    <svg class="w-10 h-10 mb-1 group-hover:scale-110 transition-transform" fill="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    <span class="text-sm">Email</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 text-center border-t border-slate-700">
+        <p class="text-gray-500 text-sm">&copy; <span id="currentYear"></span> Howard Liu. All rights reserved.
+    </footer>
+
+    <script>
+        // Starry Sky Effect
+        const starrySkyContainer = document.getElementById('starry-sky-container');
+        const numRegularStars = 150;
+
+        for (let i = 0; i < numRegularStars; i++) {
+            let star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+
+            const size = Math.random() * 2 + 0.5;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+
+            star.style.animationDelay = Math.random() * 5 + 's';
+            star.style.animationDuration = Math.random() * 5 + 5 + 's';
+
+            starrySkyContainer.appendChild(star);
+        }
+
+        // Shooting Star Effect
+        function createShootingStar() {
+            const shootingStar = document.createElement('div');
+            shootingStar.className = 'shooting-star';
+
+            const angleDeg = Math.random() * 60 + 15;
+            let startX, startY, travelDistanceX, travelDistanceY;
+
+            if (Math.random() > 0.5) {
+                startX = Math.random() * window.innerWidth;
+                startY = -100;
+                travelDistanceX = (window.innerHeight + 100) * Math.tan(angleDeg * Math.PI / 180);
+                travelDistanceY = window.innerHeight + 200;
+                if (Math.random() > 0.5) travelDistanceX *= -1;
+            } else {
+                startY = Math.random() * window.innerHeight * 0.7;
+                if (Math.random() > 0.5) {
+                    startX = -100;
+                    travelDistanceX = window.innerWidth + 200;
+                } else {
+                    startX = window.innerWidth + 100;
+                    travelDistanceX = -(window.innerWidth + 200);
+                }
+                travelDistanceY = (Math.abs(travelDistanceX)) * Math.tan(angleDeg * Math.PI / 180);
+            }
+
+            const actualAngleRad = Math.atan2(travelDistanceY, travelDistanceX);
+            const actualAngleDeg = actualAngleRad * 180 / Math.PI - 90;
+
+            shootingStar.style.setProperty('--start-x', `${startX}px`);
+            shootingStar.style.setProperty('--start-y', `${startY}px`);
+            shootingStar.style.setProperty('--angle', `${actualAngleDeg}deg`);
+            shootingStar.style.setProperty('--travel-distance-y', `${travelDistanceY}px`);
+            shootingStar.style.setProperty('--travel-distance-x', `${travelDistanceX}px`);
+
+            const duration = Math.random() * 2 + 1.5;
+            shootingStar.style.animationDuration = `${duration}s`;
+
+            starrySkyContainer.appendChild(shootingStar);
+
+            setTimeout(() => {
+                if (shootingStar.parentNode) {
+                    shootingStar.parentNode.removeChild(shootingStar);
+                }
+            }, duration * 1000);
+        }
+
+        setInterval(createShootingStar, 3000 + Math.random() * 4000);
+
+
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuSvg = menuButton.querySelector('svg');
+        const originalBurgerPaths = Array.from(mobileMenuSvg.querySelectorAll('path')).map(p => p.getAttribute('d'));
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const paths = mobileMenuSvg.querySelectorAll('path');
+            if (mobileMenu.classList.contains('hidden')) {
+                paths[0].setAttribute('d', originalBurgerPaths[0]);
+                paths[1].setAttribute('d', originalBurgerPaths[1]);
+                if (originalBurgerPaths.length > 2 && paths.length > 2) {
+                    paths[2].setAttribute('d', originalBurgerPaths[2]);
+                    paths[2].style.display = '';
+                } else if (paths.length > 2) {
+                    paths[2].style.display = 'none';
+                }
+            } else {
+                paths[0].setAttribute('d', 'M6 18L18 6');
+                paths[1].setAttribute('d', 'M6 6l12 12');
+                if (paths.length > 2) {
+                    paths[2].style.display = 'none';
+                }
+            }
+        });
+
+        const mobileNavLinks = mobileMenu.querySelectorAll('a.nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const paths = mobileMenuSvg.querySelectorAll('path');
+                paths[0].setAttribute('d', originalBurgerPaths[0]);
+                paths[1].setAttribute('d', originalBurgerPaths[1]);
+                if (originalBurgerPaths.length > 2 && paths.length > 2) {
+                    paths[2].setAttribute('d', originalBurgerPaths[2]);
+                    paths[2].style.display = '';
+                } else if (paths.length > 2) {
+                    paths[2].style.display = 'none';
+                }
+            });
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('header nav a.nav-link, #mobile-menu a.nav-link');
+        const headerNavLink = document.querySelector('header a.nav-link-header');
+
+
+        const activateNavLink = () => {
+            let currentSectionId = 'about';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - window.innerHeight * 0.3) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            if (window.pageYOffset < sections[0].offsetTop - window.innerHeight * 0.7) {
+                currentSectionId = 'about';
+            }
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            if (headerNavLink) {
+                if (currentSectionId === 'about') {
+                    headerNavLink.classList.add('active');
+                } else {
+                    headerNavLink.classList.remove('active');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', activateNavLink);
+        window.addEventListener('load', activateNavLink);
+
+        // --- Constellation Line Drawing ---
+        function createConstellationLine(star1Id, star2Id, container) {
+            const star1 = document.getElementById(star1Id);
+            const star2 = document.getElementById(star2Id);
+
+            if (!star1 || !star2) {
+                console.warn(`Star element not found for line: ${star1Id} to ${star2Id}.`);
+                return;
+            }
+
+            const line = document.createElement('div');
+            line.className = 'constellation-line';
+
+            const x1 = star1.offsetLeft + star1.offsetWidth / 2;
+            const y1 = star1.offsetTop + star1.offsetHeight / 2;
+            const x2 = star2.offsetLeft + star2.offsetWidth / 2;
+            const y2 = star2.offsetTop + star2.offsetHeight / 2;
+
+            const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+            const angle = Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI);
+
+            line.style.width = `${length}px`;
+            line.style.left = `${x1}px`;
+            line.style.top = `${y1 - (1 / 2)}px`; // Line height is 1px
+            line.style.transform = `rotate(${angle}deg)`;
+
+            container.appendChild(line);
+        }
+
+        function drawConstellationLines() {
+            const constellationOverlay = document.getElementById('gemini-constellation-overlay');
+            if (!constellationOverlay) {
+                return;
+            }
+
+            const existingLines = constellationOverlay.querySelectorAll('.constellation-line');
+            existingLines.forEach(line => line.remove());
+
+            const connections = [
+                { from: 'gem-pollux', to: 'gem-upsilon' },
+                { from: 'gem-upsilon', to: 'gem-kappa' },
+                { from: 'gem-upsilon', to: 'gem-lota' },
+                { from: 'gem-upsilon', to: 'gem-wasat' },
+                { from: 'gem-wasat', to: 'gem-mekbuda' },
+                { from: 'gem-mekbuda', to: 'gem-alhena' },
+                { from: 'gem-mekbuda', to: 'gem-epsilon' },
+                { from: 'gem-castor', to: 'gem-tau' },
+                { from: 'gem-tau', to: 'gem-theta' },
+                { from: 'gem-tau', to: 'gem-lota' },
+                { from: 'gem-tau', to: 'gem-mebsuta' },
+                { from: 'gem-mebsuta', to: 'gem-tejat' },
+                { from: 'gem-mebsuta', to: 'gem-nu' },
+                { from: 'gem-tejat', to: 'gem-propus' },
+                { from: 'gem-propus', to: 'gem-one' },
+            ];
+
+            connections.forEach(conn => {
+                createConstellationLine(conn.from, conn.to, constellationOverlay);
+            });
+        }
+
+        window.addEventListener('load', drawConstellationLines);
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        const debouncedDrawLines = debounce(drawConstellationLines, 100);
+        window.addEventListener('resize', debouncedDrawLines);
+
+        // --- Constellation Line Pulsing Effect ---
+        function pulseConstellationLines() {
+            const lines = document.querySelectorAll('#gemini-constellation-overlay .constellation-line');
+            if (lines.length === 0) {
+                // If no lines are drawn (e.g., before initial draw), try drawing them.
+                // This can happen if setInterval fires before window.load
+                drawConstellationLines();
+                // Re-query for lines after attempting to draw
+                const newLines = document.querySelectorAll('#gemini-constellation-overlay .constellation-line');
+                if (newLines.length === 0) return; // Still no lines, exit
+
+                newLines.forEach(line => {
+                    line.style.opacity = '0.7';
+                });
+                setTimeout(() => {
+                    newLines.forEach(line => {
+                        line.style.opacity = '0';
+                    });
+                }, 2500);
+
+            } else {
+                lines.forEach(line => {
+                    line.style.opacity = '0.7';
+                });
+                setTimeout(() => {
+                    lines.forEach(line => {
+                        line.style.opacity = '0';
+                    });
+                }, 2500);
+            }
+        }
+
+        window.addEventListener('load', () => {
+            setInterval(pulseConstellationLines, 5000);
+        });
+
+    </script>
+</body>
+
+</html>

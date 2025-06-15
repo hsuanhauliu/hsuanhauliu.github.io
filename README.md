@@ -1,5 +1,13 @@
-# Website
+# My Portfolio
 
 A website, about me.
 
-I recently rewrote the website with [Gemini](https://gemini.google.com/), which you can check out [here](https://hsuanhauliu.github.io/). My old website can still be accessed [here](https://hsuanhauliu.github.io/old).
+I recently rewrote my website using [Gemini](https://gemini.google.com/), which you can check out [here](https://hsuanhauliu.github.io/).
+
+## Dev
+
+To build the website:
+
+```bash
+npm run build
+```

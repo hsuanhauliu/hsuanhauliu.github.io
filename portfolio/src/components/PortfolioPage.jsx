@@ -39,7 +39,7 @@ export default function Portfolio() {
                     </p>
                     <p className="text-lg text-gray-400 text-center max-w-2xl mx-auto">
                         I'm pretty good at problem solving, system design, coding, and shipping features. I love technology and
-                        solve interesting challenges and explore new ideas with it. I'm also into fitness - I climb artificial
+                        solving interesting challenges & exploring new ideas with it. I'm also into fitness - I climb artificial
                         rocks and lift heavy objects in unnecessarily challenging ways for fun.
                     </p>
                     <div className="mt-10 text-center">

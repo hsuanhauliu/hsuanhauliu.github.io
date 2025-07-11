@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
+import '../styles/Header.css'
 
 function Header({ sectionLinks, sectionRefs }) {
     // State to manage the visibility of the mobile menu

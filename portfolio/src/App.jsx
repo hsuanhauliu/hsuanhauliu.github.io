@@ -1,5 +1,4 @@
 import PortfolioPage from './components/PortfolioPage'; 
-import './styles/PortfolioPage.css'
 
 function App() {
   return (

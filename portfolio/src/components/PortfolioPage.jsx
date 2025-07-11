@@ -3,8 +3,11 @@ import StarrySkyContainer from './background/StarrySkyContainer';
 import Header from './Header'
 import Footer from './Footer'
 
+import rugoImg from '../assets/rugo.png';
+import securityWebcamImg from '../assets/security_webcam.png';
+
 import '../styles/background/StarrySkyContainer.css'
-import '../styles/Header.css'
+import '../styles/PortfolioPage.css'
 
 // This component encapsulates the entire portfolio page.
 export default function Portfolio() {
@@ -147,7 +150,7 @@ export default function Portfolio() {
                     <div className="grid md:grid-cols-2 gap-8">
                         {/* Project Items */}
                         <div className="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700 transition-all duration-300">
-                            <img src="https://placehold.co/600x400/1e293b/90caf9?text=RuGo" alt="RuGo" className="w-full h-48 object-cover" />
+                            <img src={rugoImg} alt="RuGo" className="w-full h-48 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-2xl font-semibold text-blue-400 mb-2">RuGo</h3>
                                 <p className="text-gray-300 mb-3 text-sm">VR Rube Goldberg experiment game.</p>
@@ -160,7 +163,7 @@ export default function Portfolio() {
                             </div>
                         </div>
                         <div className="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700 transition-all duration-300">
-                            <img src="https://placehold.co/600x400/1e293b/81d4fa?text=Security+Webcam" alt="Security Webcam" className="w-full h-48 object-cover" />
+                            <img src={securityWebcamImg} alt="Security Webcam" className="w-full h-48 object-cover" />
                             <div className="p-6">
                                 <h3 className="text-2xl font-semibold text-blue-400 mb-2">Security Webcam</h3>
                                 <p className="text-gray-300 mb-3 text-sm">Simple webcam monitoring program using facial recognition and motion detection to auto-record and save footage.</p>
@@ -171,10 +174,17 @@ export default function Portfolio() {
                             </div>
                         </div>
                     </div>
-                    <div className="text-center mt-10">
-                        <a href="/apps" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
-                            More Projects
-                        </a>
+                    <div className="flex justify-center items-center space-x-8 mt-10">
+                        <div className="flex flex-col items-center group">
+                            <a href="https://github.com/hsuanhauliu" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                                More Projects
+                            </a>
+                        </div>
+                        <div className="flex flex-col items-center group">
+                            <a href="/app" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                                App Collection
+                            </a>
+                        </div>
                     </div>
                 </section>
 

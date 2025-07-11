@@ -181,7 +181,7 @@ export default function Portfolio() {
                             </a>
                         </div>
                         <div className="flex flex-col items-center group">
-                            <a href="/app" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                            <a href="/apps" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
                                 App Collection
                             </a>
                         </div>

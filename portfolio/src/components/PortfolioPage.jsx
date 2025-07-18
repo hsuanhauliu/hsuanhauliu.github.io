@@ -1,13 +1,26 @@
+import { useRef } from 'react';
+
 import rugoImg from '../assets/rugo.png';
 import securityWebcamImg from '../assets/security_webcam.png';
+import Header from './Header'
 
 import '../styles/background/StarrySkyContainer.css'
 import '../styles/PortfolioPage.css'
 
 // This component encapsulates the entire portfolio page.
-export default function PortfolioPage({ sectionRefs }) {
+export default function PortfolioPage({ projectPageTrigger }) {
+    const sectionRefs = [
+        { id: "#about", name: "About", ref: useRef(null) },
+        { id: "#experience", name: "Experience", ref: useRef(null) },
+        { id: "#skills", name: "Skills", ref: useRef(null) },
+        { id: "#projects", name: "Projects", ref: useRef(null) },
+        { id: "#contact", name: "Contact", ref: useRef(null) },
+    ];
+
     return (
         <main className="pt-20">
+            <Header sectionRefs={sectionRefs} />
+
             <section ref={sectionRefs.about} id="about" className="min-h-screen flex flex-col justify-center">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center text-white">Hi, I'm Howard Liu</h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
@@ -154,9 +167,9 @@ export default function PortfolioPage({ sectionRefs }) {
                         </a>
                     </div>
                     <div className="flex flex-col items-center group">
-                        <a href="/apps" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                        <button onClick={projectPageTrigger} className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
                             Project Page
-                        </a>
+                        </button>
                     </div>
                 </div>
             </section>

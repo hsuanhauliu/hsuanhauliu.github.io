@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import logo from '../assets/logo.png';
 import '../styles/Header.css'
 
-function Header({ sectionLinks, sectionRefs }) {
+function Header({ sectionRefs }) {
     // State to manage the visibility of the mobile menu
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -49,12 +49,12 @@ function Header({ sectionLinks, sectionRefs }) {
         <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 shadow-md">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
-                    <div href="#about" id="header-logo-link" className="flex items-center space-x-2 text-white hover:text-gray-300 transition duration-300" aria-label="Howard Liu - Home">
+                    <a href="/" id="header-logo-link" className="flex items-center space-x-2 text-white hover:text-gray-300 transition duration-300" aria-label="Howard Liu - Home">
                         <img id="header-logo-img" src={logo} alt="Howard Liu Logo" className="h-8" />
                         <span className="text-2xl font-bold">Howard Liu</span>
-                    </div>
+                    </a>
                     <nav className="hidden md:flex space-x-6">
-                        {sectionLinks.map((section, i) => <a key={i} href={section.id} className="nav-link text-gray-300 hover:text-white transition duration-300">{section.name}</a>)}
+                        {sectionRefs.map((section, i) => <a key={i} href={section.id} className="nav-link text-gray-300 hover:text-white transition duration-300">{section.name}</a>)}
                     </nav>
                     <div className="md:hidden">
                         <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} id="mobile-menu-button" className="text-gray-300 hover:text-white focus:outline-none">
@@ -77,7 +77,7 @@ function Header({ sectionLinks, sectionRefs }) {
                 </div>
             </div>
             <div id="mobile-menu" className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-gray-800 bg-opacity-95`}>
-                {sectionLinks.map((section, i) => <a key={i} onClick={() => setMobileMenuOpen(false)} href={section.id} className="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">{section.name}</a>)}
+                {sectionRefs.map((section, i) => <a key={i} onClick={() => setMobileMenuOpen(false)} href={section.id} className="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">{section.name}</a>)}
             </div>
         </header>
     );

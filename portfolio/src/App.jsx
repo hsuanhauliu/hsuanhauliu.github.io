@@ -1,37 +1,34 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 import StarrySkyContainer from './components/background/StarrySkyContainer';
-import Header from './components/Header'
 import Footer from './components/Footer'
 import PortfolioPage from './components/PortfolioPage';
+import ProjectPage from './components/ProjectPage';
 
 import './styles/background/StarrySkyContainer.css'
 import './App.css'
 
 export default function App() {
-  const sectionLinks = [
-    { "id": "#about", "name": "About" },
-    { "id": "#experience", "name": "Experience" },
-    { "id": "#skills", "name": "Skills" },
-    { "id": "#projects", "name": "Projects" },
-    { "id": "#contact", "name": "Contact" },
-  ];
+  // useState hook to keep track of the currently active tab.
+  // We'll use 'home' as the default active tab.
+  const [activeTab, setActiveTab] = useState('home');
 
-  // An object to store refs for each section to calculate scroll positions
-  const sectionRefs = {
-    about: useRef(null),
-    experience: useRef(null),
-    skills: useRef(null),
-    projects: useRef(null),
-    contact: useRef(null),
-  };
+  // Data for our tabs. This approach makes it easy to add more tabs later.
+  const pages = [
+    {
+      id: 'home', content:
+        <PortfolioPage
+          projectPageTrigger={() => setActiveTab('projects')}
+        />
+    },
+    { id: 'projects', content: <ProjectPage /> },
+  ];
 
   return (
     <div className="antialiased">
       <StarrySkyContainer />
 
-      <Header sectionLinks={sectionLinks} sectionRefs={sectionRefs} />
-
-      <PortfolioPage sectionRefs={sectionRefs} />
+      {/* Content Area */}
+      {pages.find(page => page.id === activeTab)?.content}
 
       <Footer />
     </div>

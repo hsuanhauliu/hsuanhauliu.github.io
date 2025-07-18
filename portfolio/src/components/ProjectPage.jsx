@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 import Header from './Header'
 
@@ -11,38 +11,69 @@ import ConstellationCreatorImg from '../assets/constellation_creator.png';
 import ChessTimerImg from '../assets/chess_timer.png';
 import TetrisImg from '../assets/tetris.png';
 import ChessboardSimulationImg from '../assets/chessboard_simulation.png';
+import SecurityWebcamImg from '../assets/security_webcam.png';
+import RandomTextGeneratorImg from '../assets/random_text_generator.jpg';
+import RugoImg from '../assets/rugo.png';
+import SudokuSolverImg from '../assets/sudoku_solver.jpg';
 
 const portfolioData = [
     {
-        section_name: "Utilities",
+        section_name: "Apps",
         cards: [
-            { title: "Split", description: "A client-side expense splitting app.", link: "/apps/split.html", image: SplitImg, tags: ['App'] },
-            { title: "Sketchpad", description: "A simple app to draw on images.", link: "/apps/sketchpad.html", image: SketchPadImg, tags: ['Tool'] },
-            { title: "QR Generator", description: "QR code generator with customizations.", link: "/apps/qr_generator.html", image: QrGeneratorImg, tags: ['Tool'] },
-            { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Tool'] },
-            { title: "Stopwatch & Timer", description: "Stopwatch and timer with audio cues.", link: "/apps/stopwatch_timer.html", image: StopWatchTimerImg, tags: ['Tool'] },
-            { title: "Chess Timer", description: "Simple mobile friendly chess timer.", link: "/apps/chess_timer.html", image: ChessTimerImg, tags: ['Tool'] },
+            { title: "Security Webcam", description: "Simple security camera system right on your computer.", link: "https://github.com/hsuanhauliu/security-webcam", image: SecurityWebcamImg, tags: ['CV', 'Python'] },
+            { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/apps/split.html", image: SplitImg, tags: ['Frontend'] },
+            { title: "Sketchpad", description: "A simple app to draw on images.", link: "/apps/sketchpad.html", image: SketchPadImg, tags: ['Frontend'] },
+            { title: "QR Generator", description: "QR code generator with customizations.", link: "/apps/qr_generator.html", image: QrGeneratorImg, tags: ['Frontend'] },
+            { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Frontend'] },
+            { title: "Stopwatch & Timer", description: "Stopwatch and timer with audio cues.", link: "/apps/stopwatch_timer.html", image: StopWatchTimerImg, tags: ['Frontend'] },
+            { title: "Chess Timer", description: "Simple mobile friendly chess timer.", link: "/apps/chess_timer.html", image: ChessTimerImg, tags: ['Frontend'] },
+            { title: "Random Text Generator", description: "Text generator using Hidden Markov Model.", link: "https://github.com/hsuanhauliu/random-text-generator", image: RandomTextGeneratorImg, tags: ['ML'] },
+            { title: "Hidden Message Image", description: "Encrypt secret messages in images.", link: "https://github.com/hsuanhauliu/hidden-message-image", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Image Processing'] },
+            { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['AI', 'Python'] },
+            { title: "Simple File Server", description: "File server to provide real-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Python', 'Docker'] },
         ]
     },
     {
         section_name: "Games",
         cards: [
-            { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Game'] },
-            { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Game'] },
-            { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Game'] },
+            { title: "RuGo", description: "VR Rube Goldberg experiment game.", link: "https://github.com/hsuanhauliu/RuGo", image: RugoImg, tags: ['AR', 'VR', 'Unity'] },
+            { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Frontend'] },
+            { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Frontend'] },
+            { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Frontend'] },
+            { title: "Sudoku Solver", description: "Solver for traditional 9x9 Sudoku.", link: "https://github.com/hsuanhauliu/sudoku-solver", image: SudokuSolverImg, tags: ['AI', 'Python'] },
+        ]
+    },
+    {
+        section_name: "Tutorials",
+        cards: [
+            { title: "FCN Semantic Segmentation", description: "", link: "https://github.com/hsuanhauliu/FCN-semantic-segmentation", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'ML', 'Tensorflow'] },
+            { title: "LeNet-5", description: "", link: "https://github.com/hsuanhauliu/LeNet5-TensorFlow", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'ML', 'Tensorflow'] },
+            { title: "Structure From Motion", description: "", link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'OpenCV'] },
+            { title: "Facial Alignment", description: "", link: "https://github.com/hsuanhauliu/facial-alignment-exercise", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'OpenCV'] },
+            { title: "Weather Prediction", description: "Weather prediction with Viterbi algorithm.", link: "/weather_prediction", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['ML', 'Frontend'] },
+            { title: "Live Filter", description: "A tool that allows you to experiment with your custom image filters.", link: "https://github.com/hsuanhauliu/live-filter", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Image Processing'] },
+            { title: "Yelp Recommendation System #1", description: "Yelp recommendation system using collaborative filtering method.", link: "https://github.com/hsuanhauliu/yelp-recommendation-system", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['ML', 'Spark'] },
+            { title: "Yelp Recommendation System #2", description: "Yelp recommendation system using Girvan-Newman algorithm.", link: "https://github.com/hsuanhauliu/girvan-newman-community-detection", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['ML', 'Spark'] },
+        ]
+    },
+    {
+        section_name: "Libraries",
+        cards: [
+            { title: "Fast Serve", description: "One-line code to spin up a HTTP inference server for your ML models.", link: "https://github.com/hsuanhauliu/fast-serve", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Python'] },
         ]
     }
 ];
 
-// Filter Controls Component
-const FilterControls = ({ tags, activeTag, onFilterChange }) => (
-    <div className="flex justify-center flex-wrap gap-2 mb-12">
-        <button onClick={() => onFilterChange('All')} className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300 ${activeTag === 'All' ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+const FilterControls = ({ tags, tagCounts, totalCount, activeTag, onFilterChange }) => (
+    <div className="flex justify-center flex-wrap gap-3 mb-12">
+        <button onClick={() => onFilterChange('All')} className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300 flex items-center ${activeTag === 'All' ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
             All
+            <span className="ml-2 bg-slate-500/50 text-slate-200 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">{totalCount}</span>
         </button>
         {tags.map(tag => (
-            <button key={tag} onClick={() => onFilterChange(tag)} className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300 ${activeTag === tag ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
+            <button key={tag} onClick={() => onFilterChange(tag)} className={`px-4 py-2 text-sm font-semibold rounded-full transition-colors duration-300 flex items-center ${activeTag === tag ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-300 hover:bg-slate-600'}`}>
                 {tag}
+                <span className="ml-2 bg-slate-500/50 text-slate-200 text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">{tagCounts[tag]}</span>
             </button>
         ))}
     </div>
@@ -51,7 +82,7 @@ const FilterControls = ({ tags, activeTag, onFilterChange }) => (
 
 // Project Card Component
 const ProjectCard = ({ title, description, link, image, tags }) => (
-    <a href={link} className="project-card flex flex-col overflow-hidden bg-slate-800 border border-slate-700 rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-sky-400/20 hover:border-sky-400">
+    <a href={link} target="_blank" rel="noopener noreferrer" className="project-card flex flex-col overflow-hidden bg-slate-800 border border-slate-700 rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-sky-400/20 hover:border-sky-400">
         <img src={image} alt={title} className="w-full h-48 object-cover" onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x225/1e293b/e0e0e0?text=Image+Error'; }} />
         <div className="p-6 flex flex-col flex-grow">
             <h2 className="text-xl font-semibold text-sky-400 mb-2">{title}</h2>
@@ -70,8 +101,25 @@ const ProjectCard = ({ title, description, link, image, tags }) => (
 export default function ProjectPage() {
     const [activeFilter, setActiveFilter] = useState('All');
 
-    // Get all unique tags from the portfolio data
-    const allTags = [...new Set(portfolioData.flatMap(section => section.cards.flatMap(card => card.tags)))];
+    // useMemo will only re-calculate these values when portfolioData changes.
+    const { allTags, tagCounts, totalCards } = useMemo(() => {
+        const allCards = portfolioData.flatMap(section => section.cards);
+        const counts = {};
+        allCards.forEach(card => {
+            card.tags.forEach(tag => {
+                counts[tag] = (counts[tag] || 0) + 1;
+            });
+        });
+        
+        // Sort tags by count (descending)
+        const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+
+        return {
+            allTags: tags,
+            tagCounts: counts,
+            totalCards: allCards.length
+        };
+    }, []);
 
     const handleFilterChange = (tag) => {
         setActiveFilter(tag);
@@ -81,8 +129,14 @@ export default function ProjectPage() {
         <main className="pt-28 lg:pt-32 pb-16">
             <Header sectionRefs={[]} />
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl mb-10">
-                <FilterControls tags={allTags} activeTag={activeFilter} onFilterChange={handleFilterChange} />
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mb-10">
+                <FilterControls
+                    tags={allTags}
+                    tagCounts={tagCounts}
+                    totalCount={totalCards}
+                    activeTag={activeFilter}
+                    onFilterChange={handleFilterChange}
+                />
             </div>
 
             {portfolioData.map((section) => {
@@ -95,11 +149,11 @@ export default function ProjectPage() {
                 }
 
                 return (
-                    <div key={section.section_name} className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl mb-10">
+                    <div key={section.section_name} className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mb-10">
                         <h2 className="text-3xl font-bold text-center mb-12 text-sky-400">
                             {section.section_name}
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
                             {filteredCards.map((card) => (
                                 <ProjectCard
                                     key={card.title}

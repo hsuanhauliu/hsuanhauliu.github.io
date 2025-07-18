@@ -21,7 +21,7 @@ const portfolioData = [
         section_name: "Apps",
         cards: [
             { title: "Security Webcam", description: "Simple security camera system right on your computer.", link: "https://github.com/hsuanhauliu/security-webcam", image: SecurityWebcamImg, tags: ['CV', 'Python'] },
-            { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/apps/split.html", image: SplitImg, tags: ['Frontend'] },
+            { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/split", image: SplitImg, tags: ['Frontend'] },
             { title: "Sketchpad", description: "A simple app to draw on images.", link: "/apps/sketchpad.html", image: SketchPadImg, tags: ['Frontend'] },
             { title: "QR Generator", description: "QR code generator with customizations.", link: "/apps/qr_generator.html", image: QrGeneratorImg, tags: ['Frontend'] },
             { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Frontend'] },

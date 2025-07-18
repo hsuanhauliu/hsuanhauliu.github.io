@@ -10,18 +10,18 @@ import '../styles/PortfolioPage.css'
 // This component encapsulates the entire portfolio page.
 export default function PortfolioPage({ projectPageTrigger }) {
     const sectionRefs = [
-        { id: "#about", name: "About", ref: useRef(null) },
-        { id: "#experience", name: "Experience", ref: useRef(null) },
-        { id: "#skills", name: "Skills", ref: useRef(null) },
-        { id: "#projects", name: "Projects", ref: useRef(null) },
-        { id: "#contact", name: "Contact", ref: useRef(null) },
+        { id: "about", name: "About", ref: useRef(null) },
+        { id: "experience", name: "Experience", ref: useRef(null) },
+        { id: "skills", name: "Skills", ref: useRef(null) },
+        { id: "projects", name: "Projects", ref: useRef(null) },
+        { id: "contact", name: "Contact", ref: useRef(null) },
     ];
 
     return (
         <main className="pt-20">
             <Header sectionRefs={sectionRefs} />
 
-            <section ref={sectionRefs.about} id="about" className="min-h-screen flex flex-col justify-center">
+            <section ref={sectionRefs[0].ref} id="about" className="min-h-screen flex flex-col justify-center">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center text-white">Hi, I'm Howard Liu</h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
                     A Google engineer experienced in machine learning, computer vision, and data engineering.
@@ -40,7 +40,7 @@ export default function PortfolioPage({ projectPageTrigger }) {
                 </div>
             </section>
 
-            <section ref={sectionRefs.experience} id="experience">
+            <section ref={sectionRefs[1].ref} id="experience">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Experience</h2>
                 <div className="space-y-10">
                     {/* Experience Items */}
@@ -103,7 +103,7 @@ export default function PortfolioPage({ projectPageTrigger }) {
                 </div>
             </section>
 
-            <section ref={sectionRefs.skills} id="skills">
+            <section ref={sectionRefs[2].ref} id="skills">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Technical Skills</h2>
                 <div className="mb-8">
                     <h3 className="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">Machine Learning & Computer Vision</h3>
@@ -131,7 +131,7 @@ export default function PortfolioPage({ projectPageTrigger }) {
                 </div>
             </section>
 
-            <section ref={sectionRefs.projects} id="projects">
+            <section ref={sectionRefs[3].ref} id="projects">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Featured Projects</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Project Items */}
@@ -174,7 +174,7 @@ export default function PortfolioPage({ projectPageTrigger }) {
                 </div>
             </section>
 
-            <section ref={sectionRefs.contact} id="contact" className="pb-20">
+            <section ref={sectionRefs[4].ref} id="contact" className="pb-20">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">You can find me on...</h2>
                 <div className="flex justify-center items-center space-x-8">
                     <a href="https://github.com/hsuanhauliu" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition duration-300 flex flex-col items-center group">

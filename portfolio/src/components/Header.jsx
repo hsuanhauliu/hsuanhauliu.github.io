@@ -16,12 +16,12 @@ function Header({ sectionRefs }) {
             const scrollY = window.pageYOffset;
 
             // Find which section is currently in view
-            Object.entries(sectionRefs).forEach(([id, ref]) => {
-                const section = ref.current;
-                if (section) {
+            sectionRefs.map(section => {
+                const sec = section.ref.current;
+                if (sec) {
                     // Check if the top of the section is within a certain threshold of the viewport
-                    if (scrollY >= section.offsetTop - window.innerHeight * 0.3) {
-                        currentSectionId = id;
+                    if (scrollY >= sec.offsetTop - window.innerHeight * 0.3) {
+                        currentSectionId = section.id;
                     }
                 }
             });
@@ -54,7 +54,7 @@ function Header({ sectionRefs }) {
                         <span className="text-2xl font-bold">Howard Liu</span>
                     </a>
                     <nav className="hidden md:flex space-x-6">
-                        {sectionRefs.map((section, i) => <a key={i} href={section.id} className="nav-link text-gray-300 hover:text-white transition duration-300">{section.name}</a>)}
+                        {sectionRefs.map((section, i) => <a key={i} href={"#" + section.id} className="nav-link text-gray-300 hover:text-white transition duration-300">{section.name}</a>)}
                     </nav>
                     <div className="md:hidden">
                         <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} id="mobile-menu-button" className="text-gray-300 hover:text-white focus:outline-none">
@@ -77,7 +77,7 @@ function Header({ sectionRefs }) {
                 </div>
             </div>
             <div id="mobile-menu" className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-gray-800 bg-opacity-95`}>
-                {sectionRefs.map((section, i) => <a key={i} onClick={() => setMobileMenuOpen(false)} href={section.id} className="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">{section.name}</a>)}
+                {sectionRefs.map((section, i) => <a key={i} onClick={() => setMobileMenuOpen(false)} href={"#" + section.id} className="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">{section.name}</a>)}
             </div>
         </header>
     );

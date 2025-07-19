@@ -28,9 +28,9 @@ const portfolioData = [
             { title: "Stopwatch & Timer", description: "Stopwatch and timer with audio cues.", link: "/apps/stopwatch_timer.html", image: StopWatchTimerImg, tags: ['Frontend'] },
             { title: "Chess Timer", description: "Simple mobile friendly chess timer.", link: "/apps/chess_timer.html", image: ChessTimerImg, tags: ['Frontend'] },
             { title: "Random Text Generator", description: "Text generator using Hidden Markov Model.", link: "https://github.com/hsuanhauliu/random-text-generator", image: RandomTextGeneratorImg, tags: ['ML'] },
-            { title: "Hidden Message Image", description: "Encrypt secret messages in images.", link: "https://github.com/hsuanhauliu/hidden-message-image", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Image Processing'] },
-            { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['AI', 'Python'] },
-            { title: "Simple File Server", description: "File server to provide real-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Python', 'Docker'] },
+            { title: "Hidden Message Image", description: "Encrypt secret messages in images.", link: "https://github.com/hsuanhauliu/hidden-message-image", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=H', tags: ['Image Processing'] },
+            { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=M', tags: ['AI', 'Python'] },
+            { title: "Simple File Server", description: "File server to provide read-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['Python', 'Docker'] },
         ]
     },
     {
@@ -46,20 +46,20 @@ const portfolioData = [
     {
         section_name: "Tutorials",
         cards: [
-            { title: "FCN Semantic Segmentation", description: "", link: "https://github.com/hsuanhauliu/FCN-semantic-segmentation", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'ML', 'Tensorflow'] },
-            { title: "LeNet-5", description: "", link: "https://github.com/hsuanhauliu/LeNet5-TensorFlow", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'ML', 'Tensorflow'] },
-            { title: "Structure From Motion", description: "", link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'OpenCV'] },
-            { title: "Facial Alignment", description: "", link: "https://github.com/hsuanhauliu/facial-alignment-exercise", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'OpenCV'] },
-            { title: "Weather Prediction", description: "Weather prediction with Viterbi algorithm.", link: "/weather-prediction", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['ML', 'Frontend'] },
+            { title: "FCN Semantic Segmentation", description: "Custom trained FCN for semantic segmentation.", link: "https://github.com/hsuanhauliu/FCN-semantic-segmentation", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['CV', 'ML', 'Tensorflow', 'Jupyter Notebook'] },
+            { title: "LeNet-5", description: "Image classification with LeNet-5.", link: "https://github.com/hsuanhauliu/LeNet5-TensorFlow", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'ML', 'Tensorflow'] },
+            { title: "Structure From Motion", description: "Exercise structure from motion pipeline with OpenCV.", link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['CV', 'OpenCV'] },
+            { title: "Facial Alignment", description: "Facial alignment exercise in Jupyter notebook.", link: "https://github.com/hsuanhauliu/facial-alignment-exercise", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['CV', 'OpenCV', 'Jupyter Notebook'] },
+            { title: "Weather Prediction", description: "Weather prediction with Viterbi algorithm.", link: "/weather-prediction", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=W', tags: ['ML', 'Frontend'] },
             { title: "Live Filter", description: "A tool that allows you to experiment with your custom image filters.", link: "https://github.com/hsuanhauliu/live-filter", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Image Processing'] },
-            { title: "Yelp Recommendation System #1", description: "Yelp recommendation system using collaborative filtering method.", link: "https://github.com/hsuanhauliu/yelp-recommendation-system", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['ML', 'Spark'] },
-            { title: "Yelp Recommendation System #2", description: "Yelp recommendation system using Girvan-Newman algorithm.", link: "https://github.com/hsuanhauliu/girvan-newman-community-detection", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['ML', 'Spark'] },
+            { title: "Yelp Recommendation System #1", description: "Yelp recommendation system using collaborative filtering method.", link: "https://github.com/hsuanhauliu/yelp-recommendation-system", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=Y', tags: ['ML', 'Spark'] },
+            { title: "Yelp Recommendation System #2", description: "Yelp recommendation system using Girvan-Newman algorithm.", link: "https://github.com/hsuanhauliu/girvan-newman-community-detection", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=Y', tags: ['ML', 'Spark'] },
         ]
     },
     {
         section_name: "Libraries",
         cards: [
-            { title: "Fast Serve", description: "One-line code to spin up a HTTP inference server for your ML models.", link: "https://github.com/hsuanhauliu/fast-serve", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Python'] },
+            { title: "Fast Serve", description: "One-line code to spin up a HTTP inference server for your ML models.", link: "https://github.com/hsuanhauliu/fast-serve", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['Python'] },
         ]
     }
 ];
@@ -110,7 +110,7 @@ export default function ProjectPage() {
                 counts[tag] = (counts[tag] || 0) + 1;
             });
         });
-        
+
         // Sort tags by count (descending)
         const tags = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
 

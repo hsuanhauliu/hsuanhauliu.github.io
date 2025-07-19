@@ -8,7 +8,7 @@ import '../styles/background/StarrySkyContainer.css'
 import '../styles/PortfolioPage.css'
 
 // This component encapsulates the entire portfolio page.
-export default function PortfolioPage({ projectPageTrigger }) {
+export default function PortfolioPage() {
     const sectionRefs = [
         { id: "about", name: "About", ref: useRef(null) },
         { id: "experience", name: "Experience", ref: useRef(null) },
@@ -167,9 +167,9 @@ export default function PortfolioPage({ projectPageTrigger }) {
                         </a>
                     </div>
                     <div className="flex flex-col items-center group">
-                        <button onClick={projectPageTrigger} className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                        <a href="/projects" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
                             Project Page
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>

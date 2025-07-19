@@ -4,13 +4,13 @@ import './styles/App.css'
 
 import StarrySkyContainer from './components/background/StarrySkyContainer';
 import Footer from './components/Footer'
-import PortfolioPage from './components/PortfolioPage';
+import ProjectPage from './components/ProjectPage';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className="antialiased">
       <StarrySkyContainer />
-      <PortfolioPage />
+      <ProjectPage />
       <Footer />
     </div>
   </StrictMode>

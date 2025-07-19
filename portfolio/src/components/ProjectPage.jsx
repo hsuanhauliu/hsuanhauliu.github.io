@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 
 import Header from './Header'
+import '../styles/Page.css'
 
 import SplitImg from '../assets/split.png';
 import SketchPadImg from '../assets/sketchpad.png';

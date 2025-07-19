@@ -4,8 +4,7 @@ import rugoImg from '../assets/rugo.png';
 import securityWebcamImg from '../assets/security_webcam.png';
 import Header from './Header'
 
-import '../styles/background/StarrySkyContainer.css'
-import '../styles/PortfolioPage.css'
+import '../styles/Page.css'
 
 // This component encapsulates the entire portfolio page.
 export default function PortfolioPage() {

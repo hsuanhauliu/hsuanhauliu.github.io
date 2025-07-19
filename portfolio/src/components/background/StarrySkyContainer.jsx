@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 
+import '../../styles/background/StarrySkyContainer.css'
+
 function StarrySkyContainer() {
     const starrySkyRef = useRef(null);
 

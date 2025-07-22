@@ -28,10 +28,10 @@ const portfolioData = [
             { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Frontend'] },
             { title: "Stopwatch & Timer", description: "Stopwatch and timer with audio cues.", link: "/apps/stopwatch_timer.html", image: StopWatchTimerImg, tags: ['Frontend'] },
             { title: "Chess Timer", description: "Simple mobile friendly chess timer.", link: "/apps/chess_timer.html", image: ChessTimerImg, tags: ['Frontend'] },
-            { title: "Random Text Generator", description: "Text generator using Hidden Markov Model.", link: "https://github.com/hsuanhauliu/random-text-generator", image: RandomTextGeneratorImg, tags: ['ML'] },
-            { title: "Hidden Message Image", description: "Encrypt secret messages in images.", link: "https://github.com/hsuanhauliu/hidden-message-image", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=H', tags: ['Image Processing'] },
-            { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=M', tags: ['AI', 'Python'] },
-            { title: "Simple File Server", description: "File server to provide read-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['Python', 'Docker'] },
+            { title: "Random Text Generator", description: "Text generator using Hidden Markov Model.", link: "https://github.com/hsuanhauliu/random-text-generator", image: RandomTextGeneratorImg, tags: ['ML', 'CLI'] },
+            { title: "Hidden Message Image", description: "Encrypt secret messages in images.", link: "https://github.com/hsuanhauliu/hidden-message-image", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=H', tags: ['Image Processing', 'CLI'] },
+            { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=M', tags: ['AI', 'Python', 'CLI'] },
+            { title: "Simple File Server", description: "File server to provide read-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['Python', 'Docker', 'CLI'] },
         ]
     },
     {
@@ -41,7 +41,7 @@ const portfolioData = [
             { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Frontend'] },
             { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Frontend'] },
             { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Frontend'] },
-            { title: "Sudoku Solver", description: "Solver for traditional 9x9 Sudoku.", link: "https://github.com/hsuanhauliu/sudoku-solver", image: SudokuSolverImg, tags: ['AI', 'Python'] },
+            { title: "Sudoku Solver", description: "Solver for traditional 9x9 Sudoku.", link: "https://github.com/hsuanhauliu/sudoku-solver", image: SudokuSolverImg, tags: ['AI', 'Python', 'CLI'] },
         ]
     },
     {

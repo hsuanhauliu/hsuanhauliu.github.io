@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/App.css'
 
 import StarrySkyContainer from './components/background/StarrySkyContainer';
 import Footer from './components/Footer'

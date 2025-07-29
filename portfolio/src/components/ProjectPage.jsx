@@ -39,7 +39,7 @@ const portfolioData = [
         section_name: "Games",
         cards: [
             { title: "RuGo", description: "VR Rube Goldberg experiment game.", link: "https://github.com/hsuanhauliu/RuGo", image: RugoImg, tags: ['AR', 'VR', 'Unity'] },
-            { title: "Blackjack", description: "Single player Blackjack.", link: "apps/blackjack.html", image: BlackjackImg, tags: ['Frontend'] },
+            { title: "Blackjack", description: "Single player Blackjack.", link: "/apps/blackjack.html", image: BlackjackImg, tags: ['Frontend'] },
             { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Frontend'] },
             { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Frontend'] },
             { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Frontend'] },

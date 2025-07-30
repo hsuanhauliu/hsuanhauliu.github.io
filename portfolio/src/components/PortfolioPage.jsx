@@ -44,7 +44,7 @@ export default function PortfolioPage() {
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Experience</h2>
                 <div className="space-y-10">
                     {/* Experience Items */}
-                    <div className="p-6 rounded-lg shadow-xl border border-slate-700">
+                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
                         <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
                             <ComputerIcon /> Software Engineer
                         </h3>
@@ -55,7 +55,7 @@ export default function PortfolioPage() {
                             <li>Built event logging features for user product purchases on various device platforms.</li>
                         </ul>
                     </div>
-                    <div className="p-6 rounded-lg shadow-xl border border-slate-700">
+                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
                         <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
                             <RobotIcon /> Robotics Engineer
                         </h3>
@@ -70,7 +70,7 @@ export default function PortfolioPage() {
                                 visualization.</li>
                         </ul>
                     </div>
-                    <div className="p-6 rounded-lg shadow-xl border border-slate-700">
+                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
                         <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
                             <InternIcon />Software Engineering Intern
                         </h3>
@@ -79,7 +79,7 @@ export default function PortfolioPage() {
                             <li>Trained custom Deep Learning models and created data pre-processing pipelines.</li>
                         </ul>
                     </div>
-                    <div className="p-6 rounded-lg shadow-xl border border-slate-700">
+                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
                         <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
                             <InternIcon />Machine Learning Research Intern
                         </h3>
@@ -88,7 +88,7 @@ export default function PortfolioPage() {
                             <li>ML model hyper-parameter tuning, data processing and collection, ML model visualization.</li>
                         </ul>
                     </div>
-                    <div className="p-6 rounded-lg shadow-xl border border-slate-700">
+                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
                         <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
                             <InternIcon />Software Developer Intern
                         </h3>
@@ -97,13 +97,13 @@ export default function PortfolioPage() {
                             <li>Trained object detection models using custom dataset and designed scoring algorithm.</li>
                         </ul>
                     </div>
-                    <div className="p-6 rounded-lg shadow-xl border border-slate-700">
+                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
                         <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
                             <StudentIcon />M.S. in Computer Science
                         </h3>
                         <p className="text-gray-400 mb-1">University of Southern California | Jan 2018 – Dec 2019</p>
                     </div>
-                    <div className="p-6 rounded-lg shadow-xl border border-slate-700">
+                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
                         <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
                             <StudentIcon />B.S. in Computer Science
                         </h3>

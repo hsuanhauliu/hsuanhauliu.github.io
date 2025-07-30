@@ -76,7 +76,7 @@ function Header({ sectionRefs }) {
                     </div>
                 </div>
             </div>
-            <div id="mobile-menu" className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-gray-800 bg-opacity-95`}>
+            <div id="mobile-menu" className={`${isMobileMenuOpen ? 'block' : 'hidden'} md:hidden bg-gray-800/95`}>
                 {sectionRefs.map((section, i) => <a key={i} onClick={() => setMobileMenuOpen(false)} href={"#" + section.id} className="block nav-link py-3 px-4 text-sm text-gray-200 hover:bg-gray-700 hover:text-white transition duration-300">{section.name}</a>)}
             </div>
         </header>

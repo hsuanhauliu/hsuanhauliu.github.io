@@ -2,19 +2,88 @@ import { useRef } from 'react';
 
 import rugoImg from '../assets/rugo.png';
 import securityWebcamImg from '../assets/security_webcam.png';
+
 import Header from './Header';
+import ExperienceCard from './cards/ExperienceCard';
 import { ComputerIcon, RobotIcon, InternIcon, StudentIcon, GithubIcon, LinkedInIcon, EmailIcon } from './Icons';
 
 import '../styles/Page.css';
 
 // This component encapsulates the entire portfolio page.
 export default function PortfolioPage() {
+    // Section references.
     const sectionRefs = [
         { id: "about", name: "About", ref: useRef(null) },
         { id: "experience", name: "Experience", ref: useRef(null) },
         { id: "skills", name: "Skills", ref: useRef(null) },
         { id: "projects", name: "Projects", ref: useRef(null) },
         { id: "contact", name: "Contact", ref: useRef(null) },
+    ];
+
+    // Data for populating the experience cards.
+    const experiences = [
+        {
+            icon: <ComputerIcon />,
+            title: "Software Engineer",
+            subtitle: "Google | Jun 2022 - Present",
+            body: [
+                "Contributed to building the next generation of YouTube billing backend system and features.",
+                "Collaborated with various YouTube product teams to support billing infrastructure features.",
+                "Built event logging features for user product purchases on various device platforms."
+            ]
+        },
+        {
+            icon: <RobotIcon />,
+            title: "Robotics Engineer",
+            subtitle: "Dexterity Inc. | Feb 2020 – Jun 2022",
+            body: [
+                "Developed and deployed several key robot system features, including system orchestration and camera calibration.",
+                "Built and managed critical data & ETL pipelines and infrastructure for production and development systems.",
+                "Created dozens of developer tools to support research effort and product development.",
+                "Delivered solutions to gather key business metrics, system performance metrics, and data visualization."
+            ]
+        },
+        {
+            icon: <InternIcon />,
+            title: "Software Engineering Intern",
+            subtitle: "Playing Forward LLC | Sep 2019 – Dec 2019",
+            body: [
+                "Trained custom Deep Learning models and created data pre-processing pipelines."
+            ]
+        },
+        {
+            icon: <InternIcon />,
+            title: "Machine Learning Research Intern",
+            subtitle: "UMLx Project | May 2019 – Aug 2019",
+            body: [
+                "ML model hyper-parameter tuning, data processing and collection, ML model visualization."
+            ]
+        },
+        {
+            icon: <InternIcon />,
+            title: "Software Developer Intern",
+            subtitle: "CarmaCam | Aug 2018 – Nov 2018",
+            body: [
+                "Trained object detection models on custom dataset and designed scoring algorithm for driving violation reports."
+            ]
+        },
+        {
+            icon: <StudentIcon />,
+            title: "M.S. in Computer Science",
+            subtitle: "University of Southern California | Jan 2018 – Dec 2019",
+        },
+        {
+            icon: <StudentIcon />,
+            title: "B.S. in Computer Science",
+            subtitle: "Auburn University | May 2013 – Dec 2017",
+        }
+    ];
+
+    // Data for rendering skill sections.
+    const skill_sections = [
+        { title: "Machine Learning & Computer Vision", skills: ['Python', 'C++', 'TensorFlow', 'PyTorch', 'Keras', 'OpenCV', 'Jupyter Notebook', 'Deep Learning', 'Supervised Learning', 'ML Infrastructure', 'Model Deployment', 'MLOps'] },
+        { title: "Data Engineering & Backend", skills: ['Airflow', 'Prometheus', 'Apache Kafka', 'Docker', 'Kubernetes', 'ETL Pipelines'] },
+        { title: "Databases", skills: ['Redis', 'Elasticsearch', 'Postgres', 'MySQL'] },
     ];
 
     return (
@@ -43,72 +112,16 @@ export default function PortfolioPage() {
             <section ref={sectionRefs[1].ref} id="experience">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Experience</h2>
                 <div className="space-y-10">
-                    {/* Experience Items */}
-                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
-                        <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
-                            <ComputerIcon /> Software Engineer
-                        </h3>
-                        <p className="text-gray-400 mb-1">Google | Jun 2022 - Present</p>
-                        <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2">
-                            <li>Contributed to building the next generation of YouTube billing backend system and features.</li>
-                            <li>Collaborated with various YouTube product teams to support billing infrastructure features.</li>
-                            <li>Built event logging features for user product purchases on various device platforms.</li>
-                        </ul>
-                    </div>
-                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
-                        <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
-                            <RobotIcon /> Robotics Engineer
-                        </h3>
-                        <p className="text-gray-400 mb-1">Dexterity Inc. | Feb 2020 – Jun 2022</p>
-                        <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2">
-                            <li>Developed and deployed several key robot system features, including system orchestration and
-                                camera calibration.</li>
-                            <li>Built and managed critical data & ETL pipelines and infrastructure for production and
-                                development systems.</li>
-                            <li>Created dozens of developer tools to support research effort and product development.</li>
-                            <li>Delivered solutions to gather key business metrics, system performance metrics, and data
-                                visualization.</li>
-                        </ul>
-                    </div>
-                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
-                        <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
-                            <InternIcon />Software Engineering Intern
-                        </h3>
-                        <p className="text-gray-400 mb-1">Playing Forward LLC | Sep 2019 – Dec 2019</p>
-                        <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2">
-                            <li>Trained custom Deep Learning models and created data pre-processing pipelines.</li>
-                        </ul>
-                    </div>
-                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
-                        <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
-                            <InternIcon />Machine Learning Research Intern
-                        </h3>
-                        <p className="text-gray-400 mb-1">UMLx Project | May 2019 – Aug 2019</p>
-                        <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2">
-                            <li>ML model hyper-parameter tuning, data processing and collection, ML model visualization.</li>
-                        </ul>
-                    </div>
-                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
-                        <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
-                            <InternIcon />Software Developer Intern
-                        </h3>
-                        <p className="text-gray-400 mb-1">CarmaCam | Aug 2018 – Nov 2018</p>
-                        <ul className="list-disc list-inside text-gray-300 space-y-1 pl-2">
-                            <li>Trained object detection models using custom dataset and designed scoring algorithm.</li>
-                        </ul>
-                    </div>
-                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
-                        <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
-                            <StudentIcon />M.S. in Computer Science
-                        </h3>
-                        <p className="text-gray-400 mb-1">University of Southern California | Jan 2018 – Dec 2019</p>
-                    </div>
-                    <div className="bg-slate-800/70 p-6 rounded-lg shadow-xl border border-slate-700">
-                        <h3 className="flex items-center gap-x-2 text-2xl font-semibold text-blue-400 mb-1">
-                            <StudentIcon />B.S. in Computer Science
-                        </h3>
-                        <p className="text-gray-400 mb-1">Auburn University | May 2013 – Dec 2017</p>
-                    </div>
+                    {
+                        experiences.map((exp) => (
+                            <ExperienceCard
+                                key={exp.title}
+                                icon={exp.icon}
+                                title={exp.title}
+                                sub_title={exp.subtitle}
+                                body={exp.body}
+                            />))
+                    }
                 </div>
                 <div className="text-center mt-10">
                     <a href="https://drive.google.com/file/d/127lTiCtVaUWMORjv8yNofKC48cBCIJ1G/view" target="_blank" rel="noopener noreferrer" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
@@ -119,30 +132,17 @@ export default function PortfolioPage() {
 
             <section ref={sectionRefs[2].ref} id="skills">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Technical Skills</h2>
-                <div className="mb-8">
-                    <h3 className="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">Machine Learning & Computer Vision</h3>
-                    <div className="flex flex-wrap justify-center sm:justify-start gap-3">
-                        {['Python', 'C++', 'TensorFlow', 'PyTorch', 'Keras', 'OpenCV', 'Jupyter Notebook', 'Deep Learning', 'Supervised Learning', 'ML Infrastructure', 'Model Deployment', 'MLOps'].map(skill => (
-                            <span key={skill} className="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">{skill}</span>
-                        ))}
-                    </div>
-                </div>
-                <div className="mb-8">
-                    <h3 className="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">Data Engineering & Backend</h3>
-                    <div className="flex flex-wrap justify-center sm:justify-start gap-3">
-                        {['Airflow', 'Prometheus', 'Apache Kafka', 'Docker', 'Kubernetes', 'ETL Pipelines'].map(skill => (
-                            <span key={skill} className="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">{skill}</span>
-                        ))}
-                    </div>
-                </div>
-                <div>
-                    <h3 className="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">Databases</h3>
-                    <div className="flex flex-wrap justify-center sm:justify-start gap-3">
-                        {['Redis', 'Elasticsearch', 'Postgres', 'MySQL'].map(skill => (
-                            <span key={skill} className="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">{skill}</span>
-                        ))}
-                    </div>
-                </div>
+                {
+                    skill_sections.map(skill_section => (
+                        <div key={skill_section.title} className="mb-8">
+                            <h3 className="text-2xl font-semibold text-blue-300 mb-4 text-center sm:text-left">{skill_section.title}</h3>
+                            <div className="flex flex-wrap justify-center sm:justify-start gap-3">
+                                {skill_section.skills.map(skill => (
+                                    <span key={skill} className="skill-tag text-gray-300 py-2 px-4 rounded-lg text-sm">{skill}</span>
+                                ))}
+                            </div>
+                        </div>))
+                }
             </section>
 
             <section ref={sectionRefs[3].ref} id="projects">

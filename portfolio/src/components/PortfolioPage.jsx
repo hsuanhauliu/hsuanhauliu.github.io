@@ -90,7 +90,7 @@ export default function PortfolioPage() {
         <main className="pt-20">
             <Header sectionRefs={sectionRefs} />
 
-            <section ref={sectionRefs[0].ref} id="about" className="min-h-screen flex flex-col justify-center">
+            <section ref={sectionRefs[0].ref} id={sectionRefs[0].id} className="min-h-screen flex flex-col justify-center">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center text-white">Hi, I'm Howard Liu</h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
                     A Google engineer experienced in machine learning, computer vision, and data engineering.
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
                 </div>
             </section>
 
-            <section ref={sectionRefs[1].ref} id="experience">
+            <section ref={sectionRefs[1].ref} id={sectionRefs[1].id}>
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Experience</h2>
                 <div className="space-y-10">
                     {
@@ -130,7 +130,7 @@ export default function PortfolioPage() {
                 </div>
             </section>
 
-            <section ref={sectionRefs[2].ref} id="skills">
+            <section ref={sectionRefs[2].ref} id={sectionRefs[2].id}>
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Technical Skills</h2>
                 {
                     skill_sections.map(skill_section => (
@@ -145,12 +145,12 @@ export default function PortfolioPage() {
                 }
             </section>
 
-            <section ref={sectionRefs[3].ref} id="projects">
+            <section ref={sectionRefs[3].ref} id={sectionRefs[3].id}>
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Featured Projects</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Project Items */}
                     <div className="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700 transition-all duration-300">
-                        <img src={rugoImg} alt="RuGo" className="w-full h-48 object-cover" />
+                        <img src={rugoImg} alt="RuGo" loading="lazy" className="w-full h-48 object-cover" />
                         <div className="p-6">
                             <h3 className="text-2xl font-semibold text-blue-400 mb-2">RuGo</h3>
                             <p className="text-gray-300 mb-3 text-sm">VR Rube Goldberg experiment game.</p>
@@ -163,7 +163,7 @@ export default function PortfolioPage() {
                         </div>
                     </div>
                     <div className="project-card bg-slate-800 rounded-lg shadow-xl overflow-hidden border border-slate-700 transition-all duration-300">
-                        <img src={securityWebcamImg} alt="Security Webcam" className="w-full h-48 object-cover" />
+                        <img src={securityWebcamImg} loading="lazy" alt="Security Webcam" className="w-full h-48 object-cover" />
                         <div className="p-6">
                             <h3 className="text-2xl font-semibold text-blue-400 mb-2">Security Webcam</h3>
                             <p className="text-gray-300 mb-3 text-sm">Simple webcam monitoring program using facial recognition and motion detection to auto-record and save footage.</p>
@@ -188,7 +188,7 @@ export default function PortfolioPage() {
                 </div>
             </section>
 
-            <section ref={sectionRefs[4].ref} id="contact" className="pb-20">
+            <section ref={sectionRefs[4].ref} id={sectionRefs[4].id} className="pb-20">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Find me on...</h2>
                 <div className="flex justify-center items-center space-x-8">
                     <a href="https://github.com/hsuanhauliu" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition duration-300 flex flex-col items-center group">

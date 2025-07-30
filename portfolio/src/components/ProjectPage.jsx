@@ -86,7 +86,7 @@ const FilterControls = ({ tags, tagCounts, totalCount, activeTag, onFilterChange
 // Project Card Component
 const ProjectCard = ({ title, description, link, image, tags }) => (
     <a href={link} target="_blank" rel="noopener noreferrer" className="project-card flex flex-col overflow-hidden bg-slate-800 border border-slate-700 rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-sky-400/20 hover:border-sky-400">
-        <img src={image} alt={title} className="w-full h-48 object-cover" onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x225/1e293b/e0e0e0?text=Image+Error'; }} />
+        <img src={image} alt={title} loading="lazy" className="w-full h-48 object-cover" onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x225/1e293b/e0e0e0?text=Image+Error'; }} />
         <div className="p-6 flex flex-col flex-grow">
             <h2 className="text-xl font-semibold text-sky-400 mb-2">{title}</h2>
             <p className="text-slate-400 text-sm mb-4 flex-grow">{description}</p>

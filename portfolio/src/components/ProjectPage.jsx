@@ -16,14 +16,24 @@ import SecurityWebcamImg from '../assets/security_webcam.png';
 import RandomTextGeneratorImg from '../assets/random_text_generator.jpg';
 import RugoImg from '../assets/rugo.png';
 import SudokuSolverImg from '../assets/sudoku_solver.jpg';
-import BlackjackImg from '../assets/blackjack.png'
+import BlackjackImg from '../assets/blackjack.png';
+import SfmImg from '../assets/sfm.png';
+import OjectDetectionImg from '../assets/object_detection.png';
 
 const portfolioData = [
+    {
+        section_name: "Featured Projects",
+        cards: [
+            { title: "Structure From Motion", description: "Exercise structure from motion pipeline with OpenCV.", link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV", image: SfmImg, tags: ['CV', 'OpenCV'] },
+            { title: "Vision Toolkit", description: "Collection of vision related web apps and tools.", link: "https://github.com/hsuanhauliu/vision-toolkit", image: OjectDetectionImg, tags: ['Frontend', 'CV', 'ML'] },
+            { title: "RuGo", description: "VR Rube Goldberg experiment game.", link: "https://github.com/hsuanhauliu/RuGo", image: RugoImg, tags: ['AR', 'VR', 'Unity'] },
+            { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/split", image: SplitImg, tags: ['Frontend'] },
+        ]
+    },
     {
         section_name: "Apps",
         cards: [
             { title: "Security Webcam", description: "Simple security camera system right on your computer.", link: "https://github.com/hsuanhauliu/security-webcam", image: SecurityWebcamImg, tags: ['CV', 'Python'] },
-            { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/split", image: SplitImg, tags: ['Frontend'] },
             { title: "Sketchpad", description: "A simple app to draw on images.", link: "/apps/sketchpad.html", image: SketchPadImg, tags: ['Frontend'] },
             { title: "QR Generator", description: "QR code generator with customizations.", link: "/apps/qr_generator.html", image: QrGeneratorImg, tags: ['Frontend'] },
             { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Frontend'] },
@@ -38,7 +48,6 @@ const portfolioData = [
     {
         section_name: "Games",
         cards: [
-            { title: "RuGo", description: "VR Rube Goldberg experiment game.", link: "https://github.com/hsuanhauliu/RuGo", image: RugoImg, tags: ['AR', 'VR', 'Unity'] },
             { title: "Blackjack", description: "Single player Blackjack.", link: "/apps/blackjack.html", image: BlackjackImg, tags: ['Frontend'] },
             { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Frontend'] },
             { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Frontend'] },
@@ -51,7 +60,6 @@ const portfolioData = [
         cards: [
             { title: "FCN Semantic Segmentation", description: "Custom trained FCN for semantic segmentation.", link: "https://github.com/hsuanhauliu/FCN-semantic-segmentation", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['CV', 'ML', 'Tensorflow', 'Jupyter Notebook'] },
             { title: "LeNet-5", description: "Image classification with LeNet-5.", link: "https://github.com/hsuanhauliu/LeNet5-TensorFlow", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'ML', 'Tensorflow'] },
-            { title: "Structure From Motion", description: "Exercise structure from motion pipeline with OpenCV.", link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['CV', 'OpenCV'] },
             { title: "Facial Alignment", description: "Facial alignment exercise in Jupyter notebook.", link: "https://github.com/hsuanhauliu/facial-alignment-exercise", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['CV', 'OpenCV', 'Jupyter Notebook'] },
             { title: "Weather Prediction", description: "Weather prediction with Viterbi algorithm.", link: "/weather-prediction", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=W', tags: ['ML', 'Frontend'] },
             { title: "Live Filter", description: "A tool that allows you to experiment with your custom image filters.", link: "https://github.com/hsuanhauliu/live-filter", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Image Processing'] },

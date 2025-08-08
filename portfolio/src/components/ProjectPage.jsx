@@ -19,40 +19,42 @@ import SudokuSolverImg from '../assets/sudoku_solver.jpg';
 import BlackjackImg from '../assets/blackjack.png';
 import SfmImg from '../assets/sfm.png';
 import OjectDetectionImg from '../assets/object_detection.png';
+import StitchImg from '../assets/stitch.png';
 
 const portfolioData = [
     {
         section_name: "Featured Projects",
         cards: [
-            { title: "Structure From Motion", description: "Exercise structure from motion pipeline with OpenCV.", link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV", image: SfmImg, tags: ['CV', 'OpenCV'] },
-            { title: "Vision Toolkit", description: "Collection of vision related web apps and tools.", link: "https://github.com/hsuanhauliu/vision-toolkit", image: OjectDetectionImg, tags: ['Frontend', 'CV', 'ML'] },
+            { title: "Vision Toolkit", description: "Collection of vision related web apps and tools.", link: "https://github.com/hsuanhauliu/vision-toolkit", image: OjectDetectionImg, tags: ['Web', 'CV', 'ML', 'Docker'] },
             { title: "RuGo", description: "VR Rube Goldberg experiment game.", link: "https://github.com/hsuanhauliu/RuGo", image: RugoImg, tags: ['AR', 'VR', 'Unity'] },
-            { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/split", image: SplitImg, tags: ['Frontend'] },
+            { title: "Stitch", description: "Web app for stitching images together.", link: "/stitch", image: StitchImg, tags: ['Web', 'Image Processing'] },
+            { title: "Structure From Motion", description: "Exercise structure from motion pipeline with OpenCV.", link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV", image: SfmImg, tags: ['CV', 'OpenCV'] },
         ]
     },
     {
         section_name: "Apps",
         cards: [
-            { title: "Security Webcam", description: "Simple security camera system right on your computer.", link: "https://github.com/hsuanhauliu/security-webcam", image: SecurityWebcamImg, tags: ['CV', 'Python'] },
-            { title: "Sketchpad", description: "A simple app to draw on images.", link: "/apps/sketchpad.html", image: SketchPadImg, tags: ['Frontend'] },
-            { title: "QR Generator", description: "QR code generator with customizations.", link: "/apps/qr_generator.html", image: QrGeneratorImg, tags: ['Frontend'] },
-            { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Frontend'] },
-            { title: "Stopwatch & Timer", description: "Stopwatch and timer with audio cues.", link: "/apps/stopwatch_timer.html", image: StopWatchTimerImg, tags: ['Frontend'] },
-            { title: "Chess Timer", description: "Simple mobile friendly chess timer.", link: "/apps/chess_timer.html", image: ChessTimerImg, tags: ['Frontend'] },
+            { title: "Security Webcam", description: "Simple security camera system right on your computer.", link: "https://github.com/hsuanhauliu/security-webcam", image: SecurityWebcamImg, tags: ['CV', 'AI'] },
+            { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/split", image: SplitImg, tags: ['Web'] },
+            { title: "Sketchpad", description: "A simple app to draw on images.", link: "/apps/sketchpad.html", image: SketchPadImg, tags: ['Web'] },
+            { title: "QR Generator", description: "QR code generator with customizations.", link: "/apps/qr_generator.html", image: QrGeneratorImg, tags: ['Web'] },
+            { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Web'] },
+            { title: "Stopwatch & Timer", description: "Stopwatch and timer with audio cues.", link: "/apps/stopwatch_timer.html", image: StopWatchTimerImg, tags: ['Web'] },
+            { title: "Chess Timer", description: "Simple mobile friendly chess timer.", link: "/apps/chess_timer.html", image: ChessTimerImg, tags: ['Web'] },
             { title: "Random Text Generator", description: "Text generator using Hidden Markov Model.", link: "https://github.com/hsuanhauliu/random-text-generator", image: RandomTextGeneratorImg, tags: ['ML', 'CLI'] },
             { title: "Hidden Message Image", description: "Encrypt secret messages in images.", link: "https://github.com/hsuanhauliu/hidden-message-image", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=H', tags: ['Image Processing', 'CLI'] },
-            { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=M', tags: ['AI', 'Python', 'CLI'] },
-            { title: "Simple File Server", description: "File server to provide read-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['Python', 'Docker', 'CLI'] },
+            { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=M', tags: ['AI', 'CLI'] },
+            { title: "Simple File Server", description: "File server to provide read-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['Docker', 'CLI'] },
         ]
     },
     {
         section_name: "Games",
         cards: [
-            { title: "Blackjack", description: "Single player Blackjack.", link: "/apps/blackjack.html", image: BlackjackImg, tags: ['Frontend'] },
-            { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Frontend'] },
-            { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Frontend'] },
-            { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Frontend'] },
-            { title: "Sudoku Solver", description: "Solver for traditional 9x9 Sudoku.", link: "https://github.com/hsuanhauliu/sudoku-solver", image: SudokuSolverImg, tags: ['AI', 'Python', 'CLI'] },
+            { title: "Blackjack", description: "Single player Blackjack.", link: "/apps/blackjack.html", image: BlackjackImg, tags: ['Web'] },
+            { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Web'] },
+            { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Web'] },
+            { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Web'] },
+            { title: "Sudoku Solver", description: "Solver for traditional 9x9 Sudoku.", link: "https://github.com/hsuanhauliu/sudoku-solver", image: SudokuSolverImg, tags: ['AI', 'CLI'] },
         ]
     },
     {
@@ -61,7 +63,7 @@ const portfolioData = [
             { title: "FCN Semantic Segmentation", description: "Custom trained FCN for semantic segmentation.", link: "https://github.com/hsuanhauliu/FCN-semantic-segmentation", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['CV', 'ML', 'Tensorflow', 'Jupyter Notebook'] },
             { title: "LeNet-5", description: "Image classification with LeNet-5.", link: "https://github.com/hsuanhauliu/LeNet5-TensorFlow", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['CV', 'ML', 'Tensorflow'] },
             { title: "Facial Alignment", description: "Facial alignment exercise in Jupyter notebook.", link: "https://github.com/hsuanhauliu/facial-alignment-exercise", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['CV', 'OpenCV', 'Jupyter Notebook'] },
-            { title: "Weather Prediction", description: "Weather prediction with Viterbi algorithm.", link: "/weather-prediction", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=W', tags: ['ML', 'Frontend'] },
+            { title: "Weather Prediction", description: "Weather prediction with Viterbi algorithm.", link: "/weather-prediction", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=W', tags: ['ML', 'Web'] },
             { title: "Live Filter", description: "A tool that allows you to experiment with your custom image filters.", link: "https://github.com/hsuanhauliu/live-filter", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=L', tags: ['Image Processing'] },
             { title: "Yelp Recommendation System #1", description: "Yelp recommendation system using collaborative filtering method.", link: "https://github.com/hsuanhauliu/yelp-recommendation-system", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=Y', tags: ['ML', 'Spark'] },
             { title: "Yelp Recommendation System #2", description: "Yelp recommendation system using Girvan-Newman algorithm.", link: "https://github.com/hsuanhauliu/girvan-newman-community-detection", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=Y', tags: ['ML', 'Spark'] },
@@ -70,7 +72,7 @@ const portfolioData = [
     {
         section_name: "Libraries",
         cards: [
-            { title: "Fast Serve", description: "One-line code to spin up a HTTP inference server for your ML models.", link: "https://github.com/hsuanhauliu/fast-serve", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['Python'] },
+            { title: "Fast Serve", description: "One-line code to spin up a HTTP inference server for your ML models.", link: "https://github.com/hsuanhauliu/fast-serve", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=F', tags: ['Infra'] },
         ]
     }
 ];

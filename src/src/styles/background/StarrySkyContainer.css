@@ -1,0 +1,133 @@
+#starry-sky-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation-name: twinkle;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    opacity: 0;
+    animation-name: shoot;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transform-origin: bottom center;
+}
+
+.shooting-star::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+
+@keyframes shoot {
+    0% {
+        opacity: 0;
+        transform: translateY(var(--start-y)) translateX(var(--start-x)) rotate(var(--angle)) scaleY(0.5);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(var(--start-y)) translateX(var(--start-x)) rotate(var(--angle)) scaleY(1);
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(calc(var(--start-y) + var(--travel-distance-y))) translateX(calc(var(--start-x) + var(--travel-distance-x))) rotate(var(--angle)) scaleY(1.5);
+    }
+}
+
+#gemini-constellation-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.constellation-star {
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.9), 0 0 15px rgba(173, 216, 230, 0.7), 0 0 22px rgba(173, 216, 230, 0.5);
+    opacity: 0.85;
+    z-index: 2;
+}
+
+.constellation-star.pollux {
+    width: 5px;
+    height: 5px;
+}
+
+.constellation-star.castor {
+    width: 4.5px;
+    height: 4.5px;
+}
+
+.constellation-star.alhena {
+    width: 4px;
+    height: 4px;
+}
+
+.constellation-star.tejat {
+    width: 3.5px;
+    height: 3.5px;
+}
+
+.constellation-star.other {
+    width: 3px;
+    height: 3px;
+}
+
+.constellation-line {
+    position: absolute;
+    background-color: rgba(200, 220, 255, 0.7);
+    height: 1px;
+    opacity: 0;
+    transform-origin: 0 50%;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}

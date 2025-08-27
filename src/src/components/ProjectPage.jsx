@@ -22,6 +22,7 @@ import OjectDetectionImg from '../assets/object_detection.jpeg';
 import StitchImg from '../assets/stitch.jpeg';
 import StreamFxImg from '../assets/stream_fx.jpeg';
 import ImageMetadataRemover from '../assets/image_metadata_remover.jpeg'
+import NotebookEditorImg from '../assets/notebook_editor.jpeg'
 
 const portfolioData = [
     {
@@ -29,6 +30,7 @@ const portfolioData = [
         cards: [
             { title: "Vision Toolkit", description: "Collection of vision related web apps and tools.", link: "https://github.com/hsuanhauliu/vision-toolkit", image: OjectDetectionImg, tags: ['Web', 'CV', 'ML', 'Docker'] },
             { title: "StreamFX", description: "Real-time special video effects for your webcam.", link: "https://github.com/hsuanhauliu/stream-fx", image: StreamFxImg, tags: ['CV', 'ML', 'API', 'Image Processing'] },
+            { title: "Notebook Editor", description: "Simple editor for Jupyter Notebook.", link: "/apps/notebook_editor", image: NotebookEditorImg, tags: ['ML', 'Web'] },
             { title: "RuGo", description: "VR Rube Goldberg experiment game.", link: "https://github.com/hsuanhauliu/RuGo", image: RugoImg, tags: ['AR', 'VR', 'Unity'] },
             { title: "Stitch", description: "Web app for stitching images together.", link: "/stitch", image: StitchImg, tags: ['Web', 'Image Processing'] },
             { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/split", image: SplitImg, tags: ['Web'] },

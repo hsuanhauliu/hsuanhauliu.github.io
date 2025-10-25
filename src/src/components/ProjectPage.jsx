@@ -4,16 +4,12 @@ import Header from './Header'
 import '../styles/Page.css'
 
 import SplitImg from '../assets/split.jpeg';
-import SketchPadImg from '../assets/sketchpad.jpeg';
 import QrGeneratorImg from '../assets/qr_generator.jpeg';
 import SimplePdfEditorImg from '../assets/simple_pdf_editor.jpeg';
-import StopWatchTimerImg from '../assets/stopwatch_timer.jpeg';
 import ConstellationCreatorImg from '../assets/constellation_creator.jpeg';
-import ChessTimerImg from '../assets/chess_timer.jpeg';
 import TetrisImg from '../assets/tetris.jpeg';
 import ChessboardSimulationImg from '../assets/chessboard_simulation.jpeg';
 import SecurityWebcamImg from '../assets/security_webcam.jpeg';
-import RandomTextGeneratorImg from '../assets/random_text_generator.jpeg';
 import RugoImg from '../assets/rugo.jpeg';
 import SudokuSolverImg from '../assets/sudoku_solver.jpeg';
 import BlackjackImg from '../assets/blackjack.jpeg';
@@ -30,7 +26,7 @@ const portfolioData = [
         cards: [
             { title: "Vision Toolkit", description: "Collection of vision related web apps and tools.", link: "https://github.com/hsuanhauliu/vision-toolkit", image: OjectDetectionImg, tags: ['Web', 'CV', 'ML', 'Docker'] },
             { title: "StreamFX", description: "Real-time special video effects for your webcam.", link: "https://github.com/hsuanhauliu/stream-fx", image: StreamFxImg, tags: ['CV', 'ML', 'API', 'Image Processing'] },
-            { title: "Notebook Editor", description: "Simple editor for Jupyter Notebook.", link: "/apps/notebook_editor", image: NotebookEditorImg, tags: ['ML', 'Web'] },
+            { title: "Notebook Editor", description: "Simple editor for Jupyter Notebook.", link: "/apps/edit/notebook_editor", image: NotebookEditorImg, tags: ['ML', 'Web'] },
             { title: "RuGo", description: "VR Rube Goldberg experiment game.", link: "https://github.com/hsuanhauliu/RuGo", image: RugoImg, tags: ['AR', 'VR', 'Unity'] },
             { title: "Stitch", description: "Web app for stitching images together.", link: "/stitch", image: StitchImg, tags: ['Web', 'Image Processing'] },
             { title: "Split", description: "A pure client-side expense splitting desktop app.", link: "/split", image: SplitImg, tags: ['Web'] },
@@ -41,14 +37,9 @@ const portfolioData = [
         section_name: "Apps",
         cards: [
             { title: "Security Webcam", description: "Simple security camera system right on your computer.", link: "https://github.com/hsuanhauliu/security-webcam", image: SecurityWebcamImg, tags: ['CV', 'AI', 'Image Processing'] },
-            { title: "Sketchpad", description: "A simple app to draw on images.", link: "/apps/sketchpad.html", image: SketchPadImg, tags: ['Web'] },
             { title: "Image Metadata Remover", description: "View and erase metadata from your images.", link: "/apps/media/image_metadata_remover.html", image: ImageMetadataRemover, tags: ['Web', 'Image Processing'] },
             { title: "QR Generator", description: "QR code generator with customizations.", link: "/apps/media/qr_generator.html", image: QrGeneratorImg, tags: ['Web'] },
-            { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Web'] },
-            { title: "Stopwatch & Timer", description: "Stopwatch and timer with audio cues.", link: "/apps/stopwatch_timer.html", image: StopWatchTimerImg, tags: ['Web'] },
-            { title: "Chess Timer", description: "Simple mobile friendly chess timer.", link: "/apps/chess_timer.html", image: ChessTimerImg, tags: ['Web'] },
-            { title: "Random Text Generator", description: "Text generator using Hidden Markov Model.", link: "https://github.com/hsuanhauliu/random-text-generator", image: RandomTextGeneratorImg, tags: ['ML', 'CLI'] },
-            { title: "Hidden Message Image", description: "Encrypt secret messages in images.", link: "https://github.com/hsuanhauliu/hidden-message-image", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=H', tags: ['Image Processing', 'CLI'] },
+            { title: "Simple PDF Editor", description: "Pure client-side app for PDF editing.", link: "/apps/edit/simple_pdf_editor.html", image: SimplePdfEditorImg, tags: ['Web'] },
             { title: "Machine Improvised Music", description: "Music generation program.", link: "https://github.com/hsuanhauliu/machine-improvised-music", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=M', tags: ['AI', 'CLI'] },
             { title: "Simple File Server", description: "File server to provide read-only access to files.", link: "https://github.com/hsuanhauliu/simple-file-server", image: 'https://placehold.co/400x225/1e293b/64b5f6?text=S', tags: ['Docker', 'CLI'] },
         ]
@@ -56,10 +47,10 @@ const portfolioData = [
     {
         section_name: "Games",
         cards: [
-            { title: "Blackjack", description: "Single player Blackjack.", link: "/apps/blackjack.html", image: BlackjackImg, tags: ['Web'] },
-            { title: "Tetris", description: "Classic tetris game.", link: "/apps/tetris.html", image: TetrisImg, tags: ['Web'] },
-            { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Web'] },
-            { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Web'] },
+            { title: "Blackjack", description: "Single player Blackjack.", link: "/apps/games/blackjack.html", image: BlackjackImg, tags: ['Web'] },
+            { title: "Tetris", description: "Classic tetris game.", link: "/apps/games/tetris.html", image: TetrisImg, tags: ['Web'] },
+            { title: "Chessboard Simulation", description: "A configurable chessboard for analysis.", link: "/apps/games/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Web'] },
+            { title: "Constellation Creator", description: "Create star signs from any image.", link: "/apps/art/constellation_creator.html", image: ConstellationCreatorImg, tags: ['Web'] },
             { title: "Sudoku Solver", description: "Solver for traditional 9x9 Sudoku.", link: "https://github.com/hsuanhauliu/sudoku-solver", image: SudokuSolverImg, tags: ['AI', 'CLI'] },
         ]
     },

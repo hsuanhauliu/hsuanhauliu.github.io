@@ -168,8 +168,14 @@ export default function ProjectPage() {
             })}
             <div className="flex justify-center items-center space-x-8 mt-10">
                 <div className="flex flex-col items-center group">
+                    <a href="/apps" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                        More Apps
+                    </a>
+                </div>
+
+                <div className="flex flex-col items-center group">
                     <a href="https://github.com/hsuanhauliu" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
-                        See More on Github
+                        More on Github
                     </a>
                 </div>
             </div>

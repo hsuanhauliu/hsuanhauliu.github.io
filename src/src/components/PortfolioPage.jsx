@@ -28,9 +28,8 @@ export default function PortfolioPage() {
             title: "Software Engineer",
             subtitle: "Google | Jun 2022 - Present",
             body: [
-                "Contributed to building the next generation of YouTube billing backend system and features.",
-                "Collaborated with various YouTube product teams to support billing infrastructure features.",
-                "Built event logging features for user product purchases on various device platforms."
+                "Currently building Computer Vision models and machine learning infrastructure at Geo Machine Intelligence team.",
+                "3 years at YouTube Billing team working on billing backend infrastructure, shopping journey logging, etc."
             ]
         },
         {
@@ -38,10 +37,10 @@ export default function PortfolioPage() {
             title: "Robotics Engineer",
             subtitle: "Dexterity Inc. | Feb 2020 – Jun 2022",
             body: [
-                "Developed and deployed several key robot system features, including system orchestration and camera calibration.",
+                "Developed and deployed several key robot system features, including system process orchestration and camera rig calibration.",
+                "Trained and deployed instance segmentation models and created ML tools including annotation tools, serving framework, etc.",
                 "Built and managed critical data & ETL pipelines and infrastructure for production and development systems.",
-                "Created dozens of developer tools to support research effort and product development.",
-                "Delivered solutions to gather key business metrics, system performance metrics, and data visualization."
+                "Created solutions to gather key business metrics, system performance metrics, and data visualization."
             ]
         },
         {
@@ -94,7 +93,7 @@ export default function PortfolioPage() {
             <section ref={sectionRefs[0].ref} id={sectionRefs[0].id} className="min-h-screen flex flex-col justify-center">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center text-white">Hi, I'm Howard Liu</h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
-                    A Google engineer experienced in machine learning, computer vision, and data engineering.
+                    A Google engineer experienced in Machine Learning, Computer Vision, and Data Engineering.
                 </p>
                 <p className="text-lg text-gray-400 text-center max-w-2xl mx-auto">
                     I'm pretty good at problem solving, system design, coding, and shipping features. I love technology and

@@ -70,7 +70,7 @@ export default function PortfolioPage() {
             title: "Robotics Engineer",
             subtitle: "Dexterity Inc. · Feb 2020 – Jun 2022",
             body: [
-                "Developed and deployed key robot system features: process orchestration and camera rig calibration.",
+                "Developed and deployed key robot system features: camera rig calibration, data logging infrastructure, service orchestration, and more.",
                 "Trained and deployed instance segmentation models; built annotation tools and a model-serving framework.",
                 "Designed data & ETL pipelines and infrastructure for production and development systems.",
                 "Created dashboards for business metrics, system performance, and data visualization.",
@@ -183,6 +183,7 @@ export default function PortfolioPage() {
                 </p>
                 <div className="mt-12 text-center">
                     <a href="#experience" aria-label="Scroll to Experience"
+                        onClick={e => { e.preventDefault(); sectionRefs[1].ref.current?.scrollIntoView({ behavior: 'smooth' }); }}
                         className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-sky-400/40 text-sky-400 hover:border-sky-400 hover:bg-sky-400/10 transition-all duration-200 bounce-arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             strokeWidth="2" stroke="currentColor" className="w-5 h-5">

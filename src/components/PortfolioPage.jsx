@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import RugoImg from '../assets/rugo.jpeg';
 import StreamFxImg from '../assets/stream_fx.jpeg';
@@ -7,8 +8,6 @@ import ObjectDetectionImg from '../assets/object_detection.jpeg';
 import Header from './Header';
 import ExperienceCard from './cards/ExperienceCard';
 import { ComputerIcon, RobotIcon, InternIcon, StudentIcon, GithubIcon, LinkedInIcon, EmailIcon } from './Icons';
-
-import '../styles/Page.css';
 
 // This component encapsulates the entire portfolio page.
 export default function PortfolioPage() {
@@ -194,9 +193,9 @@ export default function PortfolioPage() {
                         </a>
                     </div>
                     <div className="flex flex-col items-center group">
-                        <a href="/projects" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
+                        <Link to="/projects" className="inline-block bg-transparent hover:bg-blue-500 text-blue-400 font-semibold hover:text-white py-3 px-6 border border-blue-400 hover:border-transparent rounded-lg transition duration-300">
                             Project Page
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>

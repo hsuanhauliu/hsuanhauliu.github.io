@@ -1,7 +1,6 @@
 import { useState, useMemo } from 'react';
 
 import Header from './Header'
-import '../styles/Page.css'
 
 import SplitImg from '../assets/split.jpeg';
 import QrGeneratorImg from '../assets/qr_generator.jpeg';

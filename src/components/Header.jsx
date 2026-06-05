@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import '../styles/Header.css'
 
 function Header({ sectionRefs }) {
     // State to manage the visibility of the mobile menu
@@ -49,10 +49,10 @@ function Header({ sectionRefs }) {
         <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 shadow-md">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
-                    <a href="/" id="header-logo-link" className="flex items-center space-x-2 text-white hover:text-gray-300 transition duration-300" aria-label="Howard Liu - Home">
+                    <Link to="/" id="header-logo-link" className="flex items-center space-x-2 text-white hover:text-gray-300 transition duration-300" aria-label="Howard Liu - Home">
                         <img id="header-logo-img" src={logo} alt="Howard Liu Logo" className="h-8" />
                         <span className="text-2xl font-bold">Howard Liu</span>
-                    </a>
+                    </Link>
                     <nav className="hidden md:flex space-x-6">
                         {sectionRefs.map((section, i) => <a key={i} href={"#" + section.id} className="nav-link text-gray-300 hover:text-white transition duration-300">{section.name}</a>)}
                     </nav>

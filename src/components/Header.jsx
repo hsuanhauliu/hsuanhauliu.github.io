@@ -4,79 +4,74 @@ import logo from '../assets/logo.png';
 
 function Header({ sectionRefs }) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeSectionId, setActiveSectionId] = useState(sectionRefs[0]?.id ?? '');
     const headerRef = useRef(null);
 
-    // Scroll-spy: highlight the nav link for the section currently in view
+    // Scroll-spy: track which section is currently in view
     useEffect(() => {
-        const activateNavLink = () => {
-            let currentSectionId = sectionRefs[0]?.id ?? '';
-            const scrollY = window.pageYOffset;
-
-            sectionRefs.forEach(section => {
-                const el = section.ref.current;
-                if (el && scrollY >= el.offsetTop - window.innerHeight * 0.3) {
-                    currentSectionId = section.id;
-                }
+        if (!sectionRefs.length) return;
+        const onScroll = () => {
+            const scrollY = window.scrollY;
+            let current = sectionRefs[0].id;
+            sectionRefs.forEach(({ id, ref }) => {
+                if (ref.current && scrollY >= ref.current.offsetTop - window.innerHeight * 0.3)
+                    current = id;
             });
-
-            headerRef.current?.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === `#${currentSectionId}`);
-            });
+            setActiveSectionId(current);
         };
-
-        window.addEventListener('scroll', activateNavLink, { passive: true });
-        activateNavLink();
-        return () => window.removeEventListener('scroll', activateNavLink);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener('scroll', onScroll);
     }, [sectionRefs]);
+
+    // Scroll to section without touching the URL (prevents HashRouter from breaking)
+    const scrollToSection = (e, ref) => {
+        e.preventDefault();
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const NavLink = ({ section }) => (
+        <a
+            href={`#${section.id}`}
+            onClick={e => { scrollToSection(e, section.ref); setMobileMenuOpen(false); }}
+            className={`nav-link text-sm font-medium transition-colors duration-200
+                        ${activeSectionId === section.id ? 'active text-sky-400' : 'text-slate-300 hover:text-white'}`}>
+            {section.name}
+        </a>
+    );
 
     return (
         <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
 
-                    {/* Logo / home link */}
                     <Link to="/" aria-label="Howard Liu — Home"
                         className="flex items-center gap-2.5 text-white hover:text-sky-300 transition-colors duration-200">
                         <img src={logo} alt="Logo" className="h-7 w-7 object-contain" />
                         <span className="text-xl font-bold tracking-tight">Howard Liu</span>
                     </Link>
 
-                    {/* Desktop nav */}
                     <nav className="hidden md:flex items-center gap-7">
-                        {sectionRefs.map((section, i) => (
-                            <a key={i} href={`#${section.id}`}
-                                className="nav-link text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200">
-                                {section.name}
-                            </a>
-                        ))}
+                        {sectionRefs.map(s => <NavLink key={s.id} section={s} />)}
                     </nav>
 
-                    {/* Mobile hamburger */}
                     <button
                         onClick={() => setMobileMenuOpen(v => !v)}
                         className="md:hidden text-slate-300 hover:text-white focus:outline-none transition-colors duration-200"
                         aria-label="Toggle menu">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            {isMobileMenuOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                            ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                            )}
+                            {isMobileMenuOpen
+                                ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />}
                         </svg>
                     </button>
                 </div>
             </div>
 
-            {/* Mobile dropdown */}
             {isMobileMenuOpen && (
                 <div className="md:hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800">
-                    {sectionRefs.map((section, i) => (
-                        <a key={i} href={`#${section.id}`}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="block nav-link py-3 px-6 text-sm text-slate-300
-                                       hover:text-white hover:bg-slate-800/60 transition-colors duration-200">
-                            {section.name}
-                        </a>
+                    {sectionRefs.map(s => (
+                        <NavLink key={s.id} section={s} />
                     ))}
                 </div>
             )}

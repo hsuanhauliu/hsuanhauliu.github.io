@@ -61,8 +61,8 @@ export default function PortfolioPage() {
             title: "Software Engineer",
             subtitle: "Google · Jun 2022 – Present",
             body: [
-                "Building Computer Vision models and ML infrastructure at the Geo Machine Intelligence team.",
-                "3 years on YouTube Billing: billing backend infrastructure, shopping journey logging, and more.",
+                "Building Computer Vision models and ML infrastructure on the Geo Machine Intelligence team.",
+                "Spent 3 years on the YouTube Billing team working on backend infrastructure, shopping journey logging, and more.",
             ]
         },
         {
@@ -86,7 +86,7 @@ export default function PortfolioPage() {
             icon: <InternIcon />,
             title: "Machine Learning Research Intern",
             subtitle: "UMLx Project · May 2019 – Aug 2019",
-            body: ["Hyperparameter tuning, data collection & processing, and ML model visualization."]
+            body: ["Worked on hyperparameter tuning, data collection and processing, and ML model visualization."]
         },
         {
             icon: <InternIcon />,
@@ -133,7 +133,7 @@ export default function PortfolioPage() {
         {
             image: ObjectDetectionImg,
             title: "Vision Toolkit",
-            description: "Collection of computer vision web apps and tools.",
+            description: "A collection of computer vision web apps and tools.",
             tech: ['Python', 'Docker', 'Ultralytics', 'HTML'],
             links: [
                 { label: "GitHub", href: "https://github.com/hsuanhauliu/vision-toolkit" },
@@ -175,10 +175,10 @@ export default function PortfolioPage() {
                     </span>
                 </h1>
                 <p className="text-lg md:text-xl text-slate-300 mb-6 text-center max-w-2xl mx-auto leading-relaxed">
-                    A Google engineer with experience in Machine Learning, Computer Vision, and Data Engineering.
+                    A software engineer at Google with experience in Computer Vision, Machine Learning, and Data Engineering.
                 </p>
                 <p className="text-base text-slate-400 text-center max-w-xl mx-auto leading-relaxed">
-                    I love solving interesting technical challenges and exploring new ideas. Outside of work I climb
+                    I enjoy solving interesting technical challenges and exploring new ideas. Outside of work, I climb
                     artificial rocks and lift heavy objects in unnecessarily complicated ways.
                 </p>
                 <div className="mt-12 text-center">

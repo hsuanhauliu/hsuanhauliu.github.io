@@ -20,7 +20,7 @@ export default function ExperienceCard({ icon, title, sub_title, body }) {
                     <ul className="space-y-1.5 pl-1">
                         {body.map((bp, i) => (
                             <li key={i} className="flex gap-2 text-sm text-slate-300 leading-relaxed">
-                                <span className="text-sky-600 mt-[0.3rem] shrink-0 leading-none">▸</span>
+                                <span className="text-sky-600 mt-[0.25rem] shrink-0 leading-none">▸</span>
                                 <span>{bp}</span>
                             </li>
                         ))}

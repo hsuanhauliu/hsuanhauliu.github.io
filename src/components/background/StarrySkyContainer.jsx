@@ -148,7 +148,7 @@ function StarrySkyContainer() {
         return () => {
             clearInterval(pulseInterval);
             clearInterval(shootingStarInterval);
-            window.removeEventListener('resize', debouncedDrawLines);
+window.removeEventListener('resize', debouncedDrawLines);
         };
     }, []); // Empty dependency array means this effect runs once on mount
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import RugoImg from '../assets/rugo.jpeg';
 import StreamFxImg from '../assets/stream_fx.jpeg';
-import ObjectDetectionImg from '../assets/object_detection.jpeg';
+import VividImg from '../assets/vivid.jpg';
 
 import Header from './Header';
 import ExperienceCard from './cards/ExperienceCard';
@@ -131,12 +131,13 @@ export default function PortfolioPage() {
             links: [{ label: "GitHub", href: "https://github.com/hsuanhauliu/stream-fx" }],
         },
         {
-            image: ObjectDetectionImg,
-            title: "Vision Toolkit",
-            description: "A collection of computer vision web apps and tools.",
-            tech: ['Python', 'Docker', 'Ultralytics', 'HTML'],
+            image: VividImg,
+            title: "Vivid",
+            description: "Local media management desktop app for your Mac.",
+            tech: ['React', 'Rust', 'Tauri'],
             links: [
-                { label: "GitHub", href: "https://github.com/hsuanhauliu/vision-toolkit" },
+                { label: "Website", href: "https://hsuanhauliu.github.io/vivid/" },
+                { label: "GitHub", href: "https://github.com/hsuanhauliu/vivid" },
             ],
         },
         {

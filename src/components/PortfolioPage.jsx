@@ -21,14 +21,14 @@ function SectionTitle({ children }) {
 // Featured project card — consistent with ProjectPage style
 function FeaturedCard({ image, title, description, tech, links }) {
     return (
-        <div className="project-card flex flex-col bg-slate-800/60 rounded-xl overflow-hidden border border-slate-700/80 shadow-lg">
+        <div className="project-card flex flex-col overflow-hidden">
             <img src={image} loading="lazy" alt={title} className="w-full h-48 object-cover" />
             <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-sky-300 mb-1 tracking-tight">{title}</h3>
-                <p className="text-slate-400 text-sm mb-3 flex-grow">{description}</p>
+                <h3 className="font-display text-xl font-semibold mb-1 tracking-tight" style={{ color: 'var(--cyan)' }}>{title}</h3>
+                <p className="text-sm mb-3 flex-grow" style={{ color: 'var(--ink-soft)' }}>{description}</p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
                     {tech.map(t => (
-                        <span key={t} className="px-2 py-0.5 text-xs font-medium text-sky-200 bg-sky-900/40 border border-sky-800/50 rounded-full">
+                        <span key={t} className="chip px-2.5 py-0.5 text-xs">
                             {t}
                         </span>
                     ))}
@@ -36,7 +36,10 @@ function FeaturedCard({ image, title, description, tech, links }) {
                 <div className="flex gap-4">
                     {links.map(({ label, href }) => (
                         <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                            className="text-sm font-medium text-sky-400 hover:text-sky-200 transition-colors duration-200">
+                            className="font-display text-sm font-semibold transition-colors duration-200"
+                            style={{ color: 'var(--cyan)' }}
+                            onMouseEnter={e => (e.currentTarget.style.color = 'var(--pink)')}
+                            onMouseLeave={e => (e.currentTarget.style.color = 'var(--cyan)')}>
                             {label} →
                         </a>
                     ))}
@@ -59,16 +62,18 @@ export default function PortfolioPage() {
         {
             icon: <ComputerIcon />,
             title: "Software Engineer",
-            subtitle: "Google · Jun 2022 – Present",
+            subtitle: "Google",
+            date: "2022 – Now",
             body: [
-                "Building Computer Vision models and ML infrastructure on the Geo Machine Intelligence team.",
+                "Building Computer Vision models and ML infrastructure on the Geo Real World Model team.",
                 "Spent 3 years on the YouTube Billing team working on backend infrastructure, shopping journey logging, and more.",
             ]
         },
         {
             icon: <RobotIcon />,
             title: "Robotics Engineer",
-            subtitle: "Dexterity Inc. · Feb 2020 – Jun 2022",
+            subtitle: "Dexterity Inc.",
+            date: "2020 – 2022",
             body: [
                 "Developed and deployed key robot system features: camera rig calibration, data logging infrastructure, service orchestration, and more.",
                 "Trained and deployed instance segmentation models; built annotation tools and a model-serving framework.",
@@ -79,32 +84,39 @@ export default function PortfolioPage() {
         {
             icon: <InternIcon />,
             title: "Software Engineering Intern",
-            subtitle: "Playing Forward LLC · Sep 2019 – Dec 2019",
+            subtitle: "Playing Forward LLC",
+            date: "Sep – Dec 2019",
             body: ["Trained custom deep learning models and built data pre-processing pipelines."]
         },
         {
             icon: <InternIcon />,
             title: "Machine Learning Research Intern",
-            subtitle: "UMLx Project · May 2019 – Aug 2019",
+            subtitle: "UMLx Project",
+            date: "May – Aug 2019",
             body: ["Worked on hyperparameter tuning, data collection and processing, and ML model visualization."]
         },
         {
             icon: <InternIcon />,
             title: "Software Developer Intern",
-            subtitle: "CarmaCam · Aug 2018 – Nov 2018",
+            subtitle: "CarmaCam",
+            date: "Aug – Nov 2018",
             body: ["Trained object detection models on a custom dataset; designed a scoring algorithm for driving violations."]
         },
         {
             icon: <StudentIcon />,
             title: "M.S. in Computer Science",
-            subtitle: "University of Southern California · Jan 2018 – Dec 2019",
+            subtitle: "University of Southern California",
+            date: "2018 – 2019",
         },
         {
             icon: <StudentIcon />,
             title: "B.S. in Computer Science",
-            subtitle: "Auburn University · May 2013 – Dec 2017",
+            subtitle: "Auburn University",
+            date: "2013 – 2017",
         },
     ];
+
+    const nodeColors = ['n-cyan', 'n-purple', 'n-pink', 'n-yellow', 'n-green'];
 
     const skillSections = [
         {
@@ -154,9 +166,9 @@ export default function PortfolioPage() {
     ];
 
     const contactLinks = [
-        { href: "https://github.com/hsuanhauliu",         icon: <GithubIcon />,   label: "GitHub"   },
-        { href: "https://www.linkedin.com/in/hsuanhauliu", icon: <LinkedInIcon />, label: "LinkedIn" },
-        { href: "mailto:hsuanhauliu@gmail.com",            icon: <EmailIcon />,    label: "Email"    },
+        { href: "https://github.com/hsuanhauliu",         icon: <GithubIcon />,   label: "GitHub",   starClass: "star-btn--github"   },
+        { href: "https://www.linkedin.com/in/hsuanhauliu", icon: <LinkedInIcon />, label: "LinkedIn", starClass: "star-btn--linkedin" },
+        { href: "mailto:hsuanhauliu@gmail.com",            icon: <EmailIcon />,    label: "Email",    starClass: "star-btn--email"    },
     ];
 
     return (
@@ -166,28 +178,31 @@ export default function PortfolioPage() {
             {/* ── About ───────────────────────────────────────────── */}
             <section ref={sectionRefs[0].ref} id={sectionRefs[0].id}
                 className="min-h-screen flex flex-col justify-center">
-                <p className="text-sky-400 text-center text-sm font-semibold tracking-widest uppercase mb-4">
-                    Software Engineer
+                <p className="font-display text-center text-sm font-semibold tracking-[0.25em] uppercase mb-4"
+                    style={{ color: 'var(--star-purple, #b98bff)' }}>
+                    <span style={{ color: 'var(--purple)' }}>✦ Software Engineer ✦</span>
                 </p>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-center tracking-tight">
+                <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 text-center tracking-tight">
                     <span className="text-white">Hi, I'm </span>
-                    <span className="bg-gradient-to-r from-sky-300 to-sky-500 bg-clip-text text-transparent">
-                        Howard Liu
-                    </span>
+                    <span className="hero-name">Howard Liu</span>
+                    <span className="wave ml-2">👋</span>
                 </h1>
-                <p className="text-lg md:text-xl text-slate-300 mb-6 text-center max-w-2xl mx-auto leading-relaxed">
-                    A software engineer at Google with experience in Computer Vision, Machine Learning, and Data Engineering.
+                <p className="text-lg md:text-xl mb-6 text-center max-w-2xl mx-auto leading-relaxed"
+                    style={{ color: 'var(--ink)' }}>
+                    Software engineer at Google with experience in Computer Vision, Machine Learning, and Data Engineering.
                 </p>
-                <p className="text-base text-slate-400 text-center max-w-xl mx-auto leading-relaxed">
-                    I enjoy solving interesting technical challenges and exploring new ideas. Outside of work, I climb
-                    artificial rocks and lift heavy objects in unnecessarily complicated ways.
+                <p className="text-base text-center max-w-xl mx-auto leading-relaxed"
+                    style={{ color: 'var(--ink-soft)' }}>
+                    I enjoy solving interesting technical challenges and exploring new ideas. In my free time, I climb
+                    artificial rocks and lift heavy objects in unnecessarily challenging ways.
                 </p>
                 <div className="mt-12 text-center">
                     <a href="#experience" aria-label="Scroll to Experience"
                         onClick={e => { e.preventDefault(); sectionRefs[1].ref.current?.scrollIntoView({ behavior: 'smooth' }); }}
-                        className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-sky-400/40 text-sky-400 hover:border-sky-400 hover:bg-sky-400/10 transition-all duration-200 bounce-arrow">
+                        className="bounce-arrow inline-flex items-center justify-center w-12 h-12 rounded-full transition-transform duration-200 hover:scale-110"
+                        style={{ color: '#0b0a2a', background: 'linear-gradient(180deg,#7fecff,var(--cyan))', border: '3px solid #fff', boxShadow: '0 5px 0 #1f7fa6' }}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            strokeWidth="2" stroke="currentColor" className="w-5 h-5">
+                            strokeWidth="2.5" stroke="currentColor" className="w-5 h-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
                     </a>
@@ -195,20 +210,23 @@ export default function PortfolioPage() {
             </section>
 
             {/* ── Experience ──────────────────────────────────────── */}
-            <section ref={sectionRefs[1].ref} id={sectionRefs[1].id}>
+            <section ref={sectionRefs[1].ref} id={sectionRefs[1].id} className="wide-section">
                 <SectionTitle>Experience</SectionTitle>
-                <div className="space-y-6">
-                    {experiences.map((exp) => (
+                <div className="timeline">
+                    {experiences.map((exp, i) => (
                         <ExperienceCard
                             key={exp.title}
                             icon={exp.icon}
                             title={exp.title}
                             sub_title={exp.subtitle}
                             body={exp.body}
+                            date={exp.date}
+                            side={i % 2 === 0 ? 'left' : 'right'}
+                            nodeColor={nodeColors[i % nodeColors.length]}
                         />
                     ))}
                 </div>
-                <div className="text-center mt-10">
+                <div className="text-center mt-14">
                     <a href="https://drive.google.com/file/d/127lTiCtVaUWMORjv8yNofKC48cBCIJ1G/view"
                         target="_blank" rel="noopener noreferrer" className="btn-ghost">
                         Full Resume (PDF)
@@ -221,9 +239,9 @@ export default function PortfolioPage() {
                 <SectionTitle>Technical Skills</SectionTitle>
                 {skillSections.map(({ title, skills }) => (
                     <div key={title} className="mb-8">
-                        <h3 className="text-base font-semibold text-sky-400 uppercase tracking-wider mb-4
-                                       text-center sm:text-left">
-                            {title}
+                        <h3 className="font-display text-base font-semibold uppercase tracking-wider mb-4
+                                       text-center sm:text-left" style={{ color: 'var(--star-purple, #b98bff)' }}>
+                            <span style={{ color: 'var(--purple)' }}>{title}</span>
                         </h3>
                         <div className="flex flex-wrap justify-center sm:justify-start gap-2">
                             {skills.map(skill => (
@@ -245,7 +263,7 @@ export default function PortfolioPage() {
                         className="btn-ghost">
                         GitHub Profile
                     </a>
-                    <Link to="/projects" className="btn-ghost">
+                    <Link to="/projects" className="btn-ghost btn-grape">
                         All Projects
                     </Link>
                 </div>
@@ -254,20 +272,17 @@ export default function PortfolioPage() {
             {/* ── Contact ─────────────────────────────────────────── */}
             <section ref={sectionRefs[4].ref} id={sectionRefs[4].id} className="pb-24">
                 <SectionTitle>Get in Touch</SectionTitle>
-                <div className="flex justify-center items-center gap-10">
-                    {contactLinks.map(({ href, icon, label }) => (
+                <div className="flex justify-center items-start gap-10 sm:gap-16 flex-wrap">
+                    {contactLinks.map(({ href, icon, label, starClass }) => (
                         <a key={label} href={href}
                             target={href.startsWith('mailto') ? undefined : "_blank"}
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center gap-2 text-sky-400 hover:text-sky-200
-                                       transition-all duration-200 hover:scale-110 group">
-                            <span className="group-hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.6)] transition-all duration-200">
-                                {icon}
+                            aria-label={label}
+                            className="star-link">
+                            <span className={`star-btn ${starClass}`}>
+                                <span className="star-icon">{icon}</span>
                             </span>
-                            <span className="text-xs font-medium tracking-wide text-slate-400 group-hover:text-sky-300
-                                             transition-colors duration-200">
-                                {label}
-                            </span>
+                            <span className="star-label">{label}</span>
                         </a>
                     ))}
                 </div>

@@ -2,20 +2,84 @@
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: radial-gradient(ellipse at 50% 118%, #3a2170 0%, #1a1148 42%, #0b0a2a 100%);
     overflow: hidden;
+}
+
+/* Colorful nebula clouds */
+.nebula {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.nebula-1 {
+    width: 460px;
+    height: 460px;
+    top: -120px;
+    left: -80px;
+    background: radial-gradient(circle, rgba(123, 70, 224, 0.55), transparent 70%);
+}
+
+.nebula-2 {
+    width: 560px;
+    height: 560px;
+    bottom: -180px;
+    right: -140px;
+    background: radial-gradient(circle, rgba(255, 92, 157, 0.4), transparent 70%);
+}
+
+.nebula-3 {
+    width: 380px;
+    height: 380px;
+    top: 34%;
+    left: 4%;
+    background: radial-gradient(circle, rgba(70, 224, 255, 0.28), transparent 70%);
+}
+
+/* Cartoon moon */
+.cartoon-moon {
+    position: absolute;
+    top: 7%;
+    right: 9%;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 34% 30%, #fff6d6, #ffe07a 58%, #f4c65a);
+    box-shadow:
+        0 0 46px rgba(255, 224, 122, 0.55),
+        inset -14px -12px 0 rgba(180, 130, 40, 0.12);
+    animation: moon-bob 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.cartoon-moon .crater {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(196, 150, 60, 0.32);
+}
+
+.cartoon-moon .c1 { width: 22px; height: 22px; top: 22px; left: 21px; }
+.cartoon-moon .c2 { width: 13px; height: 13px; top: 60px; left: 56px; }
+.cartoon-moon .c3 { width: 9px;  height: 9px;  top: 29px; left: 66px; }
+
+@keyframes moon-bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(11px); }
 }
 
 .star {
     position: absolute;
     background-color: white;
     border-radius: 50%;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.85), 0 0 10px rgba(160, 200, 255, 0.5);
     animation: twinkle infinite ease-in-out;
 }
 
 @keyframes twinkle {
-    0%, 100% { opacity: 0.3; transform: scale(0.8); }
-    50%       { opacity: 1;   transform: scale(1.2); }
+    0%, 100% { opacity: 0.25; transform: scale(0.7); }
+    50%       { opacity: 1;   transform: scale(1.3); }
 }
 
 .shooting-star {

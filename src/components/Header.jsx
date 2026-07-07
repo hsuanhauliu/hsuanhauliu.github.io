@@ -48,7 +48,7 @@ function Header({ sectionRefs }) {
                     <Link to="/" aria-label="Howard Liu — Home"
                         className="flex items-center gap-2.5 text-white hover:text-sky-300 transition-colors duration-200">
                         <img src={logo} alt="Logo" className="h-7 w-7 object-contain" />
-                        <span className="text-xl font-bold tracking-tight">Howard Liu</span>
+                        <span className="font-display text-xl font-bold tracking-tight">Howard Liu</span>
                     </Link>
 
                     <nav className="hidden md:flex items-center gap-7">
@@ -69,7 +69,7 @@ function Header({ sectionRefs }) {
             </div>
 
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800">
+                <div className="md:hidden flex flex-col gap-3 px-6 py-4 bg-[#0b0a2a]/95 backdrop-blur-sm border-t-2 border-[rgba(160,140,255,0.18)]">
                     {sectionRefs.map(s => (
                         <NavLink key={s.id} section={s} />
                     ))}

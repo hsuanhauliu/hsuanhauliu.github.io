@@ -41,7 +41,7 @@
 /* Cartoon moon */
 .cartoon-moon {
     position: absolute;
-    top: 7%;
+    top: 108px; /* clear the fixed 80px header */
     right: 9%;
     width: 104px;
     height: 104px;

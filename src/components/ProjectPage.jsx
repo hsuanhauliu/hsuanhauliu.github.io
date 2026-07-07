@@ -47,12 +47,12 @@ const portfolioData = [
         section_name: "Featured Projects",
         cards: [
             { title: "Vivid",                 description: "Local media management desktop app for your Mac.",           link: "https://github.com/hsuanhauliu/vivid",                              image: VividImg,              tags: ['Desktop', 'AI'] },
-            { title: "Vision Toolkit",        description: "Collection of vision related web apps and tools.",           link: "https://github.com/hsuanhauliu/vision-toolkit",                     image: OjectDetectionImg,     tags: ['Web', 'CV', 'ML', 'Docker'] },
+            { title: "Vision Toolkit",        description: "Collection of vision-related web apps and tools.",           link: "https://github.com/hsuanhauliu/vision-toolkit",                     image: OjectDetectionImg,     tags: ['Web', 'CV', 'ML', 'Docker'] },
             { title: "StreamFX",              description: "Real-time special video effects for your webcam.",           link: "https://github.com/hsuanhauliu/stream-fx",                          image: StreamFxImg,           tags: ['CV', 'ML', 'API', 'Image Processing'] },
             { title: "Notebook Editor",       description: "Simple editor for Jupyter Notebook.",                        link: "/apps/edit/notebook_editor",                                        image: NotebookEditorImg,     tags: ['ML', 'Web'] },
             { title: "RuGo",                  description: "VR Rube Goldberg experiment game.",                          link: "https://github.com/hsuanhauliu/RuGo",                               image: RugoImg,               tags: ['AR', 'VR', 'Unity'] },
             { title: "Stitch",                description: "Web app for stitching images together.",                     link: "/stitch",                                                            image: StitchImg,             tags: ['Web', 'Image Processing'] },
-            { title: "Split",                 description: "A pure client-side expense splitting desktop app.",          link: "/split",                                                             image: SplitImg,              tags: ['Web'] },
+            { title: "Split",                 description: "A pure client-side expense-splitting desktop app.",          link: "/split",                                                             image: SplitImg,              tags: ['Web'] },
             { title: "Structure From Motion", description: "Structure from motion pipeline exercise with OpenCV.",       link: "https://github.com/hsuanhauliu/structure-from-motion-with-OpenCV",  image: SfmImg,                tags: ['CV', 'OpenCV'] },
         ]
     },
@@ -70,7 +70,7 @@ const portfolioData = [
     {
         section_name: "Games",
         cards: [
-            { title: "Blackjack",              description: "Single player Blackjack.",                              link: "/apps/games/blackjack.html",            image: BlackjackImg,            tags: ['Web'] },
+            { title: "Blackjack",              description: "Single-player Blackjack.",                              link: "/apps/games/blackjack.html",            image: BlackjackImg,            tags: ['Web'] },
             { title: "Tetris",                 description: "Classic Tetris game.",                                  link: "/apps/games/tetris.html",               image: TetrisImg,               tags: ['Web'] },
             { title: "Chessboard Simulation",  description: "A configurable chessboard for analysis.",              link: "/apps/games/chessboard_simulation.html", image: ChessboardSimulationImg, tags: ['Web'] },
             { title: "Constellation Creator",  description: "Create star signs from any image.",                    link: "/apps/art/constellation_creator.html",  image: ConstellationCreatorImg, tags: ['Web'] },

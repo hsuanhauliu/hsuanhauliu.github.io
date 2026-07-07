@@ -193,7 +193,7 @@ export default function PortfolioPage() {
                 </p>
                 <p className="text-base text-center max-w-xl mx-auto leading-relaxed"
                     style={{ color: 'var(--ink-soft)' }}>
-                    I enjoy solving interesting technical challenges and exploring new ideas. In my free time, I climb
+                    I enjoy solving interesting technical problems, exploring new ideas, and building useful stuff. In my free time, I climb
                     artificial rocks and lift heavy objects in unnecessarily challenging ways.
                 </p>
                 <div className="mt-12 text-center">

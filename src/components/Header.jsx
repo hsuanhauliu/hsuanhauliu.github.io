@@ -47,7 +47,7 @@ function Header({ sectionRefs }) {
 
                     <Link to="/" aria-label="Howard Liu — Home"
                         className="flex items-center gap-2.5 text-white hover:text-sky-300 transition-colors duration-200">
-                        <img src={logo} alt="Logo" className="h-7 w-7 object-contain" />
+                        <img src={logo} alt="Logo" className="h-11 w-11 object-contain" />
                         <span className="font-display text-xl font-bold tracking-tight">Howard Liu</span>
                     </Link>
 

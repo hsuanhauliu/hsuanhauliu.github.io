@@ -166,7 +166,7 @@ export default function PortfolioPage() {
     ];
 
     const contactLinks = [
-        { href: "https://github.com/hsuanhauliu",         icon: <GithubIcon />,   label: "GitHub",   starClass: "star-btn--github"   },
+        { href: "https://github.com/hsuanhauliu",          icon: <GithubIcon />,   label: "GitHub",   starClass: "star-btn--github"   },
         { href: "https://www.linkedin.com/in/hsuanhauliu", icon: <LinkedInIcon />, label: "LinkedIn", starClass: "star-btn--linkedin" },
         { href: "mailto:hsuanhauliu@gmail.com",            icon: <EmailIcon />,    label: "Email",    starClass: "star-btn--email"    },
     ];

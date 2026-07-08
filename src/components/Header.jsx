@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { GithubIcon } from './Icons';
+
+const GITHUB_URL = 'https://github.com/hsuanhauliu';
 
 function Header({ sectionRefs }) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -53,6 +56,11 @@ function Header({ sectionRefs }) {
 
                     <nav className="hidden md:flex items-center gap-7">
                         {sectionRefs.map(s => <NavLink key={s.id} section={s} />)}
+                        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" title="GitHub"
+                            className="text-slate-300 hover:text-[#46e0ff] transition-colors duration-200 [&_svg]:w-6 [&_svg]:h-6">
+                            <GithubIcon />
+                        </a>
                     </nav>
 
                     <button
@@ -73,6 +81,11 @@ function Header({ sectionRefs }) {
                     {sectionRefs.map(s => (
                         <NavLink key={s.id} section={s} />
                     ))}
+                    <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="nav-link flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200 [&_svg]:w-5 [&_svg]:h-5">
+                        <GithubIcon /> GitHub
+                    </a>
                 </div>
             )}
         </header>

@@ -136,13 +136,6 @@ export default function PortfolioPage() {
 
     const featuredProjects = [
         {
-            image: StreamFxImg,
-            title: "StreamFX",
-            description: "Real-time special video effects for your webcam.",
-            tech: ['Python', 'OpenCV', 'YOLO11', 'OBS'],
-            links: [{ label: "GitHub", href: "https://github.com/hsuanhauliu/stream-fx" }],
-        },
-        {
             image: VividImg,
             title: "Vivid",
             description: "Local media management desktop app for your Mac.",
@@ -151,6 +144,13 @@ export default function PortfolioPage() {
                 { label: "Website", href: "https://hsuanhauliu.github.io/vivid/" },
                 { label: "GitHub", href: "https://github.com/hsuanhauliu/vivid" },
             ],
+        },
+        {
+            image: StreamFxImg,
+            title: "StreamFX",
+            description: "Real-time special video effects for your webcam.",
+            tech: ['Python', 'OpenCV', 'YOLO11', 'OBS'],
+            links: [{ label: "GitHub", href: "https://github.com/hsuanhauliu/stream-fx" }],
         },
         {
             image: RugoImg,
@@ -166,9 +166,9 @@ export default function PortfolioPage() {
     ];
 
     const contactLinks = [
-        { href: "https://github.com/hsuanhauliu",          icon: <GithubIcon />,   label: "GitHub",   starClass: "star-btn--github"   },
-        { href: "https://www.linkedin.com/in/hsuanhauliu", icon: <LinkedInIcon />, label: "LinkedIn", starClass: "star-btn--linkedin" },
-        { href: "mailto:hsuanhauliu@gmail.com",            icon: <EmailIcon />,    label: "Email",    starClass: "star-btn--email"    },
+        { href: "https://github.com/hsuanhauliu",          icon: <GithubIcon />,   label: "GitHub"   },
+        { href: "https://www.linkedin.com/in/hsuanhauliu", icon: <LinkedInIcon />, label: "LinkedIn" },
+        { href: "mailto:hsuanhauliu@gmail.com",            icon: <EmailIcon />,    label: "Email"    },
     ];
 
     return (
@@ -178,31 +178,27 @@ export default function PortfolioPage() {
             {/* ── About ───────────────────────────────────────────── */}
             <section ref={sectionRefs[0].ref} id={sectionRefs[0].id}
                 className="min-h-screen flex flex-col justify-center">
-                <p className="font-display text-center text-sm font-semibold tracking-[0.25em] uppercase mb-4"
-                    style={{ color: 'var(--star-purple, #b98bff)' }}>
-                    <span style={{ color: 'var(--purple)' }}>✦ Software Engineer ✦</span>
-                </p>
+                <p className="eyebrow text-center mb-5">Software Engineer</p>
                 <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 text-center tracking-tight">
-                    <span className="text-white">Hi, I'm </span>
+                    <span style={{ color: 'var(--ink)' }}>Hi, I'm </span>
                     <span className="hero-name">Howard Liu</span>
-                    <span className="wave ml-2">👋</span>
                 </h1>
                 <p className="text-lg md:text-xl mb-6 text-center max-w-2xl mx-auto leading-relaxed"
                     style={{ color: 'var(--ink)' }}>
                     Software engineer at Google with experience in Computer Vision, Machine Learning, and Data Engineering.
                 </p>
                 <p className="text-base text-center max-w-xl mx-auto leading-relaxed"
-                    style={{ color: 'var(--ink-soft)' }}>
+                    style={{ color: 'var(--ink-muted)' }}>
                     I enjoy solving interesting technical problems, exploring new ideas, and building useful stuff. In my free time, I climb
                     artificial rocks and lift heavy objects in unnecessarily challenging ways.
                 </p>
-                <div className="mt-12 text-center">
+                <div className="mt-14 text-center">
                     <a href="#experience" aria-label="Scroll to Experience"
                         onClick={e => { e.preventDefault(); sectionRefs[1].ref.current?.scrollIntoView({ behavior: 'smooth' }); }}
-                        className="bounce-arrow inline-flex items-center justify-center w-12 h-12 rounded-full transition-transform duration-200 hover:scale-110"
-                        style={{ color: '#0b0a2a', background: 'linear-gradient(180deg,#7fecff,var(--cyan))', border: '3px solid #fff', boxShadow: '0 5px 0 #1f7fa6' }}>
+                        className="bounce-arrow inline-flex items-center justify-center w-11 h-11 rounded-full transition-colors duration-200"
+                        style={{ color: 'var(--ink-body)', border: '1px solid var(--border-strong)' }}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            strokeWidth="2.5" stroke="currentColor" className="w-5 h-5">
+                            strokeWidth="1.8" stroke="currentColor" className="w-5 h-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
                     </a>
@@ -239,9 +235,9 @@ export default function PortfolioPage() {
                 <SectionTitle>Technical Skills</SectionTitle>
                 {skillSections.map(({ title, skills }) => (
                     <div key={title} className="mb-8">
-                        <h3 className="font-display text-base font-semibold uppercase tracking-wider mb-4
-                                       text-center sm:text-left" style={{ color: 'var(--star-purple, #b98bff)' }}>
-                            <span style={{ color: 'var(--purple)' }}>{title}</span>
+                        <h3 className="text-xs font-semibold uppercase tracking-[0.2em] mb-4
+                                       text-center sm:text-left" style={{ color: 'var(--ink-muted)' }}>
+                            {title}
                         </h3>
                         <div className="flex flex-wrap justify-center sm:justify-start gap-2">
                             {skills.map(skill => (
@@ -272,17 +268,15 @@ export default function PortfolioPage() {
             {/* ── Contact ─────────────────────────────────────────── */}
             <section ref={sectionRefs[4].ref} id={sectionRefs[4].id} className="pb-24">
                 <SectionTitle>Get in Touch</SectionTitle>
-                <div className="flex justify-center items-start gap-10 sm:gap-16 flex-wrap">
-                    {contactLinks.map(({ href, icon, label, starClass }) => (
+                <div className="flex justify-center items-start gap-8 sm:gap-12 flex-wrap">
+                    {contactLinks.map(({ href, icon, label }) => (
                         <a key={label} href={href}
                             target={href.startsWith('mailto') ? undefined : "_blank"}
                             rel="noopener noreferrer"
                             aria-label={label}
-                            className="star-link">
-                            <span className={`star-btn ${starClass}`}>
-                                <span className="star-icon">{icon}</span>
-                            </span>
-                            <span className="star-label">{label}</span>
+                            className="contact-link">
+                            <span className="contact-btn">{icon}</span>
+                            <span className="contact-label">{label}</span>
                         </a>
                     ))}
                 </div>

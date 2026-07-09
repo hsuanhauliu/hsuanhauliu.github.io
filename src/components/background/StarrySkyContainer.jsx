@@ -106,7 +106,7 @@ export default function StarrySkyContainer() {
         drawLines();
 
         const pulseInterval = setInterval(() => {
-            lines.forEach(l => (l.style.opacity = '0.3'));
+            lines.forEach(l => (l.style.opacity = '0.8'));
             setTimeout(() => lines.forEach(l => (l.style.opacity = '0')), 2500);
         }, 5000);
 
@@ -138,14 +138,6 @@ export default function StarrySkyContainer() {
 
     return (
         <div id="starry-sky-container" ref={containerRef}>
-            <div className="nebula nebula-1" />
-            <div className="nebula nebula-2" />
-            <div className="nebula nebula-3" />
-            <div className="cartoon-moon">
-                <span className="crater c1" />
-                <span className="crater c2" />
-                <span className="crater c3" />
-            </div>
             <div id="gemini-constellation-overlay">
                 {stars.map(({ id, cls, top, left }) => (
                     <div key={id} id={id} className={`constellation-star ${cls}`} style={{ top, left }} />

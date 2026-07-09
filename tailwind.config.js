@@ -7,21 +7,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Fredoka', 'sans-serif'],
-        body: ['Nunito', 'sans-serif'],
+        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       colors: {
-        night: {
-          0: '#0b0a2a',
-          1: '#140d3a',
-          2: '#241a54',
+        ink: {
+          0: '#0a0e17',
+          1: '#0f1420',
+          2: '#161c2b',
         },
-        star: {
-          cyan: '#46e0ff',
-          purple: '#b98bff',
-          pink: '#ff8fc7',
-          yellow: '#ffe07a',
-          green: '#7cf0bd',
+        accent: {
+          DEFAULT: '#5b9bff',
+          soft: '#9dc1ff',
         },
       },
     },

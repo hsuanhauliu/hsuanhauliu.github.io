@@ -58,7 +58,7 @@ function Header({ sectionRefs }) {
                         {sectionRefs.map(s => <NavLink key={s.id} section={s} />)}
                         <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"
                             aria-label="GitHub" title="GitHub"
-                            className="text-slate-300 hover:text-[#46e0ff] transition-colors duration-200 [&_svg]:w-6 [&_svg]:h-6">
+                            className="text-slate-300 hover:text-[#5b9bff] transition-colors duration-200 [&_svg]:w-6 [&_svg]:h-6">
                             <GithubIcon />
                         </a>
                     </nav>

@@ -40,7 +40,7 @@ function FeaturedCard({ image, title, description, tech, links }) {
                             style={{ color: 'var(--cyan)' }}
                             onMouseEnter={e => (e.currentTarget.style.color = 'var(--pink)')}
                             onMouseLeave={e => (e.currentTarget.style.color = 'var(--cyan)')}>
-                            {label} →
+                            {label}
                         </a>
                     ))}
                 </div>
